@@ -234,37 +234,75 @@ class CourseExtractor:
         df.to_csv(output_path, index=False)
         return df
     
+    def parse_requirement_logic(self, requirement_text):
+        """
+        Parse requirement text to detect AND/OR logic and split into paths.
+        Returns list of tuples: (group_logic, path_id)
+        """
+        if not requirement_text:
+            return []
+        
+        # Normalize text for easier parsing
+        text = requirement_text.lower().strip()
+        
+        # Detect if this contains OR logic (alternative paths)
+        # Look for standalone "or" surrounded by spaces or at boundaries
+        or_pattern = r'\s+or\s+|\s+or$|^or\s+'
+        has_or = bool(re.search(or_pattern, text))
+        
+        # If it contains OR, split into paths
+        if has_or:
+            # Split by "or" to get individual paths
+            or_split = re.split(or_pattern, text)
+            or_split = [part.strip() for part in or_split if part.strip()]
+            
+            # Each path is an alternative, so each gets its own path_id
+            results = []
+            for path_idx, path_text in enumerate(or_split, start=1):
+                # Within each path, check for AND logic
+                has_and = bool(re.search(r'\s+and\s+', path_text))
+                group_logic = 'AND' if has_and else 'OR'
+                results.append((group_logic, path_idx))
+            return results
+        else:
+            # Single path - check for AND logic within it
+            has_and = bool(re.search(r'\s+and\s+', text))
+            group_logic = 'AND' if has_and else 'OR'
+            return [(group_logic, 1)]
+    
     def parse_prerequisites(self):
-        """Parse prerequisite information and create prerequisite groups"""
-        prereq_groups = []
+        """Parse prerequisite information and create requirement groups"""
+        req_groups = []
         group_id = 1
         
         for course_code, course_data in self.courses.items():
             # Parse prerequisites
             if course_data['prerequisites']:
-                prereq_groups.append({
-                    'group_id': group_id,
-                    'course_code': course_code,
-                    'group_type': 'AND',
-                    'req_type': 'PREREQ',
-                    'min_credits': 0,
-                    'min_courses': 0
-                })
-                group_id += 1
+                prereq_logic = self.parse_requirement_logic(course_data['prerequisites'])
+                for group_logic, path_id in prereq_logic:
+                    req_groups.append({
+                        'group_id': group_id,
+                        'course_code': course_code,
+                        'req_type': 'PREREQ',
+                        'group_logic': group_logic,
+                        'path_id': path_id
+                    })
+                    group_id += 1
             
             # Parse corequisites
             if course_data['corequisites']:
-                prereq_groups.append({
-                    'group_id': group_id,
-                    'course_code': course_code,
-                    'group_type': 'AND',
-                    'req_type': 'COREQ',
-                    'min_credits': 0,
-                    'min_courses': 0
-                })
-                group_id += 1
+                coreq_logic = self.parse_requirement_logic(course_data['corequisites'])
+                for group_logic, path_id in coreq_logic:
+                    req_groups.append({
+                        'group_id': group_id,
+                        'course_code': course_code,
+                        'req_type': 'COREQ',
+                        'group_logic': group_logic,
+                        'path_id': path_id
+                    })
+                    group_id += 1
         
-        return pd.DataFrame(prereq_groups)
+        return pd.DataFrame(req_groups)
     
     def generate_all_csvs(self, input_file, output_dir):
         """Generate all required CSV files"""
@@ -275,11 +313,11 @@ class CourseExtractor:
         courses_df = self.save_courses_csv(f"{output_dir}/courses.csv")
         print(f"✓ Generated courses.csv with {len(courses_df)} courses")
         
-        # Generate prerequisite files
-        prereq_groups_df = self.parse_prerequisites()
-        if not prereq_groups_df.empty:
-            prereq_groups_df.to_csv(f"{output_dir}/prerequisite_groups.csv", index=False)
-            print(f"✓ Generated prerequisite_groups.csv with {len(prereq_groups_df)} groups")
+        # Generate requirement groups
+        req_groups_df = self.parse_prerequisites()
+        if not req_groups_df.empty:
+            req_groups_df.to_csv(f"{output_dir}/requirements_groups.csv", index=False)
+            print(f"✓ Generated requirements_groups.csv with {len(req_groups_df)} groups")
         
         # Create empty prerequisite_courses.csv structure if needed
         prereq_courses_df = pd.DataFrame({
@@ -296,9 +334,9 @@ class CourseExtractor:
             'is_mandatory': []
         })
         program_req_df.to_csv(f"{output_dir}/program_requirements.csv", index=False)
-        print(f"✓ Generated prerequisite_courses.csv and program_requirements.csv (empty, ready for data)")
+        print(f"✓ Generated requirement_items.csv and program_requirements.csv (empty, ready for data)")
         
-        return courses_df, prereq_groups_df
+        return courses_df, req_groups_df
 
 
 if __name__ == "__main__":
