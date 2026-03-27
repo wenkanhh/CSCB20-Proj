@@ -28,9 +28,9 @@ The cleaned dataset includes the following files:
 3. programs.csv - stores every academic program offered by the institution (majors, specialists, minors)
 - program_code: unique short code that identifies the program, used as the primary key and referenced by other tables
 - program_name: the full official name of the program
-- department: the department prefix associated with this program (e.g. MGA for management)
+- department_id: the department id associated with this program 
 - program_type: whether this is a Major, Specialist, or Minor
-- total_credits_required: the total number of credits a student must complete to finish this program
+- is_coop: 1 for coop program, 0 for non-coop program
 - notes: any special notes about the program such as limited enrolment conditions
 
 
@@ -57,7 +57,7 @@ The cleaned dataset includes the following files:
 - item_type: the kind of condition this row represents, one of COURSE, MIN_CREDITS_TOTAL, MIN_CREDITS_DEPT, MIN_CGPA, PROGRAM_ENROLLMENT, YEAR_STANDING, or PERMISSION
 - course_code: the specific course that must be completed, only filled when item_type is COURSE
 - min_credits: the minimum number of credits required, only filled when item_type is MIN_CREDITS_TOTAL or MIN_CREDITS_DEPT
-- department_prefix: the department the minimum credits must come from, only filled when item_type is MIN_CREDITS_DEPT
+- department_id: the department the minimum credits must come from, only filled when item_type is MIN_CREDITS_DEPT
 - min_cgpa: the minimum CGPA the student must have, only filled when item_type is MIN_CGPA
 - program_name: the program the student must be enrolled in, only filled when item_type is PROGRAM_ENROLLMENT
 - year_standing: the minimum year of study required, only filled when item_type is YEAR_STANDING
@@ -68,20 +68,20 @@ The cleaned dataset includes the following files:
 - exclusion_id: unique number that identifies each exclusion pair
 - course_code: the course being described, references the courses table
 - excluded_course: the course that conflicts with it, also references the courses table, a student who has completed this course cannot take course_code
+- note: for other exclusions that special for the course and can't be fit into the other columns
 
 
-8. program_requirements.csv - stores which courses are required for each program, and how those requirements are grouped so that elective rules like pick 2 from this list can be expressed
-- req_id: unique number that identifies each requirement row
-- program_code: references the program from the programs table that this requirement belongs to
-- group_id: groups multiple rows together into one requirement block, rows with the same group_id belong to the same rule
-- group_name: a human readable label for this requirement block such as Core Courses or 300-level Electives
-- group_type: whether the student must take ALL courses in this group or just PICK some of them
-- min_courses: the minimum number of courses the student must pick from this group, only relevant when group_type is PICK
-- min_credits: the minimum number of credits the student must pick from this group, only relevant when group_type is PICK
-- course_code: references the specific course from the courses table that belongs to this requirement group
-- is_mandatory: 1 if this specific course is always required within the group, 0 if it is one of several options
-- year_level: the suggested year of study when the student should take this course
-- category: the category label for this requirement such as Core, Elective, or Breadth
+8. program_requirement.csv - stores each requirement block for a program, one row per logical chunk of requirements such as Core Courses or Bin 1 Electives, separating the group structure from the individual courses inside it
+- group_id: unique number identifying each requirement block, referenced by program_requirement_courses to know which block each course belongs to
+- program_code: references the program from programs.csv that this requirement block belongs to
+- group_type: how the student satisfies this block, one of ALL (must take every course), PICK (take a minimum number or credits), CREDIT_LEVEL (a credit threshold at a specific course level), or OPTIONAL (encouraged but not required)
+- min_courses: the minimum number of courses the student must take from this block, only relevant when group_type is PICK
+- min_credits: the minimum credits the student must earn from this block, only relevant when group_type is PICK
+- path_id: NULL for most blocks, an integer when this block is one of several alternative ways to satisfy a requirement, the student only needs to complete all blocks sharing ONE path_id value
+- combined_group_id: NULL for most blocks, an integer when credits from multiple blocks are pooled toward a shared total minimum such as Bin 1 and Bin 2 together requiring 4.0 credits combined
+- combined_min_credits: the shared credit total that must be reached across all blocks sharing the same combined_group_id, NULL if not applicable
+- category: the category label for this block such as Required, Elective, Graduation Requirement, Co-op, or Optional
+- notes: any special notes about this requirement block
 
 
 9. past_offerings.csv - records every time a course has been offered in a past semester, used by the recommendation engine to show students when a course is typically available
@@ -109,10 +109,28 @@ The cleaned dataset includes the following files:
 - credits_earned: the actual number of credits the student earned, 0.0 if the course was failed or is still in progress
 
 
+11. departments.csv - stores each academic department as its own entity, separate from the prefixes it owns
+- department_id: unique number identifying the department
+- department_name: the full name of the department (e.g. Management, Computer Science)
+- faculty: the faculty this department belongs to (e.g. Faculty of Arts and Science)
+- notes: any special notes about the department
+
+
+12. department_prefixes.csv - junction table that links each department to all the course code prefixes it owns, one row per prefix
+- prefix_id: unique number identifying each prefix row
+- department_id: references the department from the departments table that owns this prefix
+- course_code_prefix: the actual prefix string that appears in course codes (e.g. MGA, MGH, MGE, MGO)
+- prefix_description: optional human readable note about what this prefix covers
+
+13. program_requirement_courses.csv - stores each individual course that belongs to a requirement block, one row per course per block, keeps course-level detail separate from block-level structure
+- id: unique number identifying each row
+- group_id: references the requirement block from program_requirement_groups.csv that this course belongs to
+- course_code: references the course from courses.csv that is part of this requirement block
+- is_mandatory: 1 if this specific course is always required within the block, 0 if it is one of several options the student can choose from
+- notes: any course-specific note within this block such as zero credit CR/NCR graduation requirement
+
 IMPORTANT REMARKS:
 1. this is how everything should be linked together:
 courses.csv is the central file everything else points back to. The course_code column is the primary key — every other file uses it as a foreign key to reference a course.
-prerequisite_groups.csv links to courses.csv through course_code — this tells you which course the requirement belongs to. It also generates its own group_id which becomes the link for the next file.
-prerequisite_courses.csv links to prerequisite_groups.csv through group_id — this tells you which group each required course belongs to. It also links back to courses.csv through required_course_code — this is the indirect dashed arrow in the diagram, meaning the required course must also exist in your courses table.
-program_requirements.csv links to courses.csv through course_code — telling you which course is required for that program.
+
 
