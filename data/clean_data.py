@@ -304,6 +304,171 @@ class CourseExtractor:
         
         return pd.DataFrame(req_groups)
     
+    def parse_requirement_items_from_text(self, req_text, group_id):
+        """Parse prerequisite/corequisite text to extract individual items"""
+        items = []
+        item_id_base = group_id * 1000  # Create unique item_ids within group
+        item_count = 0
+        
+        if not req_text:
+            return items
+        
+        text = req_text.lower()
+        
+        # 1. Extract course codes (pattern: [A-Z]{3,4}\d{2}[A-Z]\d)
+        course_pattern = r'([A-Z]{3,4}\d{2}[A-Z]\d)'
+        courses_found = re.findall(course_pattern, req_text)
+        for course_code in courses_found:
+            items.append({
+                'item_id': item_id_base + item_count,
+                'group_id': group_id,
+                'item_type': 'COURSE',
+                'course_code': course_code,
+                'min_credits': None,
+                'department_prefix': None,
+                'min_cgpa': None,
+                'program_name': None,
+                'year_standing': None,
+                'notes': None
+            })
+            item_count += 1
+        
+        # 2. Extract MIN_CGPA (pattern: cgpa?.*?([\d.]+))
+        cgpa_pattern = r'cgpa.*?(?:of\s+at\s+)?(?:least\s+)?([\d.]+)'
+        cgpa_match = re.search(cgpa_pattern, text)
+        if cgpa_match:
+            items.append({
+                'item_id': item_id_base + item_count,
+                'group_id': group_id,
+                'item_type': 'MIN_CGPA',
+                'course_code': None,
+                'min_credits': None,
+                'department_prefix': None,
+                'min_cgpa': float(cgpa_match.group(1)),
+                'program_name': None,
+                'year_standing': None,
+                'notes': None
+            })
+            item_count += 1
+        
+        # 3. Extract PROGRAM_ENROLLMENT (pattern: enrolment|enrollment.*?in\s+(.*?)(?:program|$))
+        program_pattern = r'enrol(?:l)?ment\s+(?:in\s+)?(?:(?:any|the)\s+)?([A-Za-z\s&]+)\s*program'
+        program_match = re.search(program_pattern, text)
+        if program_match:
+            program_name = program_match.group(1).strip()
+            items.append({
+                'item_id': item_id_base + item_count,
+                'group_id': group_id,
+                'item_type': 'PROGRAM_ENROLLMENT',
+                'course_code': None,
+                'min_credits': None,
+                'department_prefix': None,
+                'min_cgpa': None,
+                'program_name': program_name,
+                'year_standing': None,
+                'notes': None
+            })
+            item_count += 1
+        
+        # 4. Extract PERMISSION (pattern: permission|instructor's permission)
+        if re.search(r'permission', text):
+            items.append({
+                'item_id': item_id_base + item_count,
+                'group_id': group_id,
+                'item_type': 'PERMISSION',
+                'course_code': None,
+                'min_credits': None,
+                'department_prefix': None,
+                'min_cgpa': None,
+                'program_name': None,
+                'year_standing': None,
+                'notes': 'Instructor or program permission required'
+            })
+            item_count += 1
+        
+        # 5. Extract YEAR_STANDING (pattern: \d+(?:st|nd|rd|th)\s+year)
+        year_pattern = r'(\d+)(?:st|nd|rd|th)\s+year'
+        year_match = re.search(year_pattern, text)
+        if year_match:
+            items.append({
+                'item_id': item_id_base + item_count,
+                'group_id': group_id,
+                'item_type': 'YEAR_STANDING',
+                'course_code': None,
+                'min_credits': None,
+                'department_prefix': None,
+                'min_cgpa': None,
+                'program_name': None,
+                'year_standing': int(year_match.group(1)),
+                'notes': None
+            })
+            item_count += 1
+        
+        # 6. Extract MIN_CREDITS with optional department prefix
+        # Pattern: (\d+\.?\d*)\s*(?:credit|cr)(?:\s+(?:at\s+[a-z]-?level\s+)?(?:in|from)\s+(?:the\s+)?)?([Dd]epartment\s+of\s+)?(.*))?
+        credits_pattern = r'(\d+\.?\d*)\s*(?:credit|cr)'
+        for match in re.finditer(credits_pattern, req_text):
+            min_credits = float(match.group(1))
+            
+            # Check if this is department-specific
+            # Look backward for department keywords
+            start_idx = match.start()
+            before_text = req_text[:start_idx].lower()
+            
+            # Check if preceded by department info
+            dept_pattern = r'(?:in|from|at)\s+(?:the\s+)?(?:department\s+of\s+)?([A-Za-z\s&]+?)(?:\s+(?:course|program|level))?$'
+            dept_match = re.search(dept_pattern, before_text)
+            
+            dept_prefix = None
+            item_type = 'MIN_CREDITS_TOTAL'
+            
+            if dept_match:
+                dept_name = dept_match.group(1).strip()
+                # Extract department code from name (first 3 letters usually)
+                if len(dept_name) > 0:
+                    dept_prefix = dept_name[:3].upper()
+                    item_type = 'MIN_CREDITS_DEPT'
+            
+            # Only add if we haven't already added this credit requirement
+            existing_credit_items = [i for i in items if i['item_type'] in ['MIN_CREDITS_TOTAL', 'MIN_CREDITS_DEPT']]
+            if not any(i['min_credits'] == min_credits and i['item_type'] == item_type for i in existing_credit_items):
+                items.append({
+                    'item_id': item_id_base + item_count,
+                    'group_id': group_id,
+                    'item_type': item_type,
+                    'course_code': None,
+                    'min_credits': min_credits,
+                    'department_prefix': dept_prefix,
+                    'min_cgpa': None,
+                    'program_name': None,
+                    'year_standing': None,
+                    'notes': None
+                })
+                item_count += 1
+        
+        return items
+    
+    def parse_requirement_items(self):
+        """Parse all requirement items from requirements_groups"""
+        req_items = []
+        
+        for course_code, course_data in self.courses.items():
+            # Parse prerequisites
+            if course_data['prerequisites']:
+                # Get all groups for this course/prereq combination
+                req_text = course_data['prerequisites']
+                # For now, just parse the first group
+                items = self.parse_requirement_items_from_text(req_text, hash(course_code + 'PREREQ') % 100000)
+                req_items.extend(items)
+            
+            # Parse corequisites
+            if course_data['corequisites']:
+                req_text = course_data['corequisites']
+                items = self.parse_requirement_items_from_text(req_text, hash(course_code + 'COREQ') % 100000)
+                req_items.extend(items)
+        
+        return pd.DataFrame(req_items)
+    
     def generate_all_csvs(self, input_file, output_dir):
         """Generate all required CSV files"""
         # Parse courses
@@ -319,12 +484,11 @@ class CourseExtractor:
             req_groups_df.to_csv(f"{output_dir}/requirements_groups.csv", index=False)
             print(f"✓ Generated requirements_groups.csv with {len(req_groups_df)} groups")
         
-        # Create empty prerequisite_courses.csv structure if needed
-        prereq_courses_df = pd.DataFrame({
-            'group_id': [],
-            'required_course_code': []
-        })
-        prereq_courses_df.to_csv(f"{output_dir}/prerequisite_courses.csv", index=False)
+        # Generate requirement items
+        req_items_df = self.parse_requirement_items()
+        if not req_items_df.empty:
+            req_items_df.to_csv(f"{output_dir}/requirement_items.csv", index=False)
+            print(f"✓ Generated requirement_items.csv with {len(req_items_df)} items")
         
         # Create empty program_requirements.csv structure
         program_req_df = pd.DataFrame({
@@ -334,7 +498,7 @@ class CourseExtractor:
             'is_mandatory': []
         })
         program_req_df.to_csv(f"{output_dir}/program_requirements.csv", index=False)
-        print(f"✓ Generated requirement_items.csv and program_requirements.csv (empty, ready for data)")
+        print(f"✓ Generated program_requirements.csv (empty, ready for data)")
         
         return courses_df, req_groups_df
 
