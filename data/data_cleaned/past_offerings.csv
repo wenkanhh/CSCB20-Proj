@@ -1,0 +1,2461 @@
+offering_id,course_code,semester,year,instructor,delivery,day_time,campus
+1,ACMB10H3,Winter,2025,"deChamplain-Leverenz,",In-person,WE,UTSC
+2,ACMC01H3,Winter,2025,Available,In-person,,UTSC
+3,ACMD01H3,Winter,2025,Available,In-person,,UTSC
+4,ACMD02H3,Winter,2025,Available,In-person,,UTSC
+5,ACMD91H3,Winter,2025,Available,In-person,,UTSC
+6,ACMD92H3,Winter,2025,Available,In-person,,UTSC
+7,AFSA03H3,Winter,2025,"Ilmi, A.",In-person,MO,UTSC
+8,AFSC03H3,Winter,2025,"Callebert, R.",In-person,TU,UTSC
+9,AFSC97H3,Winter,2025,"Dinani, H.",In-person,TU,UTSC
+10,AFSD53H3,Winter,2025,"Rockel, S.",In-person,TH,UTSC
+11,ANTA01H3,Winter,2025,"Nargolwalla, M.",In-person,TH,UTSC
+12,ANTA02H3,Winter,2025,"Cummings, M.",In-person,MO,UTSC
+13,ANTA02H3,Winter,2025,"Cummings, M.",In-person,TU,UTSC
+14,ANTB12H3,Winter,2025,"De Aguiar Furuie,",In-person,TU,UTSC
+15,ANTB15H3,Winter,2025,"Kumpan, L.",In-person,MO,UTSC
+16,ANTB16H3,Winter,2025,"Sorge, A.",In-person,FR,UTSC
+17,ANTB20H3,Winter,2025,"Nixon, K.",In-person,TH,UTSC
+18,ANTB80H3,Winter,2025,"Butler, D.",In-person,TU,UTSC
+19,ANTC03H3,Winter,2025,FACULTY,In-person,,UTSC
+20,ANTC04H3,Winter,2025,FACULTY,In-person,,UTSC
+21,ANTC10H3,Winter,2025,"Cohen, S.",In-person,TH,UTSC
+22,ANTC17H3,Winter,2025,"Nargolwalla, M.",In-person,MO,UTSC
+23,ANTC20H3,Winter,2025,"Sorge, A.",In-person,MO,UTSC
+24,ANTC27H3,Winter,2025,"Teichroeb, J.",In-person,TH,UTSC
+25,ANTC48H3,Winter,2025,"Dewar, G.",In-person,WE,UTSC
+26,ANTC58H3,Winter,2025,"Daswani, G.",In-person,TH,UTSC
+27,ANTC65H3,Winter,2025,"Dahl, B.",In-person,TH,UTSC
+28,ANTC70H3,Winter,2025,"Mortensen, Room change",In-person,TU,UTSC
+29,ANTC71H3,Winter,2025,"Janz, L.",In-person,TU,UTSC
+30,ANTC88H3,Winter,2025,"Paz, A.",In-person,WE,UTSC
+31,ANTD10H3,Winter,2025,"Bamford, S.",In-person,TU,UTSC
+32,ANTD15H3,Winter,2025,"Mortensen, L.",In-person,WE,UTSC
+33,ANTD17H3,Winter,2025,"Schillaci, M.",In-person,WE,UTSC
+34,ANTD18H3,Winter,2025,"Dewar, G.",In-person,TH,UTSC
+35,ANTD19H3,Winter,2025,"Teichroeb, J.",In-person,TU,UTSC
+36,ANTD25H3,Winter,2025,"Schillaci, M.",In-person,TH,UTSC
+37,ANTD31H3,Winter,2025,FACULTY,In-person,,UTSC
+38,ANTD32H3,Winter,2025,FACULTY,In-person,,UTSC
+39,ANTD99H3,Winter,2025,"Silcox, M.",In-person,MO,UTSC
+40,ASTC25H3,Winter,2025,"Artymowicz, P.",In-person,TH,UTSC
+41,BIOA02H3,Winter,2025,"Mahalingam, S./ Reid, S./",In-person,TU,UTSC
+42,BIOA02H3,Winter,2025,"Mahalingam, S./ Reid, S./",In-person,TU,UTSC
+43,BIOA02H3,Winter,2025,"- Mahalingam, S./ Reid, S./",Online,,UTSC
+44,BIOB11H3,Winter,2025,"Bell, E.",In-person,TU,UTSC
+45,BIOB11H3,Winter,2025,"- Asynchronous Bell, E.",Online,,UTSC
+46,BIOB12H3,Winter,2025,"Mott, A.",In-person,MO,UTSC
+47,BIOB32H3,Winter,2025,"Brown, J.",In-person,MO,UTSC
+48,BIOB35H3,Winter,2025,"Brown, J.",In-person,WE,UTSC
+49,BIOB38H3,Winter,2025,"Stehlik, I.",In-person,TU,UTSC
+50,BIOB51H3,Winter,2025,"Fitzpatrick,",In-person,TU,UTSC
+51,BIOB51H3,Winter,2025,"- Fitzpatrick,",Online,,UTSC
+52,BIOB90H3,Winter,2025,"Brown, J.",In-person,TH,UTSC
+53,BIOB97H3,Winter,2025,"Mason, A.",In-person,TH,UTSC
+54,BIOB98H3,Winter,2025,FACULTY,In-person,,UTSC
+55,BIOB99H3,Winter,2025,FACULTY,In-person,,UTSC
+56,BIOC10H3,Winter,2025,"Mahtani, T.",In-person,WE,UTSC
+57,BIOC13H3,Winter,2025,"Gonzales-Vigil, E.",In-person,WE,UTSC
+58,BIOC14H3,Winter,2025,"McGowan,",In-person,TH,UTSC
+59,BIOC16H3,Winter,2025,"Fitzpatrick, M.",In-person,TU,UTSC
+60,BIOC17H3,Winter,2025,"Brunt, S.",In-person,FR,UTSC
+61,BIOC21H3,Winter,2025,"Brown, J.",In-person,TU,UTSC
+62,BIOC23H3,Winter,2025,"Bell, E.",In-person,MO,UTSC
+63,BIOC31H3,Winter,2025,"Gazzarrini, S.",In-person,WE,UTSC
+64,BIOC34H3,Winter,2025,"Reid, S.",In-person,MO,UTSC
+65,BIOC34H3,Winter,2025,"- Asynchronous Reid, S.",Online,,UTSC
+66,BIOC39H3,Winter,2025,"Mahtani,",In-person,FR,UTSC
+67,BIOC39H3,Winter,2025,"- Mahtani,",Online,,UTSC
+68,BIOC40H3,Winter,2025,"Pan, X.",In-person,TU,UTSC
+69,BIOC54H3,Winter,2025,"Persaud, K.",In-person,WE,UTSC
+70,BIOC60H3,Winter,2025,"Stehlik, I. Room change",In-person,MO,UTSC
+71,BIOC62H3,Winter,2025,"Sturge, R.",In-person,WE,UTSC
+72,BIOC90H3,Winter,2025,"Bell, E.",In-person,,UTSC
+73,BIOC99H3,Winter,2025,FACULTY,In-person,,UTSC
+74,BIOD07H3,Winter,2025,"Koyama, M.",In-person,WE,UTSC
+75,BIOD12H3,Winter,2025,"Zhao, R.",In-person,TU,UTSC
+76,BIOD15H3,Winter,2025,"Anreiter, I.",In-person,WE,UTSC
+77,BIOD19H3,Winter,2025,"McGowan, P.",In-person,FR,UTSC
+78,BIOD20H3,Winter,2025,"Gimenez, C.",In-person,TU,UTSC
+79,BIOD24H3,Winter,2025,"Gan, K.",In-person,FR,UTSC
+80,BIOD25H3,Winter,2025,"Filion, G.",In-person,WE,UTSC
+81,BIOD29H3,Winter,2025,"Ashok, A.",In-person,MO,UTSC
+82,BIOD43H3,Winter,2025,"Welch Jr., K.",In-person,MO,UTSC
+83,BIOD54H3,Winter,2025,"MacIvor, S.",In-person,TU,UTSC
+84,BIOD63H3,Winter,2025,"Sturge, R.",In-person,TU,UTSC
+85,BIOD65H3,Winter,2025,"Nash, J.",In-person,TU,UTSC
+86,BIOD67H3,Winter,2025,FACULTY,In-person,,UTSC
+87,BIOD95H3,Winter,2025,"Ashok, A./ Stehlik,",In-person,TU,UTSC
+88,CHMA10H3,Winter,2025,"Dalili, S./",In-person,MO,UTSC
+89,CHMA10H3,Winter,2025,"- Dalili, S./",Online,,UTSC
+90,CHMA11H3,Winter,2025,"Sauer, E./ FR time change",In-person,MO,UTSC
+91,CHMA11H3,Winter,2025,"- Sauer, E./ FR time change",Online,MO,UTSC
+92,CHMA11H3,Winter,2025,"- Sauer, E./",Online,,UTSC
+93,CHMA12H3,Winter,2025,"Mikhaylichenko, S./ Zimmer-",In-person,MO,UTSC
+94,CHMB21H3,Winter,2025,"Izmaylov, Room change",In-person,MO,UTSC
+95,CHMB41H3,Winter,2025,"Dalili, S.",In-person,TU,UTSC
+96,CHMB42H3,Winter,2025,"Mikhaylichenko,",In-person,MO,UTSC
+97,CHMB42H3,Winter,2025,"- Mikhaylichenko,",Online,,UTSC
+98,CHMB55H3,Winter,2025,"Wania, F.",In-person,WE,UTSC
+99,CHMB62H3,Winter,2025,"Sullan, R.",In-person,MO,UTSC
+100,CHMC16H3,Winter,2025,"Simpson, A.",In-person,WE,UTSC
+101,CHMC31Y3,Winter,2025,"Hadzovic, A.",In-person,FR,UTSC
+102,CHMC42H3,Winter,2025,"Sauer, E.",In-person,MO,UTSC
+103,CHMC71H3,Winter,2025,"Kerman, K.",In-person,MO,UTSC
+104,CHMD39H3,Winter,2025,"Zimmer-De Iuliis,",In-person,WE,UTSC
+105,CHMD47H3,Winter,2025,"Englich, U.",In-person,TH,UTSC
+106,CHMD91H3,Winter,2025,"Zhang, X.",In-person,,UTSC
+107,CITA02H3,Winter,2025,"- Allahwala, Changed to online",Online,WE,UTSC
+108,CITB01H3,Winter,2025,"Mah, J.",In-person,TU,UTSC
+109,CITB03H3,Winter,2025,"Bunce, S. Room change",In-person,TH,UTSC
+110,CITB05H3,Winter,2025,Calderon,In-person,TU,UTSC
+111,CITB08H3,Winter,2025,"Calderon Figueroa,",In-person,TH,UTSC
+112,CITC03H3,Winter,2025,"Mah, J.",In-person,TH,UTSC
+113,CITC04H3,Winter,2025,"Snow, K.",In-person,TU,UTSC
+114,CITC07H3,Winter,2025,"Schatz, D. Day/time change",In-person,WE,UTSC
+115,CITC15H3,Winter,2025,"Amrov, S.",In-person,WE,UTSC
+116,CITC17H3,Winter,2025,"McCormack, K.",In-person,TH,UTSC
+117,CITD01H3,Winter,2025,"- Allahwala, Changed to online",Online,MO,UTSC
+118,CITD05H3,Winter,2025,"Lashkari, M.",In-person,TH,UTSC
+119,CITD12H3,Winter,2025,"Sorensen, A.",In-person,WE,UTSC
+120,CITD30H3,Winter,2025,Available,In-person,,UTSC
+121,CLAA06H3,Winter,2025,"Cooper, K.",In-person,WE,UTSC
+122,CLAB06H3,Winter,2025,"Dost, S.",In-person,TU,UTSC
+123,CLAB20H3,Winter,2025,"Cooper, K.",In-person,MO,UTSC
+124,CLAC24H3,Winter,2025,"Blouin, K.",In-person,TH,UTSC
+125,CLAC68H3,Winter,2025,"Blouin, K.",In-person,TH,UTSC
+126,COPB12H3,Winter,2025,"Haque, F.",In-person,WE,UTSC
+127,COPB12H3,Winter,2025,"Haque, F.",In-person,WE,UTSC
+128,COPB12H3,Winter,2025,"McDowell (Simmons),",In-person,WE,UTSC
+129,COPB12H3,Winter,2025,"Haque, F.",In-person,TH,UTSC
+130,COPB12H3,Winter,2025,"McDowell (Simmons),",In-person,TH,UTSC
+131,COPB14H3,Winter,2025,"Cook, L.",In-person,WE,UTSC
+132,COPB14H3,Winter,2025,"Amiri, N.",In-person,WE,UTSC
+133,COPB31H3,Winter,2025,"Rueda Torres, E.",In-person,WE,UTSC
+134,COPB50H3,Winter,2025,Co,In-person,,UTSC
+135,COPB50H3,Winter,2025,"- Banu, S./ Chan, C./ Heer, K./",Online,,UTSC
+136,COPB51H3,Winter,2025,Physical,In-person,,UTSC
+137,COPB51H3,Winter,2025,Computer,In-person,,UTSC
+138,COPB51H3,Winter,2025,Humanities,In-person,,UTSC
+139,COPB51H3,Winter,2025,"- Chan, C./ Heer, K./",Online,,UTSC
+140,COPB51H3,Winter,2025,"- Chan, C./ Kowalchuk, A.",Online,,UTSC
+141,COPB51H3,Winter,2025,"- Heer, K./ Li, K./ Lott, A.",Online,,UTSC
+142,COPB52H3,Winter,2025,Biochemistry,In-person,,UTSC
+143,COPB52H3,Winter,2025,Computer,In-person,,UTSC
+144,COPB52H3,Winter,2025,Psycholinguistics,In-person,,UTSC
+145,COPB52H3,Winter,2025,"- Chan, P./ Natkunam,",Online,,UTSC
+146,COPB52H3,Winter,2025,"- Flores, C./ Vanloo-",Online,,UTSC
+147,COPB52H3,Winter,2025,"- Miller, R.",Online,,UTSC
+148,COPB53H3,Winter,2025,Psychology,In-person,,UTSC
+149,COPB53H3,Winter,2025,Computer,In-person,,UTSC
+150,COPB53H3,Winter,2025,Humanities,In-person,,UTSC
+151,COPB53H3,Winter,2025,"- Asynchronous Miller, R.",Online,,UTSC
+152,COPB53H3,Winter,2025,"- Asynchronous Miller, R.",Online,,UTSC
+153,COPB53H3,Winter,2025,"- Asynchronous Miller, R.",Online,,UTSC
+154,COPC98H3,Winter,2025,Psychology,In-person,,UTSC
+155,COPC98H3,Winter,2025,Computer,In-person,,UTSC
+156,COPC98H3,Winter,2025,Humanities,In-person,,UTSC
+157,COPC98H3,Winter,2025,"- Asynchronous Natkunam, G.",Online,,UTSC
+158,COPC98H3,Winter,2025,"- Asynchronous Flores, C./ Vanloo-Mve, M.",Online,,UTSC
+159,COPC98H3,Winter,2025,"- Asynchronous Natkunam, G.",Online,,UTSC
+160,COPC99H3,Winter,2025,Co,In-person,,UTSC
+161,COPC99H3,Winter,2025,Computer,In-person,,UTSC
+162,COPC99H3,Winter,2025,"- Asynchronous Natkunam, G.",Online,,UTSC
+163,COPC99H3,Winter,2025,"- Asynchronous Flores, C./ Vanloo-Mve, M.",Online,,UTSC
+164,CSCA08H3,Winter,2025,"Gawde, P.",In-person,TU,UTSC
+165,CSCA08H3,Winter,2025,"Gawde, P.",In-person,MO,UTSC
+166,CSCA48H3,Winter,2025,"Estrada, F.",In-person,MO,UTSC
+167,CSCA48H3,Winter,2025,"Estrada, F.",In-person,MO,UTSC
+168,CSCA48H3,Winter,2025,"Abou Assi, R.",In-person,TU,UTSC
+169,CSCA48H3,Winter,2025,"Ponce Castro, M.",In-person,TU,UTSC
+170,CSCA67H3,Winter,2025,"Molloy,",In-person,MO,UTSC
+171,CSCB09H3,Winter,2025,"Ponce Castro, M.",In-person,WE,UTSC
+172,CSCB09H3,Winter,2025,"Ponce Castro, M.",In-person,WE,UTSC
+173,CSCB20H3,Winter,2025,"Gawde, P.",In-person,FR,UTSC
+174,CSCB58H3,Winter,2025,"Vijaykumar,",In-person,MO,UTSC
+175,CSCB58H3,Winter,2025,"Vijaykumar,",In-person,MO,UTSC
+176,CSCB63H3,Winter,2025,"Lai, A.",In-person,MO,UTSC
+177,CSCB63H3,Winter,2025,"Tafliovich,",In-person,MO,UTSC
+178,CSCC01H3,Winter,2025,"Agrawal, P.",In-person,MO,UTSC
+179,CSCC01H3,Winter,2025,"Agrawal, P.",In-person,TU,UTSC
+180,CSCC11H3,Winter,2025,"Huang, Y.",In-person,TU,UTSC
+181,CSCC11H3,Winter,2025,"Huang, Y.",In-person,TU,UTSC
+182,CSCC24H3,Winter,2025,"Tafliovich,",In-person,TH,UTSC
+183,CSCC24H3,Winter,2025,"Tafliovich,",In-person,FR,UTSC
+184,CSCC43H3,Winter,2025,"Zhang, Q.",In-person,TH,UTSC
+185,CSCC63H3,Winter,2025,"Hadzilacos, V.",In-person,MO,UTSC
+186,CSCC69H3,Winter,2025,"Sans, T.",In-person,FR,UTSC
+187,CSCC73H3,Winter,2025,"Tell, R.",In-person,WE,UTSC
+188,CSCD03H3,Winter,2025,"Harrington, B.",In-person,MO,UTSC
+189,CSCD03H3,Winter,2025,"Harrington, B.",In-person,MO,UTSC
+190,CSCD37H3,Winter,2025,"Pancer, R.",In-person,WE,UTSC
+191,CSCD43H3,Winter,2025,"Bapat, A. Room change",In-person,FR,UTSC
+192,CSCD71H3,Winter,2025,"Sans, T. Room change",In-person,TU,UTSC
+193,CSCD84H3,Winter,2025,"Chan, B.",In-person,MO,UTSC
+194,CSCD92H3,Winter,2025,Available,In-person,,UTSC
+195,CSCD94H3,Winter,2025,Available,In-person,,UTSC
+196,CSCD95H3,Winter,2025,Available,In-person,,UTSC
+197,CTLA01H3,Winter,2025,"Khoo, E.",In-person,TU,UTSC
+198,CTLB03H3,Winter,2025,"Persaud, K.",In-person,TH,UTSC
+199,ECTB58H3,Winter,2025,"Payne, C.",In-person,WE,UTSC
+200,ECTB61H3,Winter,2025,"Ma, J.",In-person,TH,UTSC
+201,ECTB61H3,Winter,2025,"Ma, J.",In-person,TH,UTSC
+202,ECTB66H3,Winter,2025,"Ma, J.",In-person,TH,UTSC
+203,ECTC67H3,Winter,2025,"Payne, C.",In-person,WE,UTSC
+204,ECTC67H3,Winter,2025,"Ross, C.",In-person,TH,UTSC
+205,ECTC67H3,Winter,2025,"Ross, C.",In-person,TH,UTSC
+206,ECTC67H3,Winter,2025,"Ross, C.",In-person,TH,UTSC
+207,ECTC67H3,Winter,2025,"- Archontitsis, G./ Mitchell, C./",Online,,UTSC
+208,ECTC67H3,Winter,2025,"Bell, T.",In-person,WE,UTSC
+209,ECTC67H3,Winter,2025,"Heron, P.",In-person,TU,UTSC
+210,ECTC67H3,Winter,2025,"Doughty, M.",In-person,MO,UTSC
+211,ECTC67H3,Winter,2025,"Ross, C.",In-person,WE,UTSC
+212,ECTC67H3,Winter,2025,"- Synchronous Mitchell, C.",Online,FR,UTSC
+213,ECTC67H3,Winter,2025,"Vettoretti, G.",In-person,MO,UTSC
+214,ECTC67H3,Winter,2025,"Neumann, A.",In-person,MO,UTSC
+215,ECTC67H3,Winter,2025,"Wells, M.",In-person,WE,UTSC
+216,ECTC67H3,Winter,2025,"Mirza, M.",In-person,WE,UTSC
+217,ECTC67H3,Winter,2025,"- Synchronous Wallace, K.",Online,FR,UTSC
+218,ECTC67H3,Winter,2025,"Wallace, K.",In-person,TH,UTSC
+219,ECTC67H3,Winter,2025,"Dittrich, M.",In-person,TH,UTSC
+220,ECTC67H3,Winter,2025,"Isaac, M.",In-person,MO,UTSC
+221,ECTC67H3,Winter,2025,"Tozer, L.",In-person,FR,UTSC
+222,ECTC67H3,Winter,2025,"Tsuji, L.",In-person,TU,UTSC
+223,ECTC67H3,Winter,2025,"MacLellan, J.",In-person,WE,UTSC
+224,ECTC67H3,Winter,2025,"Fedoseev, A./ Spence,",In-person,TU,UTSC
+225,ECTC67H3,Winter,2025,"Jayasinghe, R.",In-person,TU,UTSC
+226,ECTC67H3,Winter,2025,"Livingstone, S.",In-person,TH,UTSC
+227,ECTC67H3,Winter,2025,"- Asynchronous Archontitsis, G.",Online,,UTSC
+228,ECTC67H3,Winter,2025,"Livingstone, S.",In-person,TU,UTSC
+229,EESA06H3,Winter,2025,"Kennedy,",In-person,MO,UTSC
+230,EESA06H3,Winter,2025,"- Kennedy,",Online,,UTSC
+231,EESA10H3,Winter,2025,"Stefanovic,",In-person,WE,UTSC
+232,EESA10H3,Winter,2025,"- Stefanovic,",Online,,UTSC
+233,EESA11H3,Winter,2025,"Stefanovic, J.",In-person,TH,UTSC
+234,EESB03H3,Winter,2025,"Mohsin, T.",In-person,WE,UTSC
+235,EESB16H3,Winter,2025,"Hathaway, M.",In-person,TU,UTSC
+236,EESB19H3,Winter,2025,"Dittrich, M.",In-person,WE,UTSC
+237,EESB20H3,Winter,2025,"Daxberger,",In-person,MO,UTSC
+238,EESB22H3,Winter,2025,"Heron, P.",In-person,TH,UTSC
+239,EESC02H3,Winter,2025,"Livingstone, S.",In-person,WE,UTSC
+240,EESC03H3,Winter,2025,"Doughty, M.",In-person,MO,UTSC
+241,EESC04H3,Winter,2025,"Martin, A.",In-person,TU,UTSC
+242,EESC13H3,Winter,2025,"Safari, E.",In-person,TU,UTSC
+243,EESC18H3,Winter,2025,"Dittrich, M.",In-person,TH,UTSC
+244,EESC19H3,Winter,2025,"Wells, M.",In-person,TH,UTSC
+245,EESC24H3,Winter,2025,"Dittrich, M.",In-person,,UTSC
+246,EESC25H3,Winter,2025,"Mohsin, T.",In-person,MO,UTSC
+247,EESC26H3,Winter,2025,"Heron, P.",In-person,TH,UTSC
+248,EESC30H3,Winter,2025,"Bell, T.",In-person,FR,UTSC
+249,EESC37H3,Winter,2025,"Daxberger, Room change",In-person,TU,UTSC
+250,EESD02H3,Winter,2025,"Stefanovic, S.",In-person,MO,UTSC
+251,EESD09H3,Winter,2025,"Martin, A.",In-person,,UTSC
+252,EESD18H3,Winter,2025,"Klenk, N.",In-person,WE,UTSC
+253,EESD20H3,Winter,2025,"Heron, P.",In-person,TU,UTSC
+254,EESD28H3,Winter,2025,"Neumann, A.",In-person,MO,UTSC
+255,ENGA02H3,Winter,2025,"Elkaim, J.",In-person,MO,UTSC
+256,ENGA02H3,Winter,2025,"Villanueva,",In-person,TU,UTSC
+257,ENGA02H3,Winter,2025,"- Keyzad, N.",Online,WE,UTSC
+258,ENGA02H3,Winter,2025,"- Bennett, C.",Online,TH,UTSC
+259,ENGA02H3,Winter,2025,"Brooks, D.",In-person,FR,UTSC
+260,ENGA03H3,Winter,2025,"Westoll, A.",In-person,WE,UTSC
+261,ENGA11H3,Winter,2025,"Leonard, G.",In-person,WE,UTSC
+262,ENGB04H3,Winter,2025,"Dolan, N.",In-person,WE,UTSC
+263,ENGB06H3,Winter,2025,"Lesk, A.",In-person,TU,UTSC
+264,ENGB12H3,Winter,2025,"King, S.",In-person,TH,UTSC
+265,ENGB28H3,Winter,2025,"Ryzhik, Y.",In-person,TU,UTSC
+266,ENGB29H3,Winter,2025,"Chakravarty, U.",In-person,MO,UTSC
+267,ENGB38H3,Winter,2025,"Greenblatt, J.",In-person,MO,UTSC
+268,ENGB39H3,Winter,2025,"Brooks, D.",In-person,WE,UTSC
+269,ENGB60H3,Winter,2025,"Wright, C.",In-person,TH,UTSC
+270,ENGB61H3,Winter,2025,"Westoll, A.",In-person,TU,UTSC
+271,ENGB63H3,Winter,2025,"Cardwell, E.",In-person,TH,UTSC
+272,ENGC09H3,Winter,2025,"Braune, S.",In-person,FR,UTSC
+273,ENGC15H3,Winter,2025,"Saeedi, P.",In-person,MO,UTSC
+274,ENGC28H3,Winter,2025,"Bolus-Reichert, C.",In-person,TU,UTSC
+275,ENGC45H3,Winter,2025,"Cardwell, E.",In-person,WE,UTSC
+276,ENGC46H3,Winter,2025,"- Synchronous Rodgers, J.",Online,TU,UTSC
+277,ENGC60H3,Winter,2025,"Lundy, R.",In-person,WE,UTSC
+278,ENGC69H3,Winter,2025,"Lister, I.",In-person,TH,UTSC
+279,ENGC74H3,Winter,2025,"Assif, M.",In-person,MO,UTSC
+280,ENGC87H3,Winter,2025,"Wright, C.",In-person,TU,UTSC
+281,ENGD14H3,Winter,2025,"Chakravarty, U.",In-person,WE,UTSC
+282,ENGD43H3,Winter,2025,"Stafford, R.",In-person,TU,UTSC
+283,ENGD48H3,Winter,2025,"Bolus-Reichert, C.",In-person,TH,UTSC
+284,ENGD60H3,Winter,2025,"Dolan, N.",In-person,TU,UTSC
+285,ENGD95H3,Winter,2025,"Westoll, A.",In-person,TU,UTSC
+286,ESTB03H3,Winter,2025,"Bariola Gonzales, N./",In-person,TU,UTSC
+287,ESTB04H3,Winter,2025,"Tozer, L.",In-person,TU,UTSC
+288,ESTC35H3,Winter,2025,"Klenk, N.",In-person,MO,UTSC
+289,ESTC40H3,Winter,2025,"Salas Reyes, R.",In-person,TH,UTSC
+290,ESTD18H3,Winter,2025,"Klenk, N.",In-person,WE,UTSC
+291,ESTD19H3,Winter,2025,"MacLellan, J.",In-person,TU,UTSC
+292,FLMA70H3,Winter,2025,"Rodness, R.",In-person,TH,UTSC
+293,FLMB71H3,Winter,2025,"- Jacob, E.",Online,MO,UTSC
+294,FLMB71H3,Winter,2025,"Sooriyakumaran,",In-person,TH,UTSC
+295,FLMB77H3,Winter,2025,"Sengupta, R.",In-person,MO,UTSC
+296,FLMC44H3,Winter,2025,"Flynn, D.",In-person,TH,UTSC
+297,FLMC75H3,Winter,2025,"Maurice, A.",In-person,WE,UTSC
+298,FLMC92H3,Winter,2025,"Sooriyakumaran,",In-person,TU,UTSC
+299,FREA02H3,Winter,2025,"Tsimenis, M.",In-person,MO,UTSC
+300,FREA02H3,Winter,2025,"Gamboa Gonzalez,",In-person,TU,UTSC
+301,FREA97H3,Winter,2025,"Sonina, S.",In-person,TU,UTSC
+302,FREA99H3,Winter,2025,"Janczak, M.",In-person,TH,UTSC
+303,FREB02H3,Winter,2025,"Pillet, M. TH room change",In-person,WE,UTSC
+304,FREB02H3,Winter,2025,"Beauquis,",In-person,MO,UTSC
+305,FREB36H3,Winter,2025,"Gaughan, C.",In-person,MO,UTSC
+306,FREB46H3,Winter,2025,"Sonina, S.",In-person,TU,UTSC
+307,FREB51H3,Winter,2025,"Gaughan, C.",In-person,WE,UTSC
+308,FREC02H3,Winter,2025,"Pillet, M.",In-person,MO,UTSC
+309,FREC02H3,Winter,2025,"Pillet, M.",In-person,TH,UTSC
+310,FREC11H3,Winter,2025,"Beauquis, C.",In-person,WE,UTSC
+311,FREC18H3,Winter,2025,"Mittler, S. Room change",In-person,TH,UTSC
+312,FREC57H3,Winter,2025,"Riendeau, P.",In-person,MO,UTSC
+313,FREC70H3,Winter,2025,"English, J. Room change",In-person,FR,UTSC
+314,FREC83H3,Winter,2025,"Mittler, S.",In-person,TU,UTSC
+315,FRED02H3,Winter,2025,Available,In-person,,UTSC
+316,FRED03H3,Winter,2025,Available,In-person,,UTSC
+317,FRED04H3,Winter,2025,Available,In-person,,UTSC
+318,FRED05H3,Winter,2025,Available,In-person,,UTSC
+319,FRED06H3,Winter,2025,"Tsimenis, Room change",In-person,TU,UTSC
+320,FRED14H3,Winter,2025,"Riendeau, Time change",In-person,MO,UTSC
+321,FRED14H3,Winter,2025,"- Synchronous Sharma, J.",Online,FR,UTSC
+322,FSTB01H3,Winter,2025,"Bariola Gonzales,",In-person,TU,UTSC
+323,FSTC02H3,Winter,2025,"Bender, D.",In-person,MO,UTSC
+324,FSTC24H3,Winter,2025,"Sukumaran, G.",In-person,WE,UTSC
+325,FSTD01H3,Winter,2025,Available,In-person,,UTSC
+326,FSTD02H3,Winter,2025,"Perttula, C.",In-person,TH,UTSC
+327,GASA01H3,Winter,2025,"Raman, B.",In-person,TU,UTSC
+328,GASB33H3,Winter,2025,"Li, L.",In-person,MO,UTSC
+329,GASB65H3,Winter,2025,"Elhalaby, E.",In-person,TH,UTSC
+330,GASC50H3,Winter,2025,"Chen, L.",In-person,MO,UTSC
+331,GASC59H3,Winter,2025,"Maunaguru, S.",In-person,WE,UTSC
+332,GASD53H3,Winter,2025,"Rockel, S.",In-person,TH,UTSC
+333,GASD55H3,Winter,2025,"Elhalaby, E.",In-person,TU,UTSC
+334,GGRA03H3,Winter,2025,"Buckley, M.",In-person,TU,UTSC
+335,GGRB03H3,Winter,2025,"Oswin, N. Room change",In-person,MO,UTSC
+336,GGRB05H3,Winter,2025,"Bernard, O.",In-person,WE,UTSC
+337,GGRB28H3,Winter,2025,"Majeed,",In-person,WE,UTSC
+338,GGRB32H3,Winter,2025,"Brauen, G.",In-person,FR,UTSC
+339,GGRC12H3,Winter,2025,"Farber, S.",In-person,TH,UTSC
+340,GGRC13H3,Winter,2025,"Torkameh, A.",In-person,WE,UTSC
+341,GGRC15H3,Winter,2025,"Brauen, G.",In-person,TU,UTSC
+342,GGRC24H3,Winter,2025,"Ekers, M.",In-person,TH,UTSC
+343,GGRC28H3,Winter,2025,"Latulippe, N.",In-person,TH,UTSC
+344,GGRC32H3,Winter,2025,"Higgins, Room change",In-person,TH,UTSC
+345,GGRD01H3,Winter,2025,Available,In-person,,UTSC
+346,GGRD12H3,Winter,2025,"Latulippe, N.",In-person,WE,UTSC
+347,GGRD14H3,Winter,2025,"Narayanareddy, Room change",In-person,TH,UTSC
+348,GGRD15H3,Winter,2025,"Oswin, N.",In-person,TU,UTSC
+349,GGRD30H3,Winter,2025,"Brauen, G.",In-person,MO,UTSC
+350,GGRD31H3,Winter,2025,Available,In-person,,UTSC
+351,GGRD49H3,Winter,2025,"Goffe, R.",In-person,TH,UTSC
+352,HISA06H3,Winter,2025,"Raman, B.",In-person,TU,UTSC
+353,HISB02H3,Winter,2025,"Khalifa, N.",In-person,TU,UTSC
+354,HISB03H3,Winter,2025,"Riddell, W.",In-person,MO,UTSC
+355,HISB11H3,Winter,2025,"Dost, S.",In-person,TU,UTSC
+356,HISB12H3,Winter,2025,"Cooper, K.",In-person,MO,UTSC
+357,HISB31H3,Winter,2025,"Riddell, W.",In-person,TH,UTSC
+358,HISB59H3,Winter,2025,"deSouza, S.",In-person,TH,UTSC
+359,HISB64H3,Winter,2025,"Khalifa, N.",In-person,MO,UTSC
+360,HISB65H3,Winter,2025,"Elhalaby, E.",In-person,TH,UTSC
+361,HISC01H3,Winter,2025,"Nelson IV, W.",In-person,TH,UTSC
+362,HISC08H3,Winter,2025,"Rockel, S.",In-person,TU,UTSC
+363,HISC11H3,Winter,2025,"Blouin, K.",In-person,TH,UTSC
+364,HISC32H3,Winter,2025,"Kazal, R.",In-person,MO,UTSC
+365,HISC45H3,Winter,2025,"Hastings, P.",In-person,WE,UTSC
+366,HISC56H3,Winter,2025,"Chen, L.",In-person,MO,UTSC
+367,HISC59H3,Winter,2025,"Maunaguru, S.",In-person,WE,UTSC
+368,HISC68H3,Winter,2025,"Blouin, K.",In-person,TH,UTSC
+369,HISC97H3,Winter,2025,"Dinani, H.",In-person,TU,UTSC
+370,HISD01H3,Winter,2025,Available,In-person,,UTSC
+371,HISD02H3,Winter,2025,Available,In-person,,UTSC
+372,HISD18H3,Winter,2025,"Price, M.",In-person,TH,UTSC
+373,HISD36H3,Winter,2025,"Kazal, R.",In-person,MO,UTSC
+374,HISD53H3,Winter,2025,"Rockel, S.",In-person,TH,UTSC
+375,HISD55H3,Winter,2025,"Elhalaby, E.",In-person,TU,UTSC
+376,HISD93H3,Winter,2025,"Arthurs, J.",In-person,WE,UTSC
+377,HLTA03H3,Winter,2025,"Bytautas, J.",In-person,TH,UTSC
+378,HLTA20H3,Winter,2025,"Colaco, K.",In-person,WE,UTSC
+379,HLTB15H3,Winter,2025,"Benoit, A.",In-person,TH,UTSC
+380,HLTB22H3,Winter,2025,"Colaco, K.",In-person,TH,UTSC
+381,HLTB24H3,Winter,2025,"Bytautas, J.",In-person,TU,UTSC
+382,HLTB27H3,Winter,2025,"Schlueter, Room change",In-person,WE,UTSC
+383,HLTB41H3,Winter,2025,"Massaquoi,",In-person,WE,UTSC
+384,HLTB44H3,Winter,2025,"Caron-Beaudoin,",In-person,TU,UTSC
+385,HLTC16H3,Winter,2025,"Schlueter, D.",In-person,TH,UTSC
+386,HLTC22H3,Winter,2025,"Marani, H.",In-person,TH,UTSC
+387,HLTC25H3,Winter,2025,"Wong, C.",Hybrid,TH,UTSC
+388,HLTC27H3,Winter,2025,"Brown, H.",In-person,MO,UTSC
+389,HLTC29H3,Winter,2025,"Schlueter, D.",In-person,WE,UTSC
+390,HLTC30H3,Winter,2025,"Wong, C.",In-person,WE,UTSC
+391,HLTC43H3,Winter,2025,"Bytautas, J.",In-person,FR,UTSC
+392,HLTC51H3,Winter,2025,"Spence, N.",In-person,WE,UTSC
+393,HLTC55H3,Winter,2025,"Wigle, J.",In-person,TU,UTSC
+394,HLTC56H3,Winter,2025,"- Synchronous Nair, A.",Online,WE,UTSC
+395,HLTC81H3,Winter,2025,"Tavares, W.",In-person,WE,UTSC
+396,HLTD01H3,Winter,2025,Available,In-person,,UTSC
+397,HLTD07H3,Winter,2025,"Parsons, J. Room change",In-person,TH,UTSC
+398,HLTD18H3,Winter,2025,"Manolson, M.",In-person,TU,UTSC
+399,HLTD25H3,Winter,2025,"Tsuji, L.",In-person,TU,UTSC
+400,HLTD28H3,Winter,2025,"Colaco, K.",In-person,TH,UTSC
+401,HLTD40H3,Winter,2025,"- Marani, H. Changed to asynchronous",Online,,UTSC
+402,HLTD50H3,Winter,2025,"Bisaillon, L.",In-person,MO,UTSC
+403,HLTD54H3,Winter,2025,"Lalani, M.",In-person,WE,UTSC
+404,HLTD80H3,Winter,2025,"- Synchronous Antabe, R.",Online,MO,UTSC
+405,HLTD80H3,Winter,2025,"Dinani, H.",Hybrid,TH,UTSC
+406,IDSA02H3,Winter,2025,"Ilmi, A.",In-person,MO,UTSC
+407,IDSB02H3,Winter,2025,"Isaac, M.",In-person,WE,UTSC
+408,IDSB06H3,Winter,2025,"Torres-Ruiz, A.",In-person,TH,UTSC
+409,IDSB07H3,Winter,2025,"Wai, Z.",In-person,WE,UTSC
+410,IDSC01H3,Winter,2025,"Mollett, S.",In-person,WE,UTSC
+411,IDSC03H3,Winter,2025,"Callebert, R.",In-person,TU,UTSC
+412,IDSC14H3,Winter,2025,"Isakson, R.",In-person,TH,UTSC
+413,IDSC15H3,Winter,2025,"Ilmi, A.",In-person,TU,UTSC
+414,IDSC18H3,Winter,2025,"Von Lieres, B.",In-person,TH,UTSC
+415,IDSD02H3,Winter,2025,"Von Lieres, B.",In-person,TU,UTSC
+416,IDSD06H3,Winter,2025,"Mollett, S.",In-person,WE,UTSC
+417,IDSD14H3,Winter,2025,Available,In-person,,UTSC
+418,IDSD15H3,Winter,2025,Available,In-person,,UTSC
+419,JOUA02H3,Winter,2025,"Shupak, G.",In-person,TU,UTSC
+420,JOUB02H3,Winter,2025,"Yu, S.",In-person,WE,UTSC
+421,JOUB05H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+422,JOUB20H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+423,JOUB24H3,Winter,2025,"Mo, G.",In-person,TU,UTSC
+424,JOUC18H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+425,JOUC19H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+426,JOUC19H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+427,JOUC20H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+428,JOUC21H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+429,JOUC22H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+430,JOUC30H3,Winter,2025,"Roderique, H.",In-person,TU,UTSC
+431,JOUC60H3,Winter,2025,"Cudjoe, J.",In-person,TU,UTSC
+432,JOUC80H3,Winter,2025,"Yu, S.",In-person,WE,UTSC
+433,JOUD10H3,Winter,2025,"Roderique, H.",In-person,TU,UTSC
+434,JOUD11H3,Winter,2025,"Abdul Hadi, T.",In-person,TU,UTSC
+435,LGGA10H3,Winter,2025,"Back, U.",In-person,TU,UTSC
+436,LGGA10H3,Winter,2025,"Kim, H.",In-person,TU,UTSC
+437,LGGA12H3,Winter,2025,"Back, U.",In-person,TU,UTSC
+438,LGGA61H3,Winter,2025,"Wu, H.",In-person,MO,UTSC
+439,LGGA75H3,Winter,2025,"Vivekanandan, P.",In-person,TH,UTSC
+440,LGGB61H3,Winter,2025,"Wang, R.",In-person,TU,UTSC
+441,LGGC64H3,Winter,2025,"Wang, R.",In-person,TU,UTSC
+442,LGGC65H3,Winter,2025,"Wu, H.",In-person,MO,UTSC
+443,LINA02H3,Winter,2025,"Moghaddam,",In-person,MO,UTSC
+444,LINB04H3,Winter,2025,"Kang, Y.",In-person,MO,UTSC
+445,LINB10H3,Winter,2025,"Gamboa Gonzalez,",In-person,FR,UTSC
+446,LINB18H3,Winter,2025,"- Asynchronous Moghaddam, S.",Online,,UTSC
+447,LINB29H3,Winter,2025,"Clare, E.",In-person,MO,UTSC
+448,LINB60H3,Winter,2025,"Wang, R.",In-person,TU,UTSC
+449,LINB62H3,Winter,2025,"Pizzacalla, M.",In-person,FR,UTSC
+450,LINB62H3,Winter,2025,"Pizzacalla, M.",In-person,TU,UTSC
+451,LINB98H3,Winter,2025,Available,In-person,,UTSC
+452,LINC02H3,Winter,2025,"Craioveanu, R.",In-person,WE,UTSC
+453,LINC10H3,Winter,2025,"Moghaddam, S.",In-person,WE,UTSC
+454,LINC11H3,Winter,2025,"Peters, A.",In-person,TH,UTSC
+455,LINC35H3,Winter,2025,"Bhattasali, S.",In-person,TU,UTSC
+456,LINC47H3,Winter,2025,"Umana, B.",In-person,TH,UTSC
+457,LIND01H3,Winter,2025,Available,In-person,,UTSC
+458,LIND02H3,Winter,2025,Available,In-person,,UTSC
+459,LIND03H3,Winter,2025,Available,In-person,,UTSC
+460,LIND11H3,Winter,2025,"Moghaddam, Room change",In-person,WE,UTSC
+461,MATA02H3,Winter,2025,"Tiozzo, G.",In-person,TU,UTSC
+462,MATA22H3,Winter,2025,"Kielstra, T.",In-person,TU,UTSC
+463,MATA22H3,Winter,2025,"Glynn-Adey, P.",In-person,WE,UTSC
+464,MATA22H3,Winter,2025,"Kielstra, T.",In-person,WE,UTSC
+465,MATA23H3,Winter,2025,"Breuss, N.",In-person,MO,UTSC
+466,MATA29H3,Winter,2025,"Glynn-Adey, P.",In-person,MO,UTSC
+467,MATA30H3,Winter,2025,"Kielstra, T.",In-person,WE,UTSC
+468,MATA31H3,Winter,2025,"Sarnataro,",In-person,WE,UTSC
+469,MATA34H3,Winter,2025,"Grinnell, R.",In-person,MO,UTSC
+470,MATA34H3,Winter,2025,"Grinnell, R.",In-person,TU,UTSC
+471,MATA35H3,Winter,2025,"Hessami Pilehrood,",In-person,MO,UTSC
+472,MATA36H3,Winter,2025,"Cavers, M.",In-person,MO,UTSC
+473,MATA36H3,Winter,2025,"Cavers, M.",In-person,TU,UTSC
+474,MATA37H3,Winter,2025,"Smith, K.",In-person,TU,UTSC
+475,MATA37H3,Winter,2025,"Smith, K.",In-person,MO,UTSC
+476,MATA37H3,Winter,2025,"Smith, K.",In-person,MO,UTSC
+477,MATA67H3,Winter,2025,"Molloy,",In-person,MO,UTSC
+478,MATB24H3,Winter,2025,"Jiang, X.",In-person,MO,UTSC
+479,MATB42H3,Winter,2025,"Glynn-Adey, P.",In-person,MO,UTSC
+480,MATB43H3,Winter,2025,"Smith, K.",In-person,MO,UTSC
+481,MATB61H3,Winter,2025,"Jiang, X.",In-person,MO,UTSC
+482,MATC01H3,Winter,2025,"Bogachev, N.",In-person,TU,UTSC
+483,MATC15H3,Winter,2025,"Bogachev, N.",In-person,TU,UTSC
+484,MATC34H3,Winter,2025,"Tiozzo, G.",In-person,TU,UTSC
+485,MATC37H3,Winter,2025,"Haslhofer, R.",In-person,TU,UTSC
+486,MATC44H3,Winter,2025,"Cavers, M.",In-person,TU,UTSC
+487,MATC46H3,Winter,2025,"Jeffrey, L.",In-person,TU,UTSC
+488,MATC58H3,Winter,2025,"Jiang, X.",In-person,MO,UTSC
+489,MATC63H3,Winter,2025,"Haslhofer, R.",In-person,TU,UTSC
+490,MATD01H3,Winter,2025,"Kupers, A.",In-person,WE,UTSC
+491,MATD09H3,Winter,2025,"Grinnell, R.",In-person,MO,UTSC
+492,MATD12H3,Winter,2025,"Shahbazi, Z.",In-person,TU,UTSC
+493,MATD34H3,Winter,2025,"Jeffrey, L.",In-person,TU,UTSC
+494,MATD92H3,Winter,2025,Available,In-person,,UTSC
+495,MATD93H3,Winter,2025,Available,In-person,,UTSC
+496,MATD94H3,Winter,2025,Available,In-person,,UTSC
+497,MATD95H3,Winter,2025,Available,In-person,,UTSC
+498,MBTB13H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+499,MBTB41H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+500,MBTB50H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+501,MBTC62H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+502,MBTC63H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+503,MBTC70H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+504,MBTC72H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+505,MDSA11H3,Winter,2025,"- Synchronous Cowan, T.",Online,TH,UTSC
+506,MDSA13H3,Winter,2025,"- Asynchronous Cudjoe, J.",Online,,UTSC
+507,MDSB12H3,Winter,2025,"Jensen, S.",In-person,TH,UTSC
+508,MDSB16H3,Winter,2025,"Couchie, A.",In-person,MO,UTSC
+509,MDSB20H3,Winter,2025,"- Cowan, T. Changed to Online",Online,WE,UTSC
+510,MDSB33H3,Winter,2025,"Lobo, R.",In-person,TH,UTSC
+511,MDSC12H3,Winter,2025,"Jensen, S.",In-person,MO,UTSC
+512,MDSC13H3,Winter,2025,"Knight, L.",In-person,FR,UTSC
+513,MDSC24H3,Winter,2025,"Cudjoe, J.",In-person,TU,UTSC
+514,MDSC25H3,Winter,2025,"Yu, S.",In-person,WE,UTSC
+515,MDSC31H3,Winter,2025,"- Asynchronous Nieborg, D.",Online,,UTSC
+516,MDSC33H3,Winter,2025,"Nieborg, D.",Hybrid,TU,UTSC
+517,MDSC34H3,Winter,2025,"Cudjoe, J.",In-person,TU,UTSC
+518,MDSC41H3,Winter,2025,"Bai, R.",In-person,TH,UTSC
+519,MDSC61H3,Winter,2025,"Lobo, R. Room change",In-person,WE,UTSC
+520,MDSC64H3,Winter,2025,"Simon, G.",In-person,TH,UTSC
+521,MDSD10H3,Winter,2025,"Lobo, R. Room change",In-person,WE,UTSC
+522,MDSD11H3,Winter,2025,"Abdul Hadi, T.",In-person,TU,UTSC
+523,MDSD20H3,Winter,2025,"Simon, G.",In-person,TU,UTSC
+524,MDSD30H3,Winter,2025,"Visan, L.",In-person,MO,UTSC
+525,MGAB01H3,Winter,2025,"Chen, L.",In-person,TU,UTSC
+526,MGAB02H3,Winter,2025,"Chen, L.",In-person,TU,UTSC
+527,MGAB02H3,Winter,2025,"Chen, L.",In-person,TU,UTSC
+528,MGAB02H3,Winter,2025,"Li, N.",In-person,MO,UTSC
+529,MGAB02H3,Winter,2025,"Chen, L.",In-person,TU,UTSC
+530,MGAB02H3,Winter,2025,"Daga, S.",In-person,TU,UTSC
+531,MGAB02H3,Winter,2025,"Quan Fun,",In-person,TU,UTSC
+532,MGAB02H3,Winter,2025,"Li, N.",In-person,MO,UTSC
+533,MGAB02H3,Winter,2025,"Daga, S.",In-person,TU,UTSC
+534,MGAB02H3,Winter,2025,"Li, N.",In-person,MO,UTSC
+535,MGAB02H3,Winter,2025,"Quan Fun,",In-person,TU,UTSC
+536,MGAB02H3,Winter,2025,"Daga, S.",In-person,TU,UTSC
+537,MGAB03H3,Winter,2025,"Chen, L.",In-person,WE,UTSC
+538,MGAB03H3,Winter,2025,"Chen, L.",In-person,WE,UTSC
+539,MGAB03H3,Winter,2025,"Chen, L.",In-person,WE,UTSC
+540,MGAC02H3,Winter,2025,"Quan Fun,",In-person,MO,UTSC
+541,MGAC02H3,Winter,2025,"Quan Fun,",In-person,MO,UTSC
+542,MGAC10H3,Winter,2025,"Papalambropoulos,",In-person,MO,UTSC
+543,MGAC50H3,Winter,2025,"Ratnam, S./",In-person,TU,UTSC
+544,MGAC70H3,Winter,2025,"Barkataki, S.",In-person,TU,UTSC
+545,MGAD20H3,Winter,2025,"Gireedharan, M.",In-person,WE,UTSC
+546,MGAD40H3,Winter,2025,"Barkataki, S.",In-person,TU,UTSC
+547,MGAD45H3,Winter,2025,"Olatoye, F.",In-person,MO,UTSC
+548,MGAD65H3,Winter,2025,"Ratnam, S./",In-person,TH,UTSC
+549,MGAD70H3,Winter,2025,"Quan Fun, G.",In-person,TU,UTSC
+550,MGAD70H3,Winter,2025,"Quan Fun, G.",In-person,MO,UTSC
+551,MGEA05H3,Winter,2025,"Parkinson, J.",In-person,TH,UTSC
+552,MGEA06H3,Winter,2025,"Au, I.",In-person,MO,UTSC
+553,MGEA06H3,Winter,2025,"Au, I.",In-person,WE,UTSC
+554,MGEA06H3,Winter,2025,"- Asynchronous Au, I.",Online,,UTSC
+555,MGEB01H3,Winter,2025,"Anjomshoa, M.",In-person,TU,UTSC
+556,MGEB02H3,Winter,2025,"Mazaheri, A.",In-person,FR,UTSC
+557,MGEB02H3,Winter,2025,"Turner, L.",In-person,MO,UTSC
+558,MGEB05H3,Winter,2025,"Au, I.",In-person,FR,UTSC
+559,MGEB06H3,Winter,2025,"Parkinson, J.",In-person,TH,UTSC
+560,MGEB06H3,Winter,2025,"Parkinson, J.",In-person,WE,UTSC
+561,MGEB06H3,Winter,2025,"Parkinson, J.",In-person,FR,UTSC
+562,MGEB06H3,Winter,2025,"Parkinson, J.",In-person,MO,UTSC
+563,MGEB06H3,Winter,2025,"Parkinson, J.",In-person,TU,UTSC
+564,MGEB06H3,Winter,2025,"Parkinson, J.",In-person,TH,UTSC
+565,MGEB11H3,Winter,2025,"Turner, L.",In-person,FR,UTSC
+566,MGEB12H3,Winter,2025,"Mazaheri,",In-person,MO,UTSC
+567,MGEB12H3,Winter,2025,"Mazaheri,",In-person,WE,UTSC
+568,MGEB12H3,Winter,2025,"- Mazaheri,",Online,,UTSC
+569,MGEB12H3,Winter,2025,"Mazaheri,",In-person,TU,UTSC
+570,MGEB32H3,Winter,2025,"Campolieti, M.",In-person,TU,UTSC
+571,MGEC02H3,Winter,2025,"Mazaheri, A.",In-person,TH,UTSC
+572,MGEC02H3,Winter,2025,"Mazaheri, A.",In-person,TH,UTSC
+573,MGEC06H3,Winter,2025,"Anjomshoa, M.",In-person,TU,UTSC
+574,MGEC08H3,Winter,2025,"Au, I.",In-person,TU,UTSC
+575,MGEC11H3,Winter,2025,"Yu, V.",In-person,FR,UTSC
+576,MGEC11H3,Winter,2025,"Yu, V.",In-person,FR,UTSC
+577,MGEC32H3,Winter,2025,"Hicks, J.",In-person,WE,UTSC
+578,MGEC34H3,Winter,2025,"Campolieti, M.",In-person,TU,UTSC
+579,MGEC37H3,Winter,2025,"Krashinsky, M.",In-person,TH,UTSC
+580,MGEC38H3,Winter,2025,"Gillezeau, R.",In-person,WE,UTSC
+581,MGEC41H3,Winter,2025,"Sood, A.",In-person,FR,UTSC
+582,MGEC41H3,Winter,2025,"Sood, A.",In-person,FR,UTSC
+583,MGEC45H3,Winter,2025,"Krashinsky, H.",In-person,TH,UTSC
+584,MGEC51H3,Winter,2025,"Hicks, J.",In-person,WE,UTSC
+585,MGEC61H3,Winter,2025,"Au, I.",In-person,MO,UTSC
+586,MGEC61H3,Winter,2025,"Au, I.",In-person,FR,UTSC
+587,MGEC62H3,Winter,2025,"Medina Quispe,",In-person,MO,UTSC
+588,MGEC71H3,Winter,2025,"Parkinson, J.",In-person,FR,UTSC
+589,MGEC81H3,Winter,2025,"- Frazer, G. Delivery mode changes",Online,TH,UTSC
+590,MGEC82H3,Winter,2025,"- Frazer, G. Delivery mode change",Online,TH,UTSC
+591,MGED02H3,Winter,2025,"Medina Quispe,",In-person,MO,UTSC
+592,MGED06H3,Winter,2025,"Medina Quispe,",In-person,TU,UTSC
+593,MGED50H3,Winter,2025,"Krashinsky, H.",In-person,TH,UTSC
+594,MGED90H3,Winter,2025,Available,In-person,,UTSC
+595,MGED91H3,Winter,2025,Available,In-person,,UTSC
+596,MGFB10H3,Winter,2025,"Ahmed, S.",In-person,TH,UTSC
+597,MGFB10H3,Winter,2025,"Tong, J.",In-person,WE,UTSC
+598,MGFB10H3,Winter,2025,"Tong, J.",In-person,MO,UTSC
+599,MGFB10H3,Winter,2025,"Tong, J.",In-person,MO,UTSC
+600,MGFB10H3,Winter,2025,"Ahmed, S.",In-person,TH,UTSC
+601,MGFC10H3,Winter,2025,"Chau, D.",In-person,TU,UTSC
+602,MGFC10H3,Winter,2025,"Chau, D.",In-person,TU,UTSC
+603,MGFC10H3,Winter,2025,"Chau, D.",In-person,TH,UTSC
+604,MGFC30H3,Winter,2025,"Wei, J.",In-person,WE,UTSC
+605,MGFC30H3,Winter,2025,"Wei, J.",In-person,WE,UTSC
+606,MGFC35H3,Winter,2025,"Nozawa, Y.",In-person,TH,UTSC
+607,MGFC35H3,Winter,2025,"Nozawa, Y.",In-person,TH,UTSC
+608,MGFC35H3,Winter,2025,"Nozawa, Y.",In-person,TH,UTSC
+609,MGFC45H3,Winter,2025,"Chau, B./ Qureshi,",In-person,MO,UTSC
+610,MGFD25H3,Winter,2025,"Chau, B.",In-person,TU,UTSC
+611,MGFD25H3,Winter,2025,"Chau, B.",In-person,TH,UTSC
+612,MGFD30H3,Winter,2025,"Mazaheri, A.",In-person,MO,UTSC
+613,MGFD30H3,Winter,2025,"Mazaheri, A.",In-person,FR,UTSC
+614,MGFD40H3,Winter,2025,"Vandezande, K.",In-person,MO,UTSC
+615,MGFD40H3,Winter,2025,"Vandezande, K.",In-person,MO,UTSC
+616,MGFD40H3,Winter,2025,"Vandezande, K.",In-person,MO,UTSC
+617,MGFD50H3,Winter,2025,"Chau, D.",In-person,WE,UTSC
+618,MGFD60H3,Winter,2025,"Chau, B.",In-person,WE,UTSC
+619,MGFD85H3,Winter,2025,"Nozawa, Y.",In-person,TU,UTSC
+620,MGHA12H3,Winter,2025,"Nwadei, T.",In-person,TU,UTSC
+621,MGHA12H3,Winter,2025,"Trougakos, J.",In-person,FR,UTSC
+622,MGHA12H3,Winter,2025,"Trougakos, J.",In-person,FR,UTSC
+623,MGHA12H3,Winter,2025,"Nwadei, T.",In-person,TU,UTSC
+624,MGHA12H3,Winter,2025,"Montgomery, S.",In-person,TU,UTSC
+625,MGHB02H3,Winter,2025,"Hansen, S.",In-person,WE,UTSC
+626,MGHB02H3,Winter,2025,"Hansen, S.",In-person,WE,UTSC
+627,MGHC02H3,Winter,2025,"Addo-Bekoe, C.",In-person,MO,UTSC
+628,MGHC02H3,Winter,2025,"Heathcote, J.",In-person,TU,UTSC
+629,MGHC02H3,Winter,2025,"Heathcote, J.",In-person,TU,UTSC
+630,MGHC02H3,Winter,2025,"Radhakrishnan, P.",In-person,WE,UTSC
+631,MGHC02H3,Winter,2025,"Syed, I.",In-person,WE,UTSC
+632,MGHC02H3,Winter,2025,"Addo-Bekoe, C.",In-person,MO,UTSC
+633,MGHC23H3,Winter,2025,"Radhakrishnan, P.",In-person,TU,UTSC
+634,MGHC52H3,Winter,2025,"Radhakrishnan, Room change",In-person,TU,UTSC
+635,MGHC53H3,Winter,2025,"Radhakrishnan, P.",In-person,WE,UTSC
+636,MGHD25H3,Winter,2025,"Hansen, S.",In-person,TH,UTSC
+637,MGHD26H3,Winter,2025,"Wilfred, S.",In-person,TH,UTSC
+638,MGIA01H3,Winter,2025,"Dewan, T.",In-person,FR,UTSC
+639,MGIA01H3,Winter,2025,"Dewan, T.",In-person,FR,UTSC
+640,MGIB02H3,Winter,2025,"Hansen, S.",In-person,MO,UTSC
+641,MGIB02H3,Winter,2025,"Hansen, S.",In-person,MO,UTSC
+642,MGID40H3,Winter,2025,"Zemel, M.",In-person,FR,UTSC
+643,MGID79H3,Winter,2025,"McElheran, K.",In-person,WE,UTSC
+644,MGMA01H3,Winter,2025,"Chan, C.",In-person,TH,UTSC
+645,MGMA01H3,Winter,2025,"Chan, C.",In-person,TH,UTSC
+646,MGMA01H3,Winter,2025,"Chan, C.",In-person,TH,UTSC
+647,MGMA01H3,Winter,2025,"Aggarwal, P.",In-person,TU,UTSC
+648,MGMA01H3,Winter,2025,"Aggarwal, P.",In-person,TU,UTSC
+649,MGMB01H3,Winter,2025,"Shah, A.",In-person,MO,UTSC
+650,MGMB01H3,Winter,2025,"Shah, A.",In-person,MO,UTSC
+651,MGMB01H3,Winter,2025,"Dewan, T.",In-person,TU,UTSC
+652,MGMB01H3,Winter,2025,"Shah, A.",In-person,MO,UTSC
+653,MGMB01H3,Winter,2025,"Dewan, T.",In-person,TH,UTSC
+654,MGMC01H3,Winter,2025,"Dewan, T.",In-person,TH,UTSC
+655,MGMC14H3,Winter,2025,"Dewan, T.",In-person,WE,UTSC
+656,MGMD01H3,Winter,2025,"Dewan, T.",In-person,WE,UTSC
+657,MGMD10H3,Winter,2025,"Aggarwal, P.",In-person,MO,UTSC
+658,MGMD10H3,Winter,2025,"Aggarwal, P.",In-person,MO,UTSC
+659,MGMD21H3,Winter,2025,"Dewan, T.",In-person,TH,UTSC
+660,MGOC10H3,Winter,2025,"Quan, V.",In-person,MO,UTSC
+661,MGOC10H3,Winter,2025,"Quan, V.",In-person,MO,UTSC
+662,MGOC10H3,Winter,2025,"Quan, V.",In-person,WE,UTSC
+663,MGOC15H3,Winter,2025,"Sekar, S.",In-person,TU,UTSC
+664,MGOC15H3,Winter,2025,"Sekar, S.",In-person,TU,UTSC
+665,MGOC20H3,Winter,2025,"Quan, V.",In-person,WE,UTSC
+666,MGOC20H3,Winter,2025,"Quan, V.",In-person,TH,UTSC
+667,MGOC20H3,Winter,2025,"Quan, V.",In-person,TH,UTSC
+668,MGSB01H3,Winter,2025,"de Bettignies, J.",In-person,WE,UTSC
+669,MGSC01H3,Winter,2025,"Shibaeva, M.",In-person,TH,UTSC
+670,MGSC03H3,Winter,2025,"Syed, I.",In-person,MO,UTSC
+671,MGSC14H3,Winter,2025,"Constantinou, P.",In-person,MO,UTSC
+672,MGSC30H3,Winter,2025,"Guiyab, J.",In-person,WE,UTSC
+673,MGSC35H3,Winter,2025,"Shibaeva, M.",In-person,TU,UTSC
+674,MGSD01H3,Winter,2025,"Zhu, B.",In-person,WE,UTSC
+675,MGSD05H3,Winter,2025,"McElheran, K.",In-person,WE,UTSC
+676,MGSD24H3,Winter,2025,"Olatoye, F.",In-person,WE,UTSC
+677,MGTA01H3,Winter,2025,"Toor, A.",In-person,TU,UTSC
+678,MGTA02H3,Winter,2025,"Toor, A.",In-person,MO,UTSC
+679,MGTA02H3,Winter,2025,"Toor, A.",In-person,TU,UTSC
+680,MGTA38H3,Winter,2025,"Heathcote, J.",In-person,MO,UTSC
+681,MGTA38H3,Winter,2025,"Heathcote, J.",In-person,MO,UTSC
+682,MGTA38H3,Winter,2025,"Shibaeva, M.",In-person,TU,UTSC
+683,MGTA38H3,Winter,2025,"Visan, L.",In-person,TU,UTSC
+684,MGTA38H3,Winter,2025,"Daga, S.",In-person,TU,UTSC
+685,MGTA38H3,Winter,2025,"Daga, S.",In-person,WE,UTSC
+686,MGTA38H3,Winter,2025,"Daga, S.",In-person,WE,UTSC
+687,MGTA38H3,Winter,2025,"Daga, S.",In-person,WE,UTSC
+688,MGTA38H3,Winter,2025,"Visan, L.",In-person,TH,UTSC
+689,MGTA38H3,Winter,2025,"Shibaeva, M.",In-person,TH,UTSC
+690,MGTD80H3,Winter,2025,Available,In-person,,UTSC
+691,MGTD81H3,Winter,2025,Available,In-person,,UTSC
+692,MUZA60H3,Winter,2025,"Hasznos, D.",In-person,TH,UTSC
+693,MUZA61H3,Winter,2025,"Hasznos, D.",In-person,TH,UTSC
+694,MUZA62H3,Winter,2025,"Murray, P.",In-person,MO,UTSC
+695,MUZA63H3,Winter,2025,"Murray, P.",In-person,MO,UTSC
+696,MUZA64H3,Winter,2025,"Leong, T.",In-person,TU,UTSC
+697,MUZA65H3,Winter,2025,"Leong, T.",In-person,TU,UTSC
+698,MUZA66H3,Winter,2025,"Berry, A.",In-person,MO,UTSC
+699,MUZA66H3,Winter,2025,"Leong, T.",In-person,WE,UTSC
+700,MUZA67H3,Winter,2025,"Berry, A.",In-person,MO,UTSC
+701,MUZA67H3,Winter,2025,"Leong, T.",In-person,WE,UTSC
+702,MUZA80H3,Winter,2025,"Risk, L.",In-person,WE,UTSC
+703,MUZA80H3,Winter,2025,"Leong, T.",In-person,TU,UTSC
+704,MUZA99H3,Winter,2025,"- Asynchronous Jacobs, Q.",Online,,UTSC
+705,MUZB01H3,Winter,2025,"Mantie, R.",In-person,TU,UTSC
+706,MUZB20H3,Winter,2025,"Cheung, B.",In-person,TH,UTSC
+707,MUZB60H3,Winter,2025,"Hasznos, D.",In-person,TH,UTSC
+708,MUZB61H3,Winter,2025,"Hasznos, D.",In-person,TH,UTSC
+709,MUZB62H3,Winter,2025,"Murray, P.",In-person,MO,UTSC
+710,MUZB63H3,Winter,2025,"Murray, P.",In-person,MO,UTSC
+711,MUZB64H3,Winter,2025,"Leong, T.",In-person,TU,UTSC
+712,MUZB65H3,Winter,2025,"Leong, T.",In-person,TU,UTSC
+713,MUZB66H3,Winter,2025,"Berry, A.",In-person,MO,UTSC
+714,MUZB66H3,Winter,2025,"Leong, T.",In-person,WE,UTSC
+715,MUZB67H3,Winter,2025,"Berry, A.",In-person,MO,UTSC
+716,MUZB67H3,Winter,2025,"Leong, T.",In-person,WE,UTSC
+717,MUZB80H3,Winter,2025,"Tsang, A.",In-person,MO,UTSC
+718,MUZC60H3,Winter,2025,"Hasznos, D.",In-person,TH,UTSC
+719,MUZC61H3,Winter,2025,"Hasznos, D.",In-person,TH,UTSC
+720,MUZC62H3,Winter,2025,"Murray, P.",In-person,MO,UTSC
+721,MUZC63H3,Winter,2025,"Murray, P.",In-person,MO,UTSC
+722,MUZC64H3,Winter,2025,"Leong, T.",In-person,TU,UTSC
+723,MUZC65H3,Winter,2025,"Leong, T.",In-person,TU,UTSC
+724,MUZC66H3,Winter,2025,"Berry, A.",In-person,MO,UTSC
+725,MUZC66H3,Winter,2025,"Leong, T.",In-person,WE,UTSC
+726,MUZC67H3,Winter,2025,"Berry, A.",In-person,MO,UTSC
+727,MUZC67H3,Winter,2025,"Leong, T.",In-person,WE,UTSC
+728,MUZD80H3,Winter,2025,"Stanbridge, A.",In-person,TU,UTSC
+729,MUZD81H3,Winter,2025,Available,In-person,,UTSC
+730,NMEB05H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+731,NMEB05H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+732,NMEB06H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+733,NMEB06H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+734,NMEB08H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+735,NMEB08H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+736,NMEB09H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+737,NMEB09H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+738,NMEB10H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+739,NMEB10H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+740,NMEC01H3,Winter,2025,"Couchie, A.",In-person,WE,UTSC
+741,NROB61H3,Winter,2025,"Rozeske, R.",In-person,TU,UTSC
+742,NROC61H3,Winter,2025,"Ito Lee, R.",In-person,WE,UTSC
+743,NROC63H3,Winter,2025,"Ito Lee, R.",In-person,TH,UTSC
+744,NROC64H3,Winter,2025,"Morrissey, M.",In-person,TU,UTSC
+745,PHLA10H3,Winter,2025,"Lee, A.",In-person,TU,UTSC
+746,PHLB02H3,Winter,2025,"Gustafson, A.",In-person,FR,UTSC
+747,PHLB07H3,Winter,2025,"Hamblin,",In-person,MO,UTSC
+748,PHLB09H3,Winter,2025,"Mathison,",In-person,TU,UTSC
+749,PHLB11H3,Winter,2025,"Yarandi, S.",In-person,TH,UTSC
+750,PHLB17H3,Winter,2025,"Shoemaker, E.",In-person,TU,UTSC
+751,PHLB18H3,Winter,2025,"- Synchronous Yarandi, S.",Online,TU,UTSC
+752,PHLB55H3,Winter,2025,"Lee, A.",In-person,TU,UTSC
+753,PHLB81H3,Winter,2025,"Raza, Z.",In-person,TH,UTSC
+754,PHLC06H3,Winter,2025,"Gustafson, Room change",In-person,WE,UTSC
+755,PHLC09H3,Winter,2025,"Hamblin, C.",In-person,TH,UTSC
+756,PHLC10H3,Winter,2025,"Howard, N.",In-person,TH,UTSC
+757,PHLC14H3,Winter,2025,"Yarandi, S.",In-person,FR,UTSC
+758,PHLC22H3,Winter,2025,"Hellie, B.",In-person,MO,UTSC
+759,PHLC35H3,Winter,2025,"Wilson, J.",In-person,MO,UTSC
+760,PHLC45H3,Winter,2025,"Hamblin, C.",In-person,WE,UTSC
+761,PHLC51H3,Winter,2025,"Kremer, P. Room change",In-person,WE,UTSC
+762,PHLD09H3,Winter,2025,"Mathison, E.",In-person,MO,UTSC
+763,PHLD31H3,Winter,2025,"Chaintreuil, U.",In-person,TU,UTSC
+764,PHLD78H3,Winter,2025,"Shoemaker, E.",In-person,TH,UTSC
+765,PHLD85H3,Winter,2025,"Mathison, E.",In-person,MO,UTSC
+766,PHLD90H3,Winter,2025,Available,In-person,,UTSC
+767,PHLD91H3,Winter,2025,Available,In-person,,UTSC
+768,PHLD92H3,Winter,2025,Available,In-person,,UTSC
+769,PHLD93H3,Winter,2025,Available,In-person,,UTSC
+770,PHLD94H3,Winter,2025,Available,In-person,,UTSC
+771,PHLD95H3,Winter,2025,Available,In-person,,UTSC
+772,PHLD96H3,Winter,2025,Available,In-person,,UTSC
+773,PHLD97H3,Winter,2025,Available,In-person,,UTSC
+774,PHLD98H3,Winter,2025,Available,In-person,,UTSC
+775,PHLD99H3,Winter,2025,Available,In-person,,UTSC
+776,PHYA10H3,Winter,2025,"Bayer Carpintero,",In-person,TU,UTSC
+777,PHYA21H3,Winter,2025,"McGraw, P.",In-person,TU,UTSC
+778,PHYA22H3,Winter,2025,"Weaver, D.",In-person,WE,UTSC
+779,PHYB21H3,Winter,2025,"Ma, Z.",In-person,MO,UTSC
+780,PHYB52H3,Winter,2025,"Bayer Carpintero,",In-person,TU,UTSC
+781,PHYB54H3,Winter,2025,"McGraw, P.",In-person,TH,UTSC
+782,PHYC11H3,Winter,2025,"Weaver, D.",In-person,TU,UTSC
+783,PHYC56H3,Winter,2025,"Rein, H.",In-person,WE,UTSC
+784,PHYC83H3,Winter,2025,"Bayer Carpintero,",In-person,WE,UTSC
+785,PHYD01H3,Winter,2025,"Weaver, D.",In-person,,UTSC
+786,PHYD38H3,Winter,2025,"Artymowicz, P.",In-person,MO,UTSC
+787,PHYD72H3,Winter,2025,"Weaver, D.",In-person,,UTSC
+788,PLIC55H3,Winter,2025,"Thomas, D.",In-person,TU,UTSC
+789,PLID01H3,Winter,2025,Available,In-person,,UTSC
+790,PLID02H3,Winter,2025,Available,In-person,,UTSC
+791,PLID03H3,Winter,2025,Available,In-person,,UTSC
+792,PLID44H3,Winter,2025,"Thomas, D.",In-person,WE,UTSC
+793,PLID53H3,Winter,2025,"Kiss, A.",In-person,TU,UTSC
+794,PLID56H3,Winter,2025,"- Synchronous Komeili, M.",Online,FR,UTSC
+795,PLID74H3,Winter,2025,"Sanjeevan, T.",In-person,TH,UTSC
+796,PMDB30H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+797,PMDB32Y3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+798,PMDB36H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+799,PMDC54Y3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+800,PMDC56H3,Winter,2025,CENTENNIAL Check myCentennial for,In-person,,UTSC
+801,POLA02H3,Winter,2025,Politics,In-person,,UTSC
+802,POLA02H3,Winter,2025,"Hoffmann, M.",In-person,TU,UTSC
+803,POLA02H3,Winter,2025,"Renckens, S.",In-person,WE,UTSC
+804,POLA02H3,Winter,2025,"Triadafilopoulos, Room change",In-person,MO,UTSC
+805,POLB30H3,Winter,2025,"Kahraman, F.",In-person,TU,UTSC
+806,POLB40H3,Winter,2025,"Cochrane, C.",In-person,MO,UTSC
+807,POLB57H3,Winter,2025,"McDougall, A.",In-person,TU,UTSC
+808,POLB81H3,Winter,2025,"Campisi, J.",In-person,TH,UTSC
+809,POLB90H3,Winter,2025,"Kingston, P.",In-person,TH,UTSC
+810,POLC11H3,Winter,2025,"Levine, R.",In-person,FR,UTSC
+811,POLC30H3,Winter,2025,"Spahiu, I.",In-person,TH,UTSC
+812,POLC36H3,Winter,2025,"Spahiu, I.",In-person,TH,UTSC
+813,POLC39H3,Winter,2025,"Kahraman, F.",In-person,TU,UTSC
+814,POLC40H3,Winter,2025,"Campisi, J.",In-person,WE,UTSC
+815,POLC42H3,Winter,2025,"Oron, O.",In-person,TU,UTSC
+816,POLC53H3,Winter,2025,"Duarte, V.",In-person,MO,UTSC
+817,POLC56H3,Winter,2025,"Cowie, C.",In-person,TH,UTSC
+818,POLC57H3,Winter,2025,"Bernhardt, N.",In-person,TU,UTSC
+819,POLC58H3,Winter,2025,"Kamal, F.",In-person,MO,UTSC
+820,POLC70H3,Winter,2025,"Street, E.",In-person,TU,UTSC
+821,POLC73H3,Winter,2025,"Reddy, K.",In-person,MO,UTSC
+822,POLC78H3,Winter,2025,"Levine, R.",In-person,TU,UTSC
+823,POLC79H3,Winter,2025,"Gordon, K.",In-person,WE,UTSC
+824,POLC94H3,Winter,2025,"Soremi, T.",In-person,TU,UTSC
+825,POLD46H3,Winter,2025,"Oron, O. Room change",In-person,TH,UTSC
+826,POLD50H3,Winter,2025,"Soremi, T.",In-person,TU,UTSC
+827,POLD52H3,Winter,2025,"Campisi, J.",In-person,TH,UTSC
+828,POLD54H3,Winter,2025,"Cowie, C.",In-person,TH,UTSC
+829,POLD89H3,Winter,2025,"Hoffmann, M.",In-person,WE,UTSC
+830,POLD92H3,Winter,2025,"Alsaadi, S.",In-person,TH,UTSC
+831,POLD95H3,Winter,2025,Available,In-person,,UTSC
+832,POLD98H3,Winter,2025,Available,In-person,,UTSC
+833,PPGD64H3,Winter,2025,"Renckens, S.",In-person,MO,UTSC
+834,PPGD68H3,Winter,2025,"Krishendeholl, A.",In-person,MO,UTSC
+835,PSCB90H3,Winter,2025,"Kim, S.",In-person,,UTSC
+836,PSCD02H3,Winter,2025,"Englich, U.",In-person,TH,UTSC
+837,PSCD11H3,Winter,2025,"Verdecchia, R.",In-person,TH,UTSC
+838,PSYA02H3,Winter,2025,"Danielson,",In-person,WE,UTSC
+839,PSYA02H3,Winter,2025,"- Danielson,",Online,,UTSC
+840,PSYB03H3,Winter,2025,"Nestor, A.",In-person,FR,UTSC
+841,PSYB30H3,Winter,2025,"Fournier, M.",In-person,WE,UTSC
+842,PSYB32H3,Winter,2025,"Mascarenhas, M.",In-person,WE,UTSC
+843,PSYB51H3,Winter,2025,"Niemeier,",In-person,WE,UTSC
+844,PSYB51H3,Winter,2025,"- Niemeier,",Online,,UTSC
+845,PSYB57H3,Winter,2025,"Souza, M.",In-person,WE,UTSC
+846,PSYB64H3,Winter,2025,"Di Domenico,",In-person,TH,UTSC
+847,PSYB64H3,Winter,2025,"- Di Domenico,",Online,,UTSC
+848,PSYB80H3,Winter,2025,"Dere, J.",In-person,TU,UTSC
+849,PSYC02H3,Winter,2025,"Cooper, A.",In-person,MO,UTSC
+850,PSYC08H3,Winter,2025,"Lewandowska, O.",In-person,WE,UTSC
+851,PSYC08H3,Winter,2025,"Lewandowska, O.",In-person,TH,UTSC
+852,PSYC12H3,Winter,2025,"Bramesfeld, K.",In-person,WE,UTSC
+853,PSYC13H3,Winter,2025,"Hutcherson, C.",In-person,MO,UTSC
+854,PSYC14H3,Winter,2025,"Huang, F.",In-person,TU,UTSC
+855,PSYC15H3,Winter,2025,"Bramesfeld, K.",In-person,TH,UTSC
+856,PSYC17H3,Winter,2025,"Wang, A.",In-person,WE,UTSC
+857,PSYC21H3,Winter,2025,"Danielson, K.",In-person,WE,UTSC
+858,PSYC22H3,Winter,2025,"McPhee, A.",In-person,MO,UTSC
+859,PSYC27H3,Winter,2025,"Haley, D.",In-person,FR,UTSC
+860,PSYC34H3,Winter,2025,"Thiruchselvam, R.",In-person,FR,UTSC
+861,PSYC36H3,Winter,2025,"Uliaszek, A.",In-person,WE,UTSC
+862,PSYC38H3,Winter,2025,"Best, M.",In-person,TU,UTSC
+863,PSYC54H3,Winter,2025,"Lewandowska, O.",In-person,TH,UTSC
+864,PSYC57H3,Winter,2025,"Hutcherson, C.",In-person,TH,UTSC
+865,PSYC62H3,Winter,2025,"Morrissey, M.",In-person,TU,UTSC
+866,PSYC70H3,Winter,2025,"Cree, G.",In-person,TU,UTSC
+867,PSYC70H3,Winter,2025,"Cree, G.",In-person,TU,UTSC
+868,PSYC71H3,Winter,2025,"Bramesfeld, K.",In-person,WE,UTSC
+869,PSYC72H3,Winter,2025,"Schmuckler, M.",In-person,MO,UTSC
+870,PSYC81H3,Winter,2025,"Cree, G.",In-person,TH,UTSC
+871,PSYC86H3,Winter,2025,"Tritt, S.",In-person,WE,UTSC
+872,PSYD15H3,Winter,2025,"Tritt, S.",In-person,WE,UTSC
+873,PSYD15H3,Winter,2025,"McPhee, A.",In-person,TU,UTSC
+874,PSYD20H3,Winter,2025,"Wu, Y.",In-person,MO,UTSC
+875,PSYD23H3,Winter,2025,"Haley, D.",In-person,FR,UTSC
+876,PSYD33H3,Winter,2025,"Best, M. Day/Time change",In-person,TU,UTSC
+877,PSYD33H3,Winter,2025,"Orjiakor,",In-person,TU,UTSC
+878,PSYD35H3,Winter,2025,"McNamara, T.",In-person,TH,UTSC
+879,PSYD37H3,Winter,2025,"Williams, Room change",In-person,WE,UTSC
+880,PSYD39H3,Winter,2025,"Cooper, A. Room change",In-person,WE,UTSC
+881,PSYD55H3,Winter,2025,"Lee, A.",In-person,WE,UTSC
+882,PSYD55H3,Winter,2025,"Lee, A.",In-person,FR,UTSC
+883,PSYD59H3,Winter,2025,"Souza, M.",In-person,WE,UTSC
+884,PSYD59H3,Winter,2025,"Souza, M.",In-person,TH,UTSC
+885,PSYD62H3,Winter,2025,"Thiruchselvam, R.",In-person,MO,UTSC
+886,PSYD66H3,Winter,2025,"Niemeier, M.",In-person,TU,UTSC
+887,PSYD66H3,Winter,2025,"Thiruchselvam, R.",In-person,WE,UTSC
+888,PSYD66H3,Winter,2025,"Steininger, J.",In-person,MO,UTSC
+889,RLGA02H3,Winter,2025,"Perley, D.",In-person,TU,UTSC
+890,SOCA05H3,Winter,2025,"Hashemi,",In-person,TH,UTSC
+891,SOCA05H3,Winter,2025,"- Hashemi,",Online,,UTSC
+892,SOCB22H3,Winter,2025,"Hashemi, B.",In-person,WE,UTSC
+893,SOCB35H3,Winter,2025,"Fosse, E.",In-person,MO,UTSC
+894,SOCB43H3,Winter,2025,"Silver, D.",In-person,TH,UTSC
+895,SOCB49H3,Winter,2025,"Hsiung, P. Room change",In-person,WE,UTSC
+896,SOCB59H3,Winter,2025,"Surajbali,",In-person,MO,UTSC
+897,SOCC23H3,Winter,2025,"Hsiung, P.",In-person,TH,UTSC
+898,SOCC29H3,Winter,2025,"Salem, R.",In-person,MO,UTSC
+899,SOCC50H3,Winter,2025,"Philips, M.",In-person,TH,UTSC
+900,SOCC51H3,Winter,2025,"Spence, N.",In-person,WE,UTSC
+901,SOCC70H3,Winter,2025,"Fosse, E.",In-person,WE,UTSC
+902,SOCD05H3,Winter,2025,"Hermer, J.",In-person,MO,UTSC
+903,SOCD12H3,Winter,2025,"Mullen, A.",In-person,FR,UTSC
+904,SOCD18H3,Winter,2025,"DeGagne, M.",In-person,WE,UTSC
+905,SOCD40H3,Winter,2025,FACULTY,In-person,,UTSC
+906,SOCD41H3,Winter,2025,FACULTY,In-person,,UTSC
+907,STAA57H3,Winter,2025,"Shams, S. WE room change",In-person,FR,UTSC
+908,STAB22H3,Winter,2025,"Samarakoon,",In-person,MO,UTSC
+909,STAB22H3,Winter,2025,"Samarakoon,",In-person,MO,UTSC
+910,STAB23H3,Winter,2025,"- Clare, E.",Online,TU,UTSC
+911,STAB27H3,Winter,2025,"Kang, S.",In-person,MO,UTSC
+912,STAB41H3,Winter,2025,"Gao, J.",In-person,TH,UTSC
+913,STAB57H3,Winter,2025,"Shams, S.",In-person,TU,UTSC
+914,STAB57H3,Winter,2025,"Shams, S.",In-person,TU,UTSC
+915,STAC33H3,Winter,2025,"Goodhand, A.",In-person,TU,UTSC
+916,STAC51H3,Winter,2025,"Samarakoon, M.",In-person,MO,UTSC
+917,STAC58H3,Winter,2025,Aghababaei Day/Time change,In-person,FR,UTSC
+918,STAC63H3,Winter,2025,"Vinogradov, V.",In-person,MO,UTSC
+919,STAC67H3,Winter,2025,"Kang, S.",In-person,WE,UTSC
+920,STAC70H3,Winter,2025,"Damouras, S.",In-person,MO,UTSC
+921,STAD29H3,Winter,2025,"Butler, K.",In-person,WE,UTSC
+922,STAD29H3,Winter,2025,"Butler, K.",In-person,MO,UTSC
+923,STAD68H3,Winter,2025,"Damouras, S.",In-person,WE,UTSC
+924,STAD70H3,Winter,2025,"Damouras, S.",In-person,MO,UTSC
+925,STAD92H3,Winter,2025,Available,In-person,,UTSC
+926,STAD93H3,Winter,2025,Available,In-person,,UTSC
+927,STAD94H3,Winter,2025,Available,In-person,,UTSC
+928,STAD95H3,Winter,2025,Available,In-person,,UTSC
+929,THRA11H3,Winter,2025,"Mealey, S.",In-person,WE,UTSC
+930,THRA11H3,Winter,2025,"Da Silva Melo, C.",In-person,TU,UTSC
+931,THRB32H3,Winter,2025,"Leffler, E.",In-person,MO,UTSC
+932,THRB41H3,Winter,2025,"Da Silva Melo, C.",In-person,TU,UTSC
+933,THRB55H3,Winter,2025,"Freeman, B.",In-person,TU,UTSC
+934,THRB56H3,Winter,2025,"Freeman, B.",In-person,TU,UTSC
+935,THRC30H3,Winter,2025,"Tessy, D.",In-person,MO,UTSC
+936,THRC40H3,Winter,2025,"Da Silva Melo, C.",In-person,TH,UTSC
+937,THRC55H3,Winter,2025,"Freeman, B.",In-person,TU,UTSC
+938,THRC56H3,Winter,2025,"Freeman, B.",In-person,TU,UTSC
+939,THRD55H3,Winter,2025,"Freeman, B.",In-person,TU,UTSC
+940,THRD56H3,Winter,2025,"Freeman, B.",In-person,TU,UTSC
+941,THRD60H3,Winter,2025,"deChamplain-Leverenz,",In-person,WE,UTSC
+942,THRD91H3,Winter,2025,FACULTY,In-person,,UTSC
+943,VPAA12H3,Winter,2025,"Sicondolfo, C.",In-person,MO,UTSC
+944,VPAB10H3,Winter,2025,"Sundar Singh, C.",In-person,WE,UTSC
+945,VPAB13H3,Winter,2025,"Flynn, S.",In-person,TU,UTSC
+946,VPAB17H3,Winter,2025,"Sundar Singh, C.",In-person,FR,UTSC
+947,VPAC13H3,Winter,2025,"Untiks, I.",In-person,FR,UTSC
+948,VPAC15H3,Winter,2025,"Sicondolfo,",In-person,TU,UTSC
+949,VPAC18H3,Winter,2025,"Klimek, C.",In-person,WE,UTSC
+950,VPAC22H3,Winter,2025,"deChamplain-Leverenz,",In-person,MO,UTSC
+951,VPAD10H3,Winter,2025,"Klimek, C.",In-person,TH,UTSC
+952,VPAD10H3,Winter,2025,"Klimek, C.",In-person,WE,UTSC
+953,VPAD14H3,Winter,2025,Available,In-person,,UTSC
+954,VPHB39H3,Winter,2025,"Harney, E.",In-person,MO,UTSC
+955,VPHB59H3,Winter,2025,"Irving, A.",In-person,TH,UTSC
+956,VPHB64H3,Winter,2025,"Webster, E.",In-person,TH,UTSC
+957,VPHB77H3,Winter,2025,"Durayappah, S.",In-person,WE,UTSC
+958,VPHC49H3,Winter,2025,"Lauder, A.",In-person,FR,UTSC
+959,VPHC63H3,Winter,2025,"Webster, E.",In-person,MO,UTSC
+960,VPHC73H3,Winter,2025,"Harney, E.",In-person,TU,UTSC
+961,VPHC75H3,Winter,2025,"Irving, A.",In-person,WE,UTSC
+962,VPHD48H3,Winter,2025,"Webster, E.",In-person,TU,UTSC
+963,VPSA62H3,Winter,2025,"Kwan, W.",In-person,TU,UTSC
+964,VPSA62H3,Winter,2025,"Cruz, P.",In-person,WE,UTSC
+965,VPSA62H3,Winter,2025,"Pivato, J.",In-person,TH,UTSC
+966,VPSA63H3,Winter,2025,"Brown, A.",In-person,TU,UTSC
+967,VPSB02H3,Winter,2025,"Koroshegyi, A.",In-person,FR,UTSC
+968,VPSB56H3,Winter,2025,"Jalal-Zadeh, N.",In-person,FR,UTSC
+969,VPSB59H3,Winter,2025,"Brown, A.",In-person,TH,UTSC
+970,VPSB62H3,Winter,2025,"Cruz, P.",In-person,MO,UTSC
+971,VPSB67H3,Winter,2025,"Klie, J.",In-person,TU,UTSC
+972,VPSB74H3,Winter,2025,"Irving, A.",In-person,TU,UTSC
+973,VPSB77H3,Winter,2025,"Pivato, J.",In-person,TH,UTSC
+974,VPSB80H3,Winter,2025,"Pugen, G.",In-person,MO,UTSC
+975,VPSB86H3,Winter,2025,"Hlady, M.",In-person,WE,UTSC
+976,VPSC53H3,Winter,2025,"Hlady, M.",In-person,WE,UTSC
+977,VPSC56H3,Winter,2025,"Abdallah, H.",In-person,TH,UTSC
+978,VPSC70H3,Winter,2025,"Koroshegyi, A.",In-person,TU,UTSC
+979,VPSC73H3,Winter,2025,"Goreas, L.",In-person,TH,UTSC
+980,VPSC77H3,Winter,2025,"Klie, J.",In-person,WE,UTSC
+981,VPSC92H3,Winter,2025,"Abdallah, H.",In-person,MO,UTSC
+982,VPSC93H3,Winter,2025,"Cho, H.",In-person,WE,UTSC
+983,VPSD56H3,Winter,2025,"Kwan, W.",In-person,MO,UTSC
+984,VPSD56H3,Winter,2025,"Mazinani, S.",In-person,MO,UTSC
+985,WSTA03H3,Winter,2025,Talahite- Time change,In-person,TH,UTSC
+986,WSTB09H3,Winter,2025,"Talahite-Moodley,",In-person,FR,UTSC
+987,WSTB10H3,Winter,2025,"Grewal, A.",In-person,WE,UTSC
+988,WSTB11H3,Winter,2025,"Hachimi, A.",In-person,TH,UTSC
+989,WSTB20H3,Winter,2025,"deSouza, S.",In-person,TU,UTSC
+990,WSTC02H3,Winter,2025,"Halavut, H.",In-person,TU,UTSC
+991,WSTC13H3,Winter,2025,"Hachimi, A.",In-person,TU,UTSC
+992,WSTC26H3,Winter,2025,"Maynard, R.",In-person,MO,UTSC
+993,WSTC40H3,Winter,2025,"Johnston, N.",In-person,TU,UTSC
+994,WSTD01H3,Winter,2025,Available,In-person,,UTSC
+995,WSTD03H3,Winter,2025,"English, J. Room change",In-person,WE,UTSC
+996,WSTD04H3,Winter,2025,"- Synchronous Hunt, K.",Online,MO,UTSC
+997,WSTD10H3,Winter,2025,"Grewal, A.",In-person,TH,UTSC
+998,ACMC01H3,Summer,2025,"Klimek, C.",In-person,,UTSC
+999,ACMD01H3,Summer,2025,"Klimek, C.",In-person,,UTSC
+1000,ACMD02H3,Summer,2025,"Klimek, C.",In-person,,UTSC
+1001,ACMD02H3,Summer,2025,"SYNC Nargolwalla, M.",In-person,MO,UTSC
+1002,ACMD02H3,Summer,2025,"SYNC Nargolwalla, M.",In-person,WE,UTSC
+1003,ANTA02H3,Summer,2025,"SYNC Mayell, S.",In-person,TU,UTSC
+1004,ANTB14H3,Summer,2025,"SYNC Pugh, K.",In-person,MO,UTSC
+1005,ANTC15H3,Summer,2025,"SYNC Vandenbeld Giles, M.",In-person,WE,UTSC
+1006,ANTC15H3,Summer,2025,"SYNC Kilroy-Marac, K.",In-person,TU,UTSC
+1007,ANTC15H3,Summer,2025,"SYNC Kilroy-Marac, K.",In-person,TH,UTSC
+1008,ANTD32H3,Summer,2025,"SYNC Van Dyk, J.",In-person,WE,UTSC
+1009,ANTD32H3,Summer,2025,"SYNC Van Dyk, J.",In-person,FR,UTSC
+1010,ANTD32H3,Summer,2025,"INPER Butler, D.",In-person,TU,UTSC
+1011,ANTD32H3,Summer,2025,"INPER Butler, D.",In-person,TH,UTSC
+1012,ANTD32H3,Summer,2025,"INPER Williams, K.",In-person,WE,UTSC
+1013,ANTD32H3,Summer,2025,"INPER Williams, K.",In-person,TH,UTSC
+1014,ANTD32H3,Summer,2025,"INPER Sturge, R.",In-person,WE,UTSC
+1015,ANTD32H3,Summer,2025,"INPER Sturge, R.",In-person,TH,UTSC
+1016,BIOA11H3,Summer,2025,"INPER Williams, K.",In-person,TU,UTSC
+1017,BIOA11H3,Summer,2025,"SYNC Williams, K.",In-person,TH,UTSC
+1018,BIOA11H3,Summer,2025,"SYNC Williams, K.",In-person,FR,UTSC
+1019,BIOA11H3,Summer,2025,"INPER Mahtani, T.",In-person,MO,UTSC
+1020,BIOA11H3,Summer,2025,"INPER Mahtani, T.",In-person,TH,UTSC
+1021,BIOA11H3,Summer,2025,"INPER Bell, E.",In-person,MO,UTSC
+1022,BIOA11H3,Summer,2025,"INPER Bell, E.",In-person,TH,UTSC
+1023,BIOB12H3,Summer,2025,"INPER Bawa, D.",In-person,TU,UTSC
+1024,BIOB12H3,Summer,2025,"INPER Bawa, D.",In-person,TU,UTSC
+1025,BIOB32H3,Summer,2025,"INPER Brown, J.",In-person,WE,UTSC
+1026,BIOB33H3,Summer,2025,"INPER Kumari, R.",In-person,FR,UTSC
+1027,BIOB33H3,Summer,2025,"INPER Brown, J.",In-person,TH,UTSC
+1028,BIOB33H3,Summer,2025,"INPER Brown, J.",In-person,FR,UTSC
+1029,BIOB33H3,Summer,2025,"INPER Travassos de Britto, B.",In-person,MO,UTSC
+1030,BIOB33H3,Summer,2025,"INPER Travassos de Britto, B.",In-person,WE,UTSC
+1031,BIOB33H3,Summer,2025,"INPER Andrade, M.",In-person,MO,UTSC
+1032,BIOB33H3,Summer,2025,"INPER Andrade, M.",In-person,WE,UTSC
+1033,BIOB52H3,Summer,2025,"INPER Keir, K.",In-person,TU,UTSC
+1034,BIOB99H3,Summer,2025,"INPER Mahtani, T.",In-person,WE,UTSC
+1035,BIOB99H3,Summer,2025,"INPER Mahtani, T.",In-person,FR,UTSC
+1036,BIOB99H3,Summer,2025,"INPER Bell, E.",In-person,TU,UTSC
+1037,BIOB99H3,Summer,2025,"INPER Bell, E.",In-person,TH,UTSC
+1038,BIOC15H3,Summer,2025,"INPER Mahtani, T.",In-person,MO,UTSC
+1039,BIOC17H3,Summer,2025,"INPER Brunt, S.",In-person,TU,UTSC
+1040,BIOC20H3,Summer,2025,"INPER Bawa, D.",In-person,FR,UTSC
+1041,BIOC23H3,Summer,2025,"INPER Bawa, D.",In-person,TH,UTSC
+1042,BIOC51H3,Summer,2025,"INPER Lovejoy, N.",In-person,WE,UTSC
+1043,BIOD21H3,Summer,2025,"INPER Bawa, D.",In-person,TH,UTSC
+1044,BIOD32H3,Summer,2025,"INPER Reid, S./ Reid, S.",In-person,MO,UTSC
+1045,BIOD32H3,Summer,2025,"INPER Reid, S./ Reid, S.",In-person,WE,UTSC
+1046,BIOD95H3,Summer,2025,"Mahtani, T.",In-person,,UTSC
+1047,BIOD98Y3,Summer,2025,"Mahtani, T.",In-person,,UTSC
+1048,BIOD99Y3,Summer,2025,"Mahtani, T.",In-person,,UTSC
+1049,CHMA11H3,Summer,2025,"INPER Kim, S.",In-person,TU,UTSC
+1050,CHMA11H3,Summer,2025,"INPER Kim, S.",In-person,TH,UTSC
+1051,CHMB16H3,Summer,2025,"INPER Kim, S.",In-person,MO,UTSC
+1052,CHMB16H3,Summer,2025,"INPER Kim, S.",In-person,WE,UTSC
+1053,CHMB42H3,Summer,2025,"INPER Sauer, E.",In-person,FR,UTSC
+1054,CHMB42H3,Summer,2025,"INPER Sauer, E.",In-person,TU,UTSC
+1055,CHMB62H3,Summer,2025,"INPER Andoy, N.",In-person,MO,UTSC
+1056,CHMC11H3,Summer,2025,"INPER Englich, U.",In-person,WE,UTSC
+1057,CHMD90Y3,Summer,2025,"Zhang, X.",In-person,,UTSC
+1058,CHMD91H3,Summer,2025,"Zhang, X.",In-person,,UTSC
+1059,CHMD92H3,Summer,2025,"INPER Englich, U.",In-person,TU,UTSC
+1060,CHMD92H3,Summer,2025,"INPER Englich, U.",In-person,TH,UTSC
+1061,CITA01H3,Summer,2025,"SYNC Bernard, O.",In-person,WE,UTSC
+1062,CITA01H3,Summer,2025,"SYNC McCormack, K.",In-person,TU,UTSC
+1063,CITA01H3,Summer,2025,"SYNC McCormack, K.",In-person,TH,UTSC
+1064,CITA01H3,Summer,2025,"INPER Snow, K.",In-person,TU,UTSC
+1065,CITA01H3,Summer,2025,"INPER Snow, K.",In-person,TH,UTSC
+1066,CITA01H3,Summer,2025,"SYNC Anderson, V.",In-person,MO,UTSC
+1067,CITA01H3,Summer,2025,"SYNC Anderson, V.",In-person,WE,UTSC
+1068,CITA01H3,Summer,2025,"SYNC Higgins, C.",In-person,MO,UTSC
+1069,CITA01H3,Summer,2025,"SYNC Higgins, C.",In-person,WE,UTSC
+1070,CITA01H3,Summer,2025,"INPER Montero Munoz, S.",In-person,TH,UTSC
+1071,CLAA05H3,Summer,2025,"INPER Spurrier, T.",In-person,MO,UTSC
+1072,CLAB06H3,Summer,2025,"SYNC Leghissa, G.",In-person,TH,UTSC
+1073,CLAB06H3,Summer,2025,"INPER Haque, F.",In-person,TU,UTSC
+1074,CLAB06H3,Summer,2025,"INPER Haque, F.",In-person,TH,UTSC
+1075,CSCA48H3,Summer,2025,"INPER Abou Assi, R.",In-person,MO,UTSC
+1076,CSCA48H3,Summer,2025,"INPER Abou Assi, R.",In-person,WE,UTSC
+1077,CSCB07H3,Summer,2025,"INPER Abou Assi, R.",In-person,MO,UTSC
+1078,CSCB09H3,Summer,2025,"INPER Lai, A.",In-person,TH,UTSC
+1079,CSCB36H3,Summer,2025,"INPER Cheng, N.",In-person,WE,UTSC
+1080,CSCB36H3,Summer,2025,"INPER Cheng, N.",In-person,FR,UTSC
+1081,CSCB58H3,Summer,2025,"INPER Ibrahim, K.",In-person,TU,UTSC
+1082,CSCB63H3,Summer,2025,"INPER Peimani, A.",In-person,MO,UTSC
+1083,CSCB63H3,Summer,2025,"INPER Peimani, A.",In-person,WE,UTSC
+1084,CSCC01H3,Summer,2025,"INPER Agrawal, P.",In-person,TU,UTSC
+1085,CSCC09H3,Summer,2025,"INPER Yong, C.",In-person,TH,UTSC
+1086,CSCC10H3,Summer,2025,"INPER Nizam, N.",In-person,WE,UTSC
+1087,CSCC24H3,Summer,2025,"INPER Lai, A.",In-person,TH,UTSC
+1088,CSCC43H3,Summer,2025,"INPER Bapat, A.",In-person,MO,UTSC
+1089,CSCC63H3,Summer,2025,"INPER Corlett, E.",In-person,TU,UTSC
+1090,CSCC63H3,Summer,2025,"INPER Corlett, E.",In-person,TH,UTSC
+1091,CSCC69H3,Summer,2025,"INPER Sans, T.",In-person,FR,UTSC
+1092,CSCD03H3,Summer,2025,"INPER Minarik, J.",In-person,WE,UTSC
+1093,CSCD95H3,Summer,2025,"INPER Payne, C.",In-person,TU,UTSC
+1094,CSCD95H3,Summer,2025,"INPER Payne, C.",In-person,TH,UTSC
+1095,CSCD95H3,Summer,2025,"SYNC Ma, J.",In-person,TU,UTSC
+1096,CSCD95H3,Summer,2025,"SYNC Ma, J.",In-person,TH,UTSC
+1097,CSCD95H3,Summer,2025,"SYNC Ma, J.",In-person,TU,UTSC
+1098,CSCD95H3,Summer,2025,"SYNC Ma, J.",In-person,TH,UTSC
+1099,CSCD95H3,Summer,2025,"SYNC Ma, J.",In-person,TU,UTSC
+1100,CSCD95H3,Summer,2025,"SYNC Ma, J.",In-person,TH,UTSC
+1101,CSCD95H3,Summer,2025,"SYNC Wang, R.",In-person,TU,UTSC
+1102,CSCD95H3,Summer,2025,"SYNC Wang, R.",In-person,TH,UTSC
+1103,CSCD95H3,Summer,2025,"INPER Payne, C.",In-person,TU,UTSC
+1104,CSCD95H3,Summer,2025,"INPER Payne, C.",In-person,TH,UTSC
+1105,EESB03H3,Summer,2025,"INPER Leung, A./ Leung, A.",In-person,WE,UTSC
+1106,EESB03H3,Summer,2025,"INPER Leung, A./ Leung, A.",In-person,WE,UTSC
+1107,EESB05H3,Summer,2025,"INPER Sujeeun, L.",In-person,FR,UTSC
+1108,EESB15H3,Summer,2025,"INPER Kayode, O.",In-person,TU,UTSC
+1109,EESC13H3,Summer,2025,"INPER Safari, E.",In-person,TU,UTSC
+1110,EESC16H3,Summer,2025,"Daxberger, H.",In-person,,UTSC
+1111,EESC24H3,Summer,2025,"Dittrich, M.",In-person,,UTSC
+1112,EESD07H3,Summer,2025,"Daxberger, H.",In-person,,UTSC
+1113,EESD09H3,Summer,2025,"Smith, K.",In-person,,UTSC
+1114,EESD10Y3,Summer,2025,"Smith, K.",In-person,,UTSC
+1115,EESD10Y3,Summer,2025,"INPER Meriano, M.",In-person,MO,UTSC
+1116,EESD10Y3,Summer,2025,"INPER Meriano, M.",In-person,TU,UTSC
+1117,EESD10Y3,Summer,2025,"INPER Meriano, M.",In-person,WE,UTSC
+1118,EESD10Y3,Summer,2025,"INPER Meriano, M.",In-person,TH,UTSC
+1119,EESD10Y3,Summer,2025,"INPER Meriano, M.",In-person,FR,UTSC
+1120,EESD10Y3,Summer,2025,"SYNC Dubois, A.",In-person,TU,UTSC
+1121,EESD10Y3,Summer,2025,"SYNC Dubois, A.",In-person,TH,UTSC
+1122,EESD10Y3,Summer,2025,"SYNC Stafford, R./ Stafford, R.",In-person,TU,UTSC
+1123,EESD10Y3,Summer,2025,"SYNC Stafford, R./ Stafford, R.",In-person,TH,UTSC
+1124,EESD10Y3,Summer,2025,"SYNC Keyzad, N.",In-person,TU,UTSC
+1125,EESD10Y3,Summer,2025,"SYNC Keyzad, N.",In-person,TH,UTSC
+1126,EESD10Y3,Summer,2025,"SYNC Stafford, R./ Stafford, R.",In-person,TU,UTSC
+1127,EESD10Y3,Summer,2025,"SYNC Stafford, R./ Stafford, R.",In-person,TH,UTSC
+1128,EESD10Y3,Summer,2025,"SYNC Dubois, A.",In-person,MO,UTSC
+1129,EESD10Y3,Summer,2025,"SYNC Dubois, A.",In-person,WE,UTSC
+1130,EESD10Y3,Summer,2025,"HYBR Westoll, A.",Hybrid,TU,UTSC
+1131,EESD10Y3,Summer,2025,"HYBR Westoll, A.",Hybrid,TH,UTSC
+1132,EESD10Y3,Summer,2025,"SYNC Dubois, A.",In-person,MO,UTSC
+1133,EESD10Y3,Summer,2025,"SYNC Dubois, A.",In-person,WE,UTSC
+1134,EESD10Y3,Summer,2025,"SYNC Dubois, A.",In-person,TU,UTSC
+1135,EESD10Y3,Summer,2025,"SYNC Dubois, A.",In-person,TH,UTSC
+1136,EESD10Y3,Summer,2025,"SYNC Morris, J.",In-person,MO,UTSC
+1137,EESD10Y3,Summer,2025,"SYNC Morris, J.",In-person,WE,UTSC
+1138,EESD10Y3,Summer,2025,"SYNC Wiebe, J.",In-person,TU,UTSC
+1139,EESD10Y3,Summer,2025,"SYNC Wiebe, J.",In-person,TH,UTSC
+1140,EESD10Y3,Summer,2025,"SYNC Sonina, S.",In-person,TU,UTSC
+1141,EESD10Y3,Summer,2025,"HYBR Sonina, S.",Hybrid,TU,UTSC
+1142,EESD10Y3,Summer,2025,"INPER Tsimenis, M.",In-person,MO,UTSC
+1143,EESD10Y3,Summer,2025,"INPER Tsimenis, M.",In-person,WE,UTSC
+1144,EESD10Y3,Summer,2025,"HYBR Sonina, S.",Hybrid,TU,UTSC
+1145,EESD10Y3,Summer,2025,"SYNC Pillet, M.",In-person,TU,UTSC
+1146,EESD10Y3,Summer,2025,"SYNC Pillet, M.",In-person,TH,UTSC
+1147,EESD10Y3,Summer,2025,"SYNC Pillet, M.",In-person,TU,UTSC
+1148,EESD10Y3,Summer,2025,"SYNC Pillet, M.",In-person,TH,UTSC
+1149,FRED05H3,Summer,2025,"INPER Kilgore, K.",In-person,TU,UTSC
+1150,FRED05H3,Summer,2025,"INPER Kilgore, K.",In-person,TH,UTSC
+1151,FRED05H3,Summer,2025,"INPER Sukumaran, G.",In-person,WE,UTSC
+1152,FRED05H3,Summer,2025,"INPER Sukumaran, G.",In-person,FR,UTSC
+1153,FRED05H3,Summer,2025,"SYNC Grewal, A.",In-person,FR,UTSC
+1154,FRED05H3,Summer,2025,"SYNC Grewal, A.",In-person,WE,UTSC
+1155,FRED05H3,Summer,2025,"SYNC Li, L.",In-person,MO,UTSC
+1156,FRED05H3,Summer,2025,"SYNC Li, L.",In-person,WE,UTSC
+1157,FRED05H3,Summer,2025,"SYNC McCormack, K.",In-person,MO,UTSC
+1158,FRED05H3,Summer,2025,"SYNC McCormack, K.",In-person,WE,UTSC
+1159,GGRA30H3,Summer,2025,"INPER Paudel, K.",In-person,TH,UTSC
+1160,GGRA30H3,Summer,2025,"SYNC Narayanareddy, R.",In-person,TU,UTSC
+1161,GGRA30H3,Summer,2025,"SYNC Narayanareddy, R.",In-person,TH,UTSC
+1162,GGRA30H3,Summer,2025,"SYNC Majeed, M.",In-person,TU,UTSC
+1163,GGRA30H3,Summer,2025,"SYNC Majeed, M.",In-person,TH,UTSC
+1164,GGRA30H3,Summer,2025,"SYNC Kepe, T.",In-person,MO,UTSC
+1165,GGRA30H3,Summer,2025,"SYNC Kepe, T.",In-person,WE,UTSC
+1166,HISA02H3,Summer,2025,"SYNC Price, M.",In-person,MO,UTSC
+1167,HISA02H3,Summer,2025,"SYNC Price, M.",In-person,WE,UTSC
+1168,HISB11H3,Summer,2025,"SYNC Leghissa, G.",In-person,TH,UTSC
+1169,HISB11H3,Summer,2025,"SYNC Hastings, P.",In-person,WE,UTSC
+1170,HISB11H3,Summer,2025,"SYNC Hastings, P.",In-person,FR,UTSC
+1171,HISB11H3,Summer,2025,"INPER Gervers, M.",In-person,MO,UTSC
+1172,HISB11H3,Summer,2025,"INPER Gervers, M.",In-person,TH,UTSC
+1173,HISB11H3,Summer,2025,"SYNC Nelson IV, W.",In-person,TU,UTSC
+1174,HISB11H3,Summer,2025,"SYNC Nelson IV, W.",In-person,TH,UTSC
+1175,HISD02H3,Summer,2025,"INPER Kelly, A.",In-person,TU,UTSC
+1176,HISD02H3,Summer,2025,"INPER Kelly, A.",In-person,TH,UTSC
+1177,HISD02H3,Summer,2025,"INPER Bytautas, J.",In-person,TU,UTSC
+1178,HISD02H3,Summer,2025,"INPER Bytautas, J.",In-person,TH,UTSC
+1179,HISD02H3,Summer,2025,"INPER Colaco, K.",In-person,MO,UTSC
+1180,HISD02H3,Summer,2025,"INPER Colaco, K.",In-person,WE,UTSC
+1181,HLTB15H3,Summer,2025,"SYNC Sicova, M.",In-person,MO,UTSC
+1182,HLTB16H3,Summer,2025,"SYNC Mbulaheni, T.",In-person,TU,UTSC
+1183,HLTB16H3,Summer,2025,"INPER Colaco, K.",In-person,MO,UTSC
+1184,HLTB16H3,Summer,2025,"INPER Colaco, K.",In-person,WE,UTSC
+1185,HLTB16H3,Summer,2025,"INPER Bytautas, J.",In-person,TU,UTSC
+1186,HLTB16H3,Summer,2025,"INPER Bytautas, J.",In-person,TH,UTSC
+1187,HLTB41H3,Summer,2025,"SYNC Antabe, R.",In-person,WE,UTSC
+1188,HLTB50H3,Summer,2025,"SYNC Sinno, J.",In-person,TU,UTSC
+1189,HLTC02H3,Summer,2025,"SYNC Wigle, J.",In-person,MO,UTSC
+1190,HLTC22H3,Summer,2025,"SYNC Marani, H.",In-person,TH,UTSC
+1191,HLTC27H3,Summer,2025,"INPER Ha, E.",In-person,TH,UTSC
+1192,HLTC52H3,Summer,2025,"INPER Perri, M.",In-person,TU,UTSC
+1193,HLTD22H3,Summer,2025,"INPER Drakes, S.",In-person,TH,UTSC
+1194,HLTD47H3,Summer,2025,"INPER Gebremikael, L.",In-person,TU,UTSC
+1195,HLTD50H3,Summer,2025,"INPER Lalani, M.",In-person,TU,UTSC
+1196,IDSA01H3,Summer,2025,"SYNC Torres-Ruiz, A.",In-person,WE,UTSC
+1197,IDSA01H3,Summer,2025,"SYNC Wai, Z.",In-person,TU,UTSC
+1198,IDSA01H3,Summer,2025,"SYNC Wai, Z.",In-person,TH,UTSC
+1199,JOUC25H3,Summer,2025,"INPER Kim, H.",In-person,MO,UTSC
+1200,JOUC25H3,Summer,2025,"INPER Kim, H.",In-person,WE,UTSC
+1201,JOUC25H3,Summer,2025,"INPER Back, U.",In-person,TU,UTSC
+1202,JOUC25H3,Summer,2025,"INPER Back, U.",In-person,TH,UTSC
+1203,JOUC25H3,Summer,2025,"INPER Back, U.",In-person,MO,UTSC
+1204,JOUC25H3,Summer,2025,"INPER Back, U.",In-person,WE,UTSC
+1205,JOUC25H3,Summer,2025,"INPER Vivekanandan, P.",In-person,MO,UTSC
+1206,JOUC25H3,Summer,2025,"INPER Vivekanandan, P.",In-person,WE,UTSC
+1207,LGGA82Y3,Summer,2025,"INPER Kondo, M.",In-person,TU,UTSC
+1208,LGGA82Y3,Summer,2025,"INPER Kondo, M.",In-person,FR,UTSC
+1209,LGGA90Y3,Summer,2025,"INPER Maldonado Castaneda, D.",In-person,TU,UTSC
+1210,LGGA90Y3,Summer,2025,"INPER Maldonado Castaneda, D.",In-person,TH,UTSC
+1211,LGGA91Y3,Summer,2025,"INPER Elamroussy, A.",In-person,MO,UTSC
+1212,LGGA91Y3,Summer,2025,"INPER Elamroussy, A.",In-person,WE,UTSC
+1213,LGGA91Y3,Summer,2025,"SYNC Moghaddam, S.",In-person,MO,UTSC
+1214,LGGA91Y3,Summer,2025,"SYNC Moghaddam, S.",In-person,WE,UTSC
+1215,LGGA91Y3,Summer,2025,"SYNC Moghaddam, S.",In-person,MO,UTSC
+1216,LGGA91Y3,Summer,2025,"SYNC Moghaddam, S.",In-person,WE,UTSC
+1217,LGGA91Y3,Summer,2025,"INPER Zamarlik, S.",In-person,TU,UTSC
+1218,LGGA91Y3,Summer,2025,"INPER Zamarlik, S.",In-person,TH,UTSC
+1219,LGGA91Y3,Summer,2025,"INPER Craioveanu, R.",In-person,MO,UTSC
+1220,LGGA91Y3,Summer,2025,"INPER Craioveanu, R.",In-person,WE,UTSC
+1221,LINB18H3,Summer,2025,"SYNC Wang, R.",In-person,TU,UTSC
+1222,LINB18H3,Summer,2025,"SYNC Wang, R.",In-person,TH,UTSC
+1223,LINB98H3,Summer,2025,"INPER Kiss, A.",In-person,TU,UTSC
+1224,LINB98H3,Summer,2025,"INPER Kiss, A.",In-person,TH,UTSC
+1225,MATA22H3,Summer,2025,"INPER Kielstra, T.",In-person,WE,UTSC
+1226,MATA22H3,Summer,2025,"INPER Kielstra, T.",In-person,FR,UTSC
+1227,MATA23H3,Summer,2025,"INPER Breuss, N.",In-person,WE,UTSC
+1228,MATA23H3,Summer,2025,"INPER Breuss, N.",In-person,FR,UTSC
+1229,MATA34H3,Summer,2025,"INPER Hart, E.",In-person,TU,UTSC
+1230,MATA34H3,Summer,2025,"INPER Hart, E.",In-person,TH,UTSC
+1231,MATA35H3,Summer,2025,"INPER Breuss, N.",In-person,WE,UTSC
+1232,MATA35H3,Summer,2025,"INPER Breuss, N.",In-person,FR,UTSC
+1233,MATA36H3,Summer,2025,"INPER Hart, E.",In-person,MO,UTSC
+1234,MATA36H3,Summer,2025,"INPER Hart, E.",In-person,TH,UTSC
+1235,MATA37H3,Summer,2025,"INPER Memarpanahi, P.",In-person,TU,UTSC
+1236,MATA37H3,Summer,2025,"INPER Memarpanahi, P.",In-person,TH,UTSC
+1237,MATB24H3,Summer,2025,"INPER Kielstra, T.",In-person,WE,UTSC
+1238,MATB24H3,Summer,2025,"INPER Kielstra, T.",In-person,FR,UTSC
+1239,MATB24H3,Summer,2025,"INPER Kielstra, T.",In-person,WE,UTSC
+1240,MATB24H3,Summer,2025,"INPER Kielstra, T.",In-person,FR,UTSC
+1241,MATB41H3,Summer,2025,"INPER Hessami Pilehrood, T.",In-person,TU,UTSC
+1242,MATB41H3,Summer,2025,"INPER Hessami Pilehrood, T.",In-person,TH,UTSC
+1243,MATB42H3,Summer,2025,"INPER Hessami Pilehrood, T.",In-person,TU,UTSC
+1244,MATB42H3,Summer,2025,"INPER Hessami Pilehrood, T.",In-person,TH,UTSC
+1245,MATC01H3,Summer,2025,"INPER Memarpanahi, P.",In-person,MO,UTSC
+1246,MATC01H3,Summer,2025,"INPER Memarpanahi, P.",In-person,WE,UTSC
+1247,MATD95H3,Summer,2025,"SYNC Kleeb, S.",In-person,TU,UTSC
+1248,MATD95H3,Summer,2025,"SYNC Kleeb, S.",In-person,TH,UTSC
+1249,MATD95H3,Summer,2025,"INPER Visan, L.",In-person,TU,UTSC
+1250,MATD95H3,Summer,2025,"INPER Visan, L.",In-person,TH,UTSC
+1251,MATD95H3,Summer,2025,"HYBR Kleeb, S.",Hybrid,TH,UTSC
+1252,MATD95H3,Summer,2025,"INPER Chen, L./ Chen, L.",In-person,TU,UTSC
+1253,MATD95H3,Summer,2025,"INPER Chen, L./ Chen, L.",In-person,TH,UTSC
+1254,MATD95H3,Summer,2025,"INPER Chen, L./ Chen, L.",In-person,TU,UTSC
+1255,MATD95H3,Summer,2025,"INPER Chen, L./ Chen, L.",In-person,TH,UTSC
+1256,MATD95H3,Summer,2025,"INPER Chen, L./ Chen, L.",In-person,TU,UTSC
+1257,MATD95H3,Summer,2025,"INPER Chen, L./ Chen, L.",In-person,TH,UTSC
+1258,MATD95H3,Summer,2025,"INPER Chen, L./ Chen, L.",In-person,TU,UTSC
+1259,MATD95H3,Summer,2025,"INPER Chen, L./ Chen, L.",In-person,TH,UTSC
+1260,MGAC01H3,Summer,2025,"INPER Quan Fun, G.",In-person,WE,UTSC
+1261,MGAC02H3,Summer,2025,"INPER Kong, D.",In-person,TU,UTSC
+1262,MGAC03H3,Summer,2025,"INPER Quan Fun, G.",In-person,WE,UTSC
+1263,MGAC70H3,Summer,2025,"INPER Kong, D.",In-person,TU,UTSC
+1264,MGAD40H3,Summer,2025,"INPER Kong, D.",In-person,MO,UTSC
+1265,MGAD45H3,Summer,2025,"INPER Kong, D.",In-person,MO,UTSC
+1266,MGAD50H3,Summer,2025,"INPER Quan Fun, G.",In-person,WE,UTSC
+1267,MGAD65H3,Summer,2025,"INPER Ratnam, S./ Vivekanandasothy, S.",In-person,TH,UTSC
+1268,MGAD65H3,Summer,2025,"INPER Daga, S.",In-person,TU,UTSC
+1269,MGAD65H3,Summer,2025,"INPER Daga, S.",In-person,TH,UTSC
+1270,MGEA02H3,Summer,2025,"HYBR Au, I.",Hybrid,TH,UTSC
+1271,MGEA06H3,Summer,2025,"INPER Au, I.",In-person,WE,UTSC
+1272,MGEB02H3,Summer,2025,"INPER Mazaheri, A.",In-person,TU,UTSC
+1273,MGEB02H3,Summer,2025,"INPER Mazaheri, A.",In-person,TU,UTSC
+1274,MGEB02H3,Summer,2025,"INPER Mazaheri, A.",In-person,TU,UTSC
+1275,MGEB06H3,Summer,2025,"INPER Anjomshoa, M.",In-person,FR,UTSC
+1276,MGEB06H3,Summer,2025,"INPER Anjomshoa, M.",In-person,TH,UTSC
+1277,MGEB11H3,Summer,2025,"INPER Yu, V.",In-person,FR,UTSC
+1278,MGEB12H3,Summer,2025,"INPER Mazaheri, A.",In-person,FR,UTSC
+1279,MGEB12H3,Summer,2025,"INPER Mazaheri, A.",In-person,FR,UTSC
+1280,MGEC02H3,Summer,2025,"INPER Mazaheri, A.",In-person,WE,UTSC
+1281,MGEC06H3,Summer,2025,"INPER Mazaheri, A.",In-person,TH,UTSC
+1282,MGEC11H3,Summer,2025,"INPER Yu, V.",In-person,TH,UTSC
+1283,MGEC40H3,Summer,2025,"INPER Mazaheri, A.",In-person,MO,UTSC
+1284,MGEC61H3,Summer,2025,"INPER Au, I.",In-person,TU,UTSC
+1285,MGEC71H3,Summer,2025,"INPER Ho, M.",In-person,MO,UTSC
+1286,MGEC71H3,Summer,2025,"INPER Ho, M.",In-person,WE,UTSC
+1287,MGEC93H3,Summer,2025,"INPER Au, I.",In-person,FR,UTSC
+1288,MGED91H3,Summer,2025,"INPER Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TU,UTSC
+1289,MGED91H3,Summer,2025,"INPER Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TH,UTSC
+1290,MGED91H3,Summer,2025,"INPER Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TU,UTSC
+1291,MGED91H3,Summer,2025,"INPER Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TH,UTSC
+1292,MGED91H3,Summer,2025,"INPER Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TU,UTSC
+1293,MGED91H3,Summer,2025,"INPER Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TH,UTSC
+1294,MGED91H3,Summer,2025,"INPER Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TU,UTSC
+1295,MGED91H3,Summer,2025,"INPER Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TH,UTSC
+1296,MGED91H3,Summer,2025,"INPER Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,MO,UTSC
+1297,MGED91H3,Summer,2025,"INPER Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,WE,UTSC
+1298,MGED91H3,Summer,2025,"INPER Ansari, R./ Mir, U.",In-person,TU,UTSC
+1299,MGED91H3,Summer,2025,"INPER Ansari, R./ Mir, U.",In-person,TH,UTSC
+1300,MGED91H3,Summer,2025,"INPER Wilfred, S.",In-person,TU,UTSC
+1301,MGED91H3,Summer,2025,"INPER Wilfred, S.",In-person,TH,UTSC
+1302,MGED91H3,Summer,2025,"INPER Trougakos, J.",In-person,TU,UTSC
+1303,MGED91H3,Summer,2025,"INPER Trougakos, J.",In-person,TH,UTSC
+1304,MGED91H3,Summer,2025,"INPER Trougakos, J.",In-person,TU,UTSC
+1305,MGED91H3,Summer,2025,"INPER Trougakos, J.",In-person,TH,UTSC
+1306,MGED91H3,Summer,2025,"INPER Connelly, B.",In-person,MO,UTSC
+1307,MGED91H3,Summer,2025,"INPER Connelly, B.",In-person,WE,UTSC
+1308,MGED91H3,Summer,2025,"INPER Heathcote, J.",In-person,MO,UTSC
+1309,MGED91H3,Summer,2025,"INPER Heathcote, J.",In-person,WE,UTSC
+1310,MGED91H3,Summer,2025,"INPER Heathcote, J.",In-person,MO,UTSC
+1311,MGED91H3,Summer,2025,"INPER Heathcote, J.",In-person,WE,UTSC
+1312,MGED91H3,Summer,2025,"INPER Wilfred, S.",In-person,MO,UTSC
+1313,MGED91H3,Summer,2025,"INPER Wilfred, S.",In-person,WE,UTSC
+1314,MGIB01H3,Summer,2025,"INPER Dewan, T.",In-person,TU,UTSC
+1315,MGIB01H3,Summer,2025,"INPER Dewan, T.",In-person,TU,UTSC
+1316,MGMB01H3,Summer,2025,"INPER Dewan, T.",In-person,TH,UTSC
+1317,MGMB01H3,Summer,2025,"INPER Dewan, T.",In-person,WE,UTSC
+1318,MGMB01H3,Summer,2025,"INPER Dewan, T.",In-person,TH,UTSC
+1319,MGMB01H3,Summer,2025,"INPER Dewan, T.",In-person,WE,UTSC
+1320,MGMB01H3,Summer,2025,"INPER McConkey, W.",In-person,MO,UTSC
+1321,MGMB01H3,Summer,2025,"INPER McConkey, W.",In-person,WE,UTSC
+1322,MGMB01H3,Summer,2025,"INPER McConkey, W.",In-person,MO,UTSC
+1323,MGMB01H3,Summer,2025,"INPER McConkey, W.",In-person,WE,UTSC
+1324,MGMB01H3,Summer,2025,"INPER Aggarwal, P.",In-person,TU,UTSC
+1325,MGMB01H3,Summer,2025,"INPER Aggarwal, P.",In-person,TH,UTSC
+1326,MGMB01H3,Summer,2025,"INPER Aggarwal, P.",In-person,TU,UTSC
+1327,MGMB01H3,Summer,2025,"INPER Aggarwal, P.",In-person,TH,UTSC
+1328,MGMD21H3,Summer,2025,"INPER Dewan, T.",In-person,WE,UTSC
+1329,MGMD21H3,Summer,2025,"INPER Quan, V.",In-person,TU,UTSC
+1330,MGMD21H3,Summer,2025,"INPER Quan, V.",In-person,TH,UTSC
+1331,MGMD21H3,Summer,2025,"INPER Quan, V.",In-person,TU,UTSC
+1332,MGMD21H3,Summer,2025,"INPER Quan, V.",In-person,TH,UTSC
+1333,MGMD21H3,Summer,2025,"INPER Cire, A.",In-person,TU,UTSC
+1334,MGMD21H3,Summer,2025,"INPER Cire, A.",In-person,TH,UTSC
+1335,MGMD21H3,Summer,2025,"INPER McConkey, W.",In-person,TU,UTSC
+1336,MGMD21H3,Summer,2025,"INPER McConkey, W.",In-person,TH,UTSC
+1337,MGMD21H3,Summer,2025,"INPER McConkey, W.",In-person,TU,UTSC
+1338,MGMD21H3,Summer,2025,"INPER McConkey, W.",In-person,TH,UTSC
+1339,MGMD21H3,Summer,2025,"INPER Olatoye, F.",In-person,TU,UTSC
+1340,MGMD21H3,Summer,2025,"INPER Olatoye, F.",In-person,TH,UTSC
+1341,MGMD21H3,Summer,2025,"INPER Constantinou, P.",In-person,TU,UTSC
+1342,MGMD21H3,Summer,2025,"INPER Constantinou, P.",In-person,TH,UTSC
+1343,MGSC30H3,Summer,2025,"INPER Guiyab, J.",In-person,TH,UTSC
+1344,MGSC30H3,Summer,2025,"INPER Shaaban Nejad Lajeva, S.",In-person,TU,UTSC
+1345,MGSC30H3,Summer,2025,"INPER Shaaban Nejad Lajeva, S.",In-person,TH,UTSC
+1346,MGTA01H3,Summer,2025,"SYNC Shibaeva, M.",In-person,MO,UTSC
+1347,MGTA02H3,Summer,2025,"SYNC Toor, A.",In-person,WE,UTSC
+1348,MGTA02H3,Summer,2025,"INPER Daga, S.",In-person,TU,UTSC
+1349,MGTA02H3,Summer,2025,"INPER Daga, S.",In-person,TH,UTSC
+1350,NROB60H3,Summer,2025,"INPER Bercovici, D.",In-person,MO,UTSC
+1351,NROB61H3,Summer,2025,"INPER Bercovici, D.",In-person,MO,UTSC
+1352,NROC64H3,Summer,2025,"INPER Morrissey, M.",In-person,WE,UTSC
+1353,NROC64H3,Summer,2025,"INPER Albert, S.",In-person,MO,UTSC
+1354,NROC64H3,Summer,2025,"INPER Albert, S.",In-person,WE,UTSC
+1355,NROC64H3,Summer,2025,"SYNC Beard, K.",In-person,TU,UTSC
+1356,NROC64H3,Summer,2025,"SYNC Beard, K.",In-person,TH,UTSC
+1357,NROC64H3,Summer,2025,"SYNC Wey, V.",In-person,TU,UTSC
+1358,NROC64H3,Summer,2025,"SYNC Wey, V.",In-person,TH,UTSC
+1359,NROC64H3,Summer,2025,"SYNC Doppenberg, A.",In-person,TU,UTSC
+1360,NROC64H3,Summer,2025,"SYNC Doppenberg, A.",In-person,TH,UTSC
+1361,NROC64H3,Summer,2025,"SYNC Dimitrov, M.",In-person,MO,UTSC
+1362,NROC64H3,Summer,2025,"SYNC Dimitrov, M.",In-person,WE,UTSC
+1363,NROC64H3,Summer,2025,"SYNC Raza, Z.",In-person,MO,UTSC
+1364,NROC64H3,Summer,2025,"SYNC Raza, Z.",In-person,WE,UTSC
+1365,PHYA21H3,Summer,2025,"INPER Bayer Carpintero, J.",In-person,TU,UTSC
+1366,PHYA21H3,Summer,2025,"INPER Bayer Carpintero, J.",In-person,TH,UTSC
+1367,PHYD01H3,Summer,2025,"Valencia, D.",In-person,,UTSC
+1368,PHYD72H3,Summer,2025,"Valencia, D.",In-person,,UTSC
+1369,PHYD72H3,Summer,2025,"INPER Takahashi, E.",In-person,MO,UTSC
+1370,PHYD72H3,Summer,2025,"INPER Takahashi, E.",In-person,WE,UTSC
+1371,PHYD72H3,Summer,2025,"INPER Tomita, Y.",In-person,MO,UTSC
+1372,PHYD72H3,Summer,2025,"INPER Tomita, Y.",In-person,WE,UTSC
+1373,PLID02H3,Summer,2025,"INPER Monahan, P.",In-person,TU,UTSC
+1374,PLID02H3,Summer,2025,"INPER Monahan, P.",In-person,TH,UTSC
+1375,POLB30H3,Summer,2025,"INPER Spahiu, I.",In-person,TH,UTSC
+1376,POLB30H3,Summer,2025,"INPER Greenaway, C.",In-person,MO,UTSC
+1377,POLB30H3,Summer,2025,"INPER Greenaway, C.",In-person,WE,UTSC
+1378,POLB30H3,Summer,2025,"INPER Greenaway, C.",In-person,MO,UTSC
+1379,POLB30H3,Summer,2025,"INPER Greenaway, C.",In-person,WE,UTSC
+1380,POLB30H3,Summer,2025,"INPER Carvounas, D.",In-person,TU,UTSC
+1381,POLB30H3,Summer,2025,"INPER Carvounas, D.",In-person,TH,UTSC
+1382,POLB30H3,Summer,2025,"INPER Levine, R.",In-person,WE,UTSC
+1383,POLB30H3,Summer,2025,"INPER Levine, R.",In-person,FR,UTSC
+1384,POLC32H3,Summer,2025,"INPER Spahiu, I.",In-person,TH,UTSC
+1385,POLC32H3,Summer,2025,"INPER Street, E.",In-person,TU,UTSC
+1386,POLC32H3,Summer,2025,"INPER Street, E.",In-person,TH,UTSC
+1387,POLC78H3,Summer,2025,"INPER Levine, R.",In-person,WE,UTSC
+1388,POLC78H3,Summer,2025,"INPER Hurl, R.",In-person,TU,UTSC
+1389,POLC78H3,Summer,2025,"INPER Hurl, R.",In-person,TH,UTSC
+1390,PSCB90H3,Summer,2025,"Sauer, E.",In-person,,UTSC
+1391,PSYB07H3,Summer,2025,"INPER Sama, M.",In-person,WE,UTSC
+1392,PSYB70H3,Summer,2025,"INPER Shoura, M.",In-person,TH,UTSC
+1393,PSYC02H3,Summer,2025,"INPER Cooper, A.",In-person,WE,UTSC
+1394,PSYC08H3,Summer,2025,"INPER Sama, M.",In-person,FR,UTSC
+1395,PSYC10H3,Summer,2025,"INPER Schwartz, S.",In-person,WE,UTSC
+1396,PSYC31H3,Summer,2025,"SYNC Zakzanis, K.",In-person,TH,UTSC
+1397,PSYC34H3,Summer,2025,"INPER Thiruchselvam, R.",In-person,WE,UTSC
+1398,PSYC34H3,Summer,2025,"INPER Souza, M.",In-person,MO,UTSC
+1399,PSYC34H3,Summer,2025,"INPER Souza, M.",In-person,TH,UTSC
+1400,PSYC70H3,Summer,2025,"INPER Cree, G.",In-person,TU,UTSC
+1401,PSYC71H3,Summer,2025,"INPER Schwartz, S.",In-person,WE,UTSC
+1402,PSYC85H3,Summer,2025,"INPER Tharmaratnam, V.",In-person,FR,UTSC
+1403,PSYD15H3,Summer,2025,"INPER Cho, H.",In-person,TU,UTSC
+1404,PSYD15H3,Summer,2025,"SYNC McPhee, A.",In-person,MO,UTSC
+1405,PSYD15H3,Summer,2025,"SYNC McPhee, A.",In-person,TU,UTSC
+1406,PSYD33H3,Summer,2025,"INPER Cooper, A.",In-person,TH,UTSC
+1407,PSYD33H3,Summer,2025,"INPER Souza, M.",In-person,MO,UTSC
+1408,PSYD33H3,Summer,2025,"INPER Souza, M.",In-person,TH,UTSC
+1409,PSYD66H3,Summer,2025,"SYNC Di Domenico, S.",In-person,TU,UTSC
+1410,SOCB05H3,Summer,2025,"SYNC Doherty, J.",In-person,MO,UTSC
+1411,SOCB26H3,Summer,2025,"SYNC Mullen, A.",In-person,TH,UTSC
+1412,SOCB26H3,Summer,2025,"SYNC Braun, J.",In-person,TU,UTSC
+1413,SOCB26H3,Summer,2025,"SYNC Braun, J.",In-person,TH,UTSC
+1414,SOCC11H3,Summer,2025,"INPER Doherty, J.",In-person,WE,UTSC
+1415,SOCC45H3,Summer,2025,"SYNC Kwan-Lafond, D.",In-person,WE,UTSC
+1416,SOCD15H3,Summer,2025,"INPER Harold, J.",In-person,TU,UTSC
+1417,SOCD44H3,Summer,2025,"INPER Kwan-Lafond, D.",In-person,TH,UTSC
+1418,STAB22H3,Summer,2025,"INPER Goodhand, A.",In-person,TU,UTSC
+1419,STAB22H3,Summer,2025,"INPER Goodhand, A.",In-person,TH,UTSC
+1420,STAB23H3,Summer,2025,"SYNC Clare, E.",In-person,TU,UTSC
+1421,STAB23H3,Summer,2025,"SYNC Clare, E.",In-person,TH,UTSC
+1422,STAB52H3,Summer,2025,"INPER Damouras, S.",In-person,TU,UTSC
+1423,STAB52H3,Summer,2025,"INPER Damouras, S.",In-person,TH,UTSC
+1424,STAB53H3,Summer,2025,"INPER Vinogradov, V.",In-person,WE,UTSC
+1425,STAB53H3,Summer,2025,"INPER Vinogradov, V.",In-person,FR,UTSC
+1426,STAC62H3,Summer,2025,"INPER Vinogradov, V.",In-person,WE,UTSC
+1427,STAC62H3,Summer,2025,"INPER Vinogradov, V.",In-person,FR,UTSC
+1428,STAC67H3,Summer,2025,"INPER Samarakoon, M.",In-person,TU,UTSC
+1429,STAC67H3,Summer,2025,"INPER Samarakoon, M.",In-person,FR,UTSC
+1430,STAD95H3,Summer,2025,"INPER Freeman, B.",In-person,TU,UTSC
+1431,STAD95H3,Summer,2025,"INPER Hussain, M.",In-person,MO,UTSC
+1432,STAD95H3,Summer,2025,"INPER Hussain, M.",In-person,WE,UTSC
+1433,STAD95H3,Summer,2025,"INPER Untiks, I.",In-person,MO,UTSC
+1434,STAD95H3,Summer,2025,"INPER Untiks, I.",In-person,WE,UTSC
+1435,STAD95H3,Summer,2025,"INPER Cornell, K.",In-person,TH,UTSC
+1436,STAD95H3,Summer,2025,"INPER Cornell, K.",In-person,FR,UTSC
+1437,STAD95H3,Summer,2025,"INPER Gervers, M.",In-person,MO,UTSC
+1438,STAD95H3,Summer,2025,"INPER Gervers, M.",In-person,TH,UTSC
+1439,VPSB56H3,Summer,2025,"INPER Jalal-Zadeh, N.",In-person,WE,UTSC
+1440,VPSB70H3,Summer,2025,"INPER Leach, A.",In-person,TU,UTSC
+1441,VPSC70H3,Summer,2025,"INPER Pugen, G.",In-person,TH,UTSC
+1442,VPSC71H3,Summer,2025,"INPER Godden, V.",In-person,WE,UTSC
+1443,VPSC94H3,Summer,2025,"INPER Howes, H.",In-person,TU,UTSC
+1444,VPSC94H3,Summer,2025,"INPER Grewal, A.",In-person,TH,UTSC
+1445,VPSC94H3,Summer,2025,"INPER Grewal, A.",In-person,TU,UTSC
+1446,ACMC01H3,Fall,2025,"Luka, M.",In-person,,UTSC
+1447,ACMD01H3,Fall,2025,"Luka, M.",In-person,,UTSC
+1448,ACMD02H3,Fall,2025,"Luka, M.",In-person,,UTSC
+1449,AFSA01H3,Fall,2025,"Wai, Z.",In-person,WE,UTSC
+1450,AFSB51H3,Fall,2025,"Dinani, H.",In-person,TU,UTSC
+1451,AFSC19H3,Fall,2025,"Hossein, C.",In-person,WE,UTSC
+1452,AFSC55H3,Fall,2025,"Rockel, S.",In-person,TU,UTSC
+1453,AFSD07H3,Fall,2025,"Ilmi, A.",In-person,MO,UTSC
+1454,ANTA01H3,Fall,2025,"Silcox, M.",In-person,MO,UTSC
+1455,ANTA01H3,Fall,2025,"Silcox, M.",In-person,TH,UTSC
+1456,ANTA02H3,Fall,2025,"Mayell, S.",In-person,WE,UTSC
+1457,ANTB01H3,Fall,2025,"Krupa, C.",In-person,TU,UTSC
+1458,ANTB02H3,Fall,2025,"Cummings, M.",In-person,MO,UTSC
+1459,ANTB14H3,Fall,2025,"Schillaci, M.",In-person,TU,UTSC
+1460,ANTB18H3,Fall,2025,"Krupa, C.",In-person,TH,UTSC
+1461,ANTB19H3,Fall,2025,"Sorge, A.",In-person,TH,UTSC
+1462,ANTB22H3,Fall,2025,"Smeltzer, E.",In-person,MO,UTSC
+1463,ANTB35H3,Fall,2025,"Paz, A.",In-person,WE,UTSC
+1464,ANTC16H3,Fall,2025,"Nargolwalla, M.",In-person,TU,UTSC
+1465,ANTC18H3,Fall,2025,"Butt, W.",In-person,MO,UTSC
+1466,ANTC25H3,Fall,2025,"Butt, W.",In-person,MO,UTSC
+1467,ANTC49H3,Fall,2025,"Teichroeb, J.",In-person,TU,UTSC
+1468,ANTC61H3,Fall,2025,"Dahl, B.",In-person,TU,UTSC
+1469,ANTD06H3,Fall,2025,"Wilson, J.",In-person,TU,UTSC
+1470,ANTD35H3,Fall,2025,"Dewar, G.",In-person,WE,UTSC
+1471,ANTD50H3,Fall,2025,"Nargolwalla, M.",In-person,MO,UTSC
+1472,ASTA01H3,Fall,2025,"Menou, K.",In-person,TU,UTSC
+1473,ASTA01H3,Fall,2025,"Menou, K.",In-person,TH,UTSC
+1474,ASTB23H3,Fall,2025,"Menou, K.",In-person,TH,UTSC
+1475,ASTC02H3,Fall,2025,"Rein, H.",In-person,TH,UTSC
+1476,BIOA01H3,Fall,2025,"Ashok, A./ MacIvor, S./ Mahalingam, S./ Wang, Y.",In-person,TU,UTSC
+1477,BIOA01H3,Fall,2025,"Ashok, A./ MacIvor, S./ Mahalingam, S./ Wang, Y.",In-person,TH,UTSC
+1478,BIOA01H3,Fall,2025,"Ashok, A./ MacIvor, S./ Mahalingam, S./ Wang, Y.",In-person,FR,UTSC
+1479,BIOA01H3,Fall,2025,"Ashok, A./ MacIvor, S./ Mahalingam, S./ Wang, Y.",In-person,TU,UTSC
+1480,BIOA01H3,Fall,2025,"Ashok, A./ MacIvor, S./ Mahalingam, S./ Wang, Y.",In-person,TH,UTSC
+1481,BIOA01H3,Fall,2025,"Ashok, A./ MacIvor, S./ Mahalingam, S./ Wang, Y.",In-person,FR,UTSC
+1482,BIOA01H3,Fall,2025,"Ashok, A./ MacIvor, S./ Mahalingam, S./ Wang, Y.",Online,,UTSC
+1483,BIOA11H3,Fall,2025,"Williams, K.",In-person,FR,UTSC
+1484,BIOB10H3,Fall,2025,"Bawa, D.",In-person,TH,UTSC
+1485,BIOB11H3,Fall,2025,"Soares, F.",In-person,MO,UTSC
+1486,BIOB12H3,Fall,2025,"Soares, F.",In-person,FR,UTSC
+1487,BIOB34H3,Fall,2025,"Brown, J.",In-person,TU,UTSC
+1488,BIOB34H3,Fall,2025,"Brown, J.",In-person,TH,UTSC
+1489,BIOB34H3,Fall,2025,"Brown, J.",Online,,UTSC
+1490,BIOB50H3,Fall,2025,"Molnar, P.",In-person,TU,UTSC
+1491,BIOB50H3,Fall,2025,"Mohammad, N.",In-person,TU,UTSC
+1492,BIOB52H3,Fall,2025,"Lovejoy, N.",In-person,TU,UTSC
+1493,BIOB90H3,Fall,2025,"Brown, J.",In-person,TU,UTSC
+1494,BIOB97H3,Fall,2025,"Mason, A.",In-person,TH,UTSC
+1495,BIOC12H3,Fall,2025,"Zhao, R.",In-person,MO,UTSC
+1496,BIOC12H3,Fall,2025,"Zhao, R.",In-person,WE,UTSC
+1497,BIOC15H3,Fall,2025,"Anreiter, I.",In-person,WE,UTSC
+1498,BIOC19H3,Fall,2025,"Gan, K.",In-person,TH,UTSC
+1499,BIOC19H3,Fall,2025,"Gan, K.",In-person,FR,UTSC
+1500,BIOC20H3,Fall,2025,"Bawa, D.",In-person,TU,UTSC
+1501,BIOC21H3,Fall,2025,"Brown, J.",In-person,TU,UTSC
+1502,BIOC21H3,Fall,2025,"Brown, J.",In-person,TH,UTSC
+1503,BIOC29H3,Fall,2025,"Wang, Y.",In-person,MO,UTSC
+1504,BIOC32H3,Fall,2025,"Brown, J.",In-person,TU,UTSC
+1505,BIOC32H3,Fall,2025,"Brown, J.",In-person,TH,UTSC
+1506,BIOC35H3,Fall,2025,"Mott, A.",In-person,MO,UTSC
+1507,BIOC37H3,Fall,2025,"Stehlik, I.",In-person,TU,UTSC
+1508,BIOC44H3,Fall,2025,"Gruntman, E.",In-person,TU,UTSC
+1509,BIOC50H3,Fall,2025,"Weir, J.",In-person,MO,UTSC
+1510,BIOC52H3,Fall,2025,"Stehlik, I.",In-person,MO,UTSC
+1511,BIOC58H3,Fall,2025,"Sturge, R.",In-person,MO,UTSC
+1512,BIOC59H3,Fall,2025,"Cadotte, M.",In-person,TH,UTSC
+1513,BIOC61H3,Fall,2025,"Sturge, R.",In-person,MO,UTSC
+1514,BIOC63H3,Fall,2025,"Sturge, R.",In-person,WE,UTSC
+1515,BIOC90H3,Fall,2025,"Mahtani, T.",In-person,,UTSC
+1516,BIOD06H3,Fall,2025,"Koyama, M.",In-person,MO,UTSC
+1517,BIOD13H3,Fall,2025,"Gonzales-Vigil, E.",In-person,WE,UTSC
+1518,BIOD17H3,Fall,2025,"Bawa, D.",In-person,FR,UTSC
+1519,BIOD21H3,Fall,2025,"Gazzarrini, S.",In-person,WE,UTSC
+1520,BIOD26H3,Fall,2025,"Brunt, S.",In-person,MO,UTSC
+1521,BIOD27H3,Fall,2025,"Brown, J.",In-person,FR,UTSC
+1522,BIOD30H3,Fall,2025,"Rajavasireddy, S.",In-person,WE,UTSC
+1523,BIOD30H3,Fall,2025,"Rajavasireddy, S.",In-person,TH,UTSC
+1524,BIOD32H3,Fall,2025,"Reid, S./ Reid, S.",In-person,TU,UTSC
+1525,BIOD32H3,Fall,2025,"Reid, S./ Reid, S.",In-person,TH,UTSC
+1526,BIOD33H3,Fall,2025,"Reid, S./ Reid, S.",In-person,MO,UTSC
+1527,BIOD33H3,Fall,2025,"Reid, S./ Reid, S.",In-person,WE,UTSC
+1528,BIOD34H3,Fall,2025,"Porteus, C.",In-person,WE,UTSC
+1529,BIOD36H3,Fall,2025,"Mott, A.",In-person,WE,UTSC
+1530,BIOD37H3,Fall,2025,"Pan, X.",In-person,FR,UTSC
+1531,BIOD48H3,Fall,2025,"Weir, J.",In-person,TH,UTSC
+1532,BIOD59H3,Fall,2025,"Molnar, P.",In-person,TU,UTSC
+1533,BIOD65H3,Fall,2025,"Nash, J.",In-person,WE,UTSC
+1534,BIOD66H3,Fall,2025,"Cadotte, M.",In-person,TU,UTSC
+1535,BIOD95H3,Fall,2025,"Ashok, A./ Stehlik, I.",In-person,TU,UTSC
+1536,BIOD95H3,Fall,2025,"Ashok, A./ Stehlik, I.",In-person,TU,UTSC
+1537,BIOD95H3,Fall,2025,"Ashok, A./ Stehlik, I.",In-person,TU,UTSC
+1538,BIOD95H3,Fall,2025,"Ashok, A./ Stehlik, I.",In-person,TU,UTSC
+1539,BIOD95H3,Fall,2025,"Ashok, A./ Stehlik, I.",In-person,TU,UTSC
+1540,BIOD95H3,Fall,2025,"Ashok, A./ Stehlik, I.",In-person,TU,UTSC
+1541,BIOD95H3,Fall,2025,"Ashok, A./ Stehlik, I.",In-person,TU,UTSC
+1542,BIOD95H3,Fall,2025,"Ashok, A./ Stehlik, I.",In-person,TU,UTSC
+1543,BIOD95H3,Fall,2025,"Ashok, A./ Stehlik, I.",In-person,TU,UTSC
+1544,CHMA10H3,Fall,2025,"Izmaylov, A./ Zimmer-De Iuliis, M.",In-person,MO,UTSC
+1545,CHMA10H3,Fall,2025,"Izmaylov, A./ Zimmer-De Iuliis, M.",In-person,WE,UTSC
+1546,CHMA10H3,Fall,2025,"Izmaylov, A./ Zimmer-De Iuliis, M.",In-person,FR,UTSC
+1547,CHMA10H3,Fall,2025,"Izmaylov, A./ Zimmer-De Iuliis, M.",In-person,MO,UTSC
+1548,CHMA10H3,Fall,2025,"Izmaylov, A./ Zimmer-De Iuliis, M.",In-person,WE,UTSC
+1549,CHMA10H3,Fall,2025,"Izmaylov, A./ Zimmer-De Iuliis, M.",In-person,FR,UTSC
+1550,CHMA10H3,Fall,2025,"Izmaylov, A./ Zimmer-De Iuliis, M.",Online,,UTSC
+1551,CHMB16H3,Fall,2025,"Kim, S.",In-person,MO,UTSC
+1552,CHMB16H3,Fall,2025,"Kim, S.",In-person,FR,UTSC
+1553,CHMB20H3,Fall,2025,"Voznyy, O.",In-person,MO,UTSC
+1554,CHMB20H3,Fall,2025,"Voznyy, O.",In-person,TH,UTSC
+1555,CHMB23H3,Fall,2025,"Voznyy, O.",In-person,MO,UTSC
+1556,CHMB23H3,Fall,2025,"Voznyy, O.",In-person,TH,UTSC
+1557,CHMB31H3,Fall,2025,"Hadzovic, A.",In-person,TU,UTSC
+1558,CHMB31H3,Fall,2025,"Hadzovic, A.",In-person,FR,UTSC
+1559,CHMB31H3,Fall,2025,"Hadzovic, A.",Online,,UTSC
+1560,CHMB41H3,Fall,2025,"Dalili, S.",In-person,TU,UTSC
+1561,CHMB41H3,Fall,2025,"Dalili, S.",In-person,TH,UTSC
+1562,CHMB41H3,Fall,2025,"Dalili, S.",Online,,UTSC
+1563,CHMC11H3,Fall,2025,"Simpson, A.",In-person,TH,UTSC
+1564,CHMC21H3,Fall,2025,"Sullan, R.",In-person,TU,UTSC
+1565,CHMC47H3,Fall,2025,"Mikhaylichenko, S.",In-person,TU,UTSC
+1566,CHMC47H3,Fall,2025,"Mikhaylichenko, S.",In-person,FR,UTSC
+1567,CHMD11H3,Fall,2025,"Lysak, D.",In-person,MO,UTSC
+1568,CHMD69H3,Fall,2025,"Hadzovic, A.",In-person,FR,UTSC
+1569,CHMD79H3,Fall,2025,"Zhang, X.",In-person,WE,UTSC
+1570,CHMD89H3,Fall,2025,"Sauer, E.",In-person,WE,UTSC
+1571,CHMD89H3,Fall,2025,"Zhang, X.",In-person,,UTSC
+1572,CHMD89H3,Fall,2025,"Zhang, X.",In-person,,UTSC
+1573,CHMD89H3,Fall,2025,"Zhang, X.",In-person,,UTSC
+1574,CHMD89H3,Fall,2025,"Zhang, X.",In-person,,UTSC
+1575,CHMD89H3,Fall,2025,"Zhang, X.",In-person,,UTSC
+1576,CHMD91H3,Fall,2025,"Zhang, X.",In-person,,UTSC
+1577,CHMD91H3,Fall,2025,"Zhang, X.",In-person,,UTSC
+1578,CHMD91H3,Fall,2025,"Zhang, X.",In-person,,UTSC
+1579,CITA01H3,Fall,2025,"Allahwala, A.",In-person,MO,UTSC
+1580,CITB01H3,Fall,2025,"Allahwala, A.",In-person,WE,UTSC
+1581,CITB03H3,Fall,2025,"Bunce, S.",In-person,TH,UTSC
+1582,CITB05H3,Fall,2025,"Calderon Figueroa, F.",In-person,TH,UTSC
+1583,CITC03H3,Fall,2025,"Mah, J.",In-person,TU,UTSC
+1584,CITC07H3,Fall,2025,"Allahwala, A.",In-person,TH,UTSC
+1585,CITC12H3,Fall,2025,"Amrov, S.",In-person,WE,UTSC
+1586,CITC14H3,Fall,2025,"Snow, K.",In-person,TH,UTSC
+1587,CITC16H3,Fall,2025,"Sorensen, A.",In-person,TH,UTSC
+1588,CITD06H3,Fall,2025,"Swerhun, N.",In-person,TH,UTSC
+1589,CLAA04H3,Fall,2025,"Spurrier, T.",In-person,TU,UTSC
+1590,CLAA05H3,Fall,2025,"Spurrier, T.",In-person,FR,UTSC
+1591,CLAB05H3,Fall,2025,"Cooper, K.",In-person,TU,UTSC
+1592,CLAC11H3,Fall,2025,"Ferentinou, G.",In-person,WE,UTSC
+1593,COPB11H3,Fall,2025,"Haque, F.",In-person,WE,UTSC
+1594,COPB11H3,Fall,2025,"Haque, F.",In-person,WE,UTSC
+1595,COPB11H3,Fall,2025,"Haque, F.",In-person,TH,UTSC
+1596,COPB11H3,Fall,2025,"McDowell (Simmons), K.",In-person,TU,UTSC
+1597,COPB11H3,Fall,2025,"McDowell (Simmons), K.",In-person,TU,UTSC
+1598,COPB11H3,Fall,2025,"Ganeshanathan, L.",In-person,MO,UTSC
+1599,COPB13H3,Fall,2025,"Cook, L.",In-person,TH,UTSC
+1600,COPB13H3,Fall,2025,"Amiri, N.",In-person,TH,UTSC
+1601,COPB30H3,Fall,2025,"Polonenko, L.",In-person,WE,UTSC
+1602,COPB30H3,Fall,2025,"Polonenko, L.",In-person,TH,UTSC
+1603,COPB30H3,Fall,2025,"Polonenko, L.",In-person,TH,UTSC
+1604,COPB30H3,Fall,2025,"Polonenko, L.",In-person,TH,UTSC
+1605,COPB50H3,Fall,2025,"Banu, S./ Chan, C./ Jacob, L./ Kowalchuk, A./ Li, K./ Lott, A./ Perreira, S./ Saito, M.",Online,,UTSC
+1606,COPB53H3,Fall,2025,"Miller, R.",Online,,UTSC
+1607,COPB53H3,Fall,2025,"Miller, R.",Online,,UTSC
+1608,COPB53H3,Fall,2025,"Miller, R.",Online,,UTSC
+1609,COPB54H3,Fall,2025,"Jacob, L./ Kowalchuk, A.",Online,,UTSC
+1610,COPB55H3,Fall,2025,"Natkunam, G./ Novakovic, N.",Online,,UTSC
+1611,COPB56H3,Fall,2025,"Banu, S./ Chan, C.",Online,,UTSC
+1612,COPB57H3,Fall,2025,"Chan, P./ Dinkha, M.",Online,,UTSC
+1613,COPB58H3,Fall,2025,"Lott, A.",Online,,UTSC
+1614,COPC98H3,Fall,2025,"Novakovic, N.",Online,,UTSC
+1615,COPC98H3,Fall,2025,"Dinkha, M.",Online,,UTSC
+1616,COPC98H3,Fall,2025,"Miller, R.",Online,,UTSC
+1617,COPC99H3,Fall,2025,"Novakovic, N.",Online,,UTSC
+1618,COPC99H3,Fall,2025,"Dinkha, M.",Online,,UTSC
+1619,COPC99H3,Fall,2025,"Miller, R.",Online,,UTSC
+1620,CSCA08H3,Fall,2025,"Gawde, P.",In-person,MO,UTSC
+1621,CSCA08H3,Fall,2025,"Gawde, P.",In-person,FR,UTSC
+1622,CSCA08H3,Fall,2025,"Gawde, P.",In-person,TU,UTSC
+1623,CSCA08H3,Fall,2025,"Gawde, P.",In-person,TH,UTSC
+1624,CSCA08H3,Fall,2025,"Huang, Y.",In-person,TU,UTSC
+1625,CSCA08H3,Fall,2025,"Huang, Y.",In-person,TH,UTSC
+1626,CSCA08H3,Fall,2025,"Rostampoor, J.",In-person,MO,UTSC
+1627,CSCA08H3,Fall,2025,"Rostampoor, J.",In-person,WE,UTSC
+1628,CSCA08H3,Fall,2025,"Rostampoor, J.",In-person,MO,UTSC
+1629,CSCA08H3,Fall,2025,"Rostampoor, J.",In-person,WE,UTSC
+1630,CSCA20H3,Fall,2025,"Bapat, A.",In-person,WE,UTSC
+1631,CSCA20H3,Fall,2025,"Bapat, A.",In-person,MO,UTSC
+1632,CSCA20H3,Fall,2025,"Bapat, A.",In-person,FR,UTSC
+1633,CSCA67H3,Fall,2025,"Krupsky, L.",In-person,FR,UTSC
+1634,CSCA67H3,Fall,2025,"Krupsky, L.",In-person,TU,UTSC
+1635,CSCA67H3,Fall,2025,"Tafliovich, A.",In-person,FR,UTSC
+1636,CSCA67H3,Fall,2025,"Tafliovich, A.",In-person,TU,UTSC
+1637,CSCA67H3,Fall,2025,"Bremer Jr, J.",In-person,WE,UTSC
+1638,CSCA67H3,Fall,2025,"Bremer Jr, J.",In-person,MO,UTSC
+1639,CSCA67H3,Fall,2025,"Tafliovich, A.",In-person,TU,UTSC
+1640,CSCA67H3,Fall,2025,"Tafliovich, A.",In-person,MO,UTSC
+1641,CSCB07H3,Fall,2025,"Abou Assi, R.",In-person,MO,UTSC
+1642,CSCB07H3,Fall,2025,"Abou Assi, R.",In-person,MO,UTSC
+1643,CSCB36H3,Fall,2025,"Cheng, N.",In-person,WE,UTSC
+1644,CSCB36H3,Fall,2025,"Cheng, N.",In-person,FR,UTSC
+1645,CSCB36H3,Fall,2025,"Cheng, N.",In-person,WE,UTSC
+1646,CSCB36H3,Fall,2025,"Cheng, N.",In-person,FR,UTSC
+1647,CSCC09H3,Fall,2025,"Sans, T.",In-person,WE,UTSC
+1648,CSCC09H3,Fall,2025,"Sans, T.",In-person,WE,UTSC
+1649,CSCC10H3,Fall,2025,"Nizam, N.",In-person,TU,UTSC
+1650,CSCC11H3,Fall,2025,"Huang, Y.",In-person,FR,UTSC
+1651,CSCC37H3,Fall,2025,"Pancer, R.",In-person,MO,UTSC
+1652,CSCC37H3,Fall,2025,"Pancer, R.",In-person,FR,UTSC
+1653,CSCC37H3,Fall,2025,"Pancer, R.",In-person,WE,UTSC
+1654,CSCC43H3,Fall,2025,"Zhang, Q.",In-person,TH,UTSC
+1655,CSCC46H3,Fall,2025,"Anderson, A.",In-person,MO,UTSC
+1656,CSCC73H3,Fall,2025,"Bretscher, A.",In-person,MO,UTSC
+1657,CSCC73H3,Fall,2025,"Bretscher, A.",In-person,WE,UTSC
+1658,CSCC73H3,Fall,2025,"Bretscher, A.",In-person,MO,UTSC
+1659,CSCC73H3,Fall,2025,"Bretscher, A.",In-person,WE,UTSC
+1660,CSCC85H3,Fall,2025,"Estrada, F.",In-person,WE,UTSC
+1661,CSCD01H3,Fall,2025,"Bodurri, A./ Yong, C.",In-person,TU,UTSC
+1662,CSCD01H3,Fall,2025,"Bodurri, A./ Yong, C.",In-person,TH,UTSC
+1663,CSCD03H3,Fall,2025,"Minarik, J.",In-person,MO,UTSC
+1664,CSCD18H3,Fall,2025,"Estrada, F.",In-person,TH,UTSC
+1665,CSCD27H3,Fall,2025,"Sans, T.",In-person,TU,UTSC
+1666,CSCD27H3,Fall,2025,"Sans, T.",In-person,TH,UTSC
+1667,CSCD54H3,Fall,2025,"Kontozopoulos, H.",In-person,MO,UTSC
+1668,CSCD71H3,Fall,2025,"Ponce Castro, M.",In-person,FR,UTSC
+1669,CSCD90H3,Fall,2025,"Kontozopoulos, H.",In-person,MO,UTSC
+1670,CTLA01H3,Fall,2025,"Khoo, E.",In-person,TU,UTSC
+1671,ECTB61H3,Fall,2025,"Ma, J.",In-person,TH,UTSC
+1672,ECTB66H3,Fall,2025,"Ma, J.",In-person,TH,UTSC
+1673,ECTC61H3,Fall,2025,"Ma, J.",In-person,TH,UTSC
+1674,ECTC63H3,Fall,2025,"Payne, C.",In-person,WE,UTSC
+1675,ECTC64H3,Fall,2025,"Payne, C.",In-person,WE,UTSC
+1676,ECTD63H3,Fall,2025,"Wang, R.",In-person,TU,UTSC
+1677,ECTD65H3,Fall,2025,"Payne, C.",In-person,TU,UTSC
+1678,EESA01H3,Fall,2025,"Stefanovic, J.",In-person,MO,UTSC
+1679,EESA01H3,Fall,2025,"Stefanovic, J.",Online,,UTSC
+1680,EESA09H3,Fall,2025,"Mohsin, T.",In-person,TH,UTSC
+1681,EESB02H3,Fall,2025,"Meriano, M.",In-person,MO,UTSC
+1682,EESB04H3,Fall,2025,"Stefanovic, J.",In-person,WE,UTSC
+1683,EESB05H3,Fall,2025,"Sujeeun, L.",In-person,FR,UTSC
+1684,EESB15H3,Fall,2025,"Kayode, O.",In-person,WE,UTSC
+1685,EESB18H3,Fall,2025,"Meriano, M.",In-person,TH,UTSC
+1686,EESC07H3,Fall,2025,"Zaknic-Catovic, A.",In-person,MO,UTSC
+1687,EESC18H3,Fall,2025,"Avetisyan, K.",In-person,TH,UTSC
+1688,EESC20H3,Fall,2025,"Rios, D.",In-person,MO,UTSC
+1689,EESC22H3,Fall,2025,"Meulendyk, T.",In-person,MO,UTSC
+1690,EESC24H3,Fall,2025,"Dittrich, M.",In-person,,UTSC
+1691,EESC33H3,Fall,2025,"Wells, M.",In-person,TH,UTSC
+1692,EESC36H3,Fall,2025,"Atikian, T.",In-person,TU,UTSC
+1693,EESD06H3,Fall,2025,"Mohsin, T.",In-person,TU,UTSC
+1694,EESD06H3,Fall,2025,"Smith, K.",In-person,,UTSC
+1695,EESD06H3,Fall,2025,"Smith, K.",In-person,,UTSC
+1696,EESD09H3,Fall,2025,"Smith, K.",In-person,,UTSC
+1697,EESD09H3,Fall,2025,"Smith, K.",In-person,,UTSC
+1698,EESD09H3,Fall,2025,"Smith, K.",In-person,,UTSC
+1699,EESD09H3,Fall,2025,"Smith, K.",In-person,,UTSC
+1700,EESD09H3,Fall,2025,"Smith, K.",In-person,,UTSC
+1701,EESD13H3,Fall,2025,"Rempe, G.",Online,TH,UTSC
+1702,EESD15H3,Fall,2025,"Stefanovic, S.",In-person,FR,UTSC
+1703,EESD15H3,Fall,2025,"MacLellan, J.",In-person,TH,UTSC
+1704,EESD15H3,Fall,2025,"MacLellan, J.",In-person,TH,UTSC
+1705,EESD15H3,Fall,2025,"MacLellan, J.",In-person,TH,UTSC
+1706,EESD19H3,Fall,2025,"Meriano, M.",In-person,TU,UTSC
+1707,EESD21H3,Fall,2025,"Smith, K.",In-person,TU,UTSC
+1708,EESD31H3,Fall,2025,"Mohsin, T.",In-person,MO,UTSC
+1709,ENGA01H3,Fall,2025,"Nikkila, S.",In-person,TH,UTSC
+1710,ENGA02H3,Fall,2025,"Assif, M.",In-person,MO,UTSC
+1711,ENGA02H3,Fall,2025,"McIntyre, S.",In-person,TU,UTSC
+1712,ENGA02H3,Fall,2025,"Reid, M./ Reid, M.",Online,WE,UTSC
+1713,ENGA02H3,Fall,2025,"Villanueva, W.",Online,TH,UTSC
+1714,ENGA03H3,Fall,2025,"Tysdal, D.",In-person,TU,UTSC
+1715,ENGA10H3,Fall,2025,"Leonard, G.",In-person,WE,UTSC
+1716,ENGB01H3,Fall,2025,"Lundy, R.",In-person,TU,UTSC
+1717,ENGB07H3,Fall,2025,"Goldman, M.",In-person,TH,UTSC
+1718,ENGB08H3,Fall,2025,"Dolan, N.",In-person,MO,UTSC
+1719,ENGB17H3,Fall,2025,"MacDonald, G./ MacDonald, G.",In-person,WE,UTSC
+1720,ENGB27H3,Fall,2025,"Chakravarty, U.",In-person,MO,UTSC
+1721,ENGB30H3,Fall,2025,"Wey, L.",In-person,TH,UTSC
+1722,ENGB52H3,Fall,2025,"Long, A.",In-person,TU,UTSC
+1723,ENGB60H3,Fall,2025,"Lundy, R.",In-person,TH,UTSC
+1724,ENGB61H3,Fall,2025,"Oza, J.",In-person,TH,UTSC
+1725,ENGB63H3,Fall,2025,"Westoll, A.",In-person,WE,UTSC
+1726,ENGC02H3,Fall,2025,"Goldman, M.",In-person,WE,UTSC
+1727,ENGC04H3,Fall,2025,"Tysdal, D.",In-person,TU,UTSC
+1728,ENGC06H3,Fall,2025,"Akiwenzie-Damm, K.",In-person,MO,UTSC
+1729,ENGC23H3,Fall,2025,"Bolus-Reichert, C.",In-person,WE,UTSC
+1730,ENGC26H3,Fall,2025,"Wey, L.",In-person,TU,UTSC
+1731,ENGC43H3,Fall,2025,"Stafford, R./ Stafford, R.",In-person,MO,UTSC
+1732,ENGC48H3,Fall,2025,"Ryzhik, Y.",In-person,TH,UTSC
+1733,ENGC54H3,Fall,2025,"Windsor, R.",In-person,TH,UTSC
+1734,ENGC62H3,Fall,2025,"Lesk, A.",In-person,MO,UTSC
+1735,ENGC88H3,Fall,2025,"Westoll, A.",In-person,WE,UTSC
+1736,ENGC88H3,Fall,2025,"Assif, M.",In-person,MO,UTSC
+1737,ENGC88H3,Fall,2025,"Assif, M.",In-person,MO,UTSC
+1738,ENGC88H3,Fall,2025,"Assif, M.",In-person,MO,UTSC
+1739,ENGC88H3,Fall,2025,"Assif, M.",In-person,MO,UTSC
+1740,ENGC88H3,Fall,2025,"Assif, M.",In-person,MO,UTSC
+1741,ENGC88H3,Fall,2025,"Tysdal, D.",In-person,,UTSC
+1742,ENGC88H3,Fall,2025,"Tysdal, D.",In-person,,UTSC
+1743,ENGC88H3,Fall,2025,"Tysdal, D.",In-person,,UTSC
+1744,ENGC88H3,Fall,2025,"Tysdal, D.",In-person,,UTSC
+1745,ENGC88H3,Fall,2025,"Tysdal, D.",In-person,,UTSC
+1746,ENGC88H3,Fall,2025,"Tysdal, D.",In-person,,UTSC
+1747,ENGD53H3,Fall,2025,"Bolus-Reichert, C.",In-person,MO,UTSC
+1748,ENGD89H3,Fall,2025,"Nikkila, S.",In-person,TU,UTSC
+1749,ENGD89H3,Fall,2025,"Nikkila, S.",In-person,TU,UTSC
+1750,ENGD89H3,Fall,2025,"Nikkila, S.",In-person,TU,UTSC
+1751,ENGD89H3,Fall,2025,"Nikkila, S.",In-person,TU,UTSC
+1752,ESTB01H3,Fall,2025,"MacLellan, J.",In-person,WE,UTSC
+1753,ESTB03H3,Fall,2025,"Bariola Gonzales, N.",In-person,WE,UTSC
+1754,ESTC36H3,Fall,2025,"Klenk, N.",In-person,MO,UTSC
+1755,ESTC37H3,Fall,2025,"Tozer, L.",In-person,TH,UTSC
+1756,ESTC37H3,Fall,2025,"MacLellan, J.",In-person,TH,UTSC
+1757,ESTC37H3,Fall,2025,"MacLellan, J.",In-person,TH,UTSC
+1758,ESTC37H3,Fall,2025,"MacLellan, J.",In-person,TH,UTSC
+1759,FLMA70H3,Fall,2025,"Flynn, D.",In-person,MO,UTSC
+1760,FLMB71H3,Fall,2025,"Flynn, D.",In-person,TU,UTSC
+1761,FLMC94H3,Fall,2025,"Saljoughi, S.",In-person,TU,UTSC
+1762,FLMC95H3,Fall,2025,"Sengupta, R.",In-person,TH,UTSC
+1763,FLMD93H3,Fall,2025,"Sengupta, R.",In-person,TH,UTSC
+1764,FREA01H3,Fall,2025,"Tsimenis, M.",In-person,TU,UTSC
+1765,FREA96H3,Fall,2025,"Sonina, S.",In-person,TU,UTSC
+1766,FREA98H3,Fall,2025,"Janczak, M.",In-person,TH,UTSC
+1767,FREB01H3,Fall,2025,"Gaughan, C.",In-person,TU,UTSC
+1768,FREB01H3,Fall,2025,"Gaughan, C.",In-person,TH,UTSC
+1769,FREB01H3,Fall,2025,"Gaughan, C.",In-person,MO,UTSC
+1770,FREB01H3,Fall,2025,"Gaughan, C.",In-person,WE,UTSC
+1771,FREB08H3,Fall,2025,"Mittler, S.",In-person,TU,UTSC
+1772,FREB11H3,Fall,2025,"Ramadan, M.",In-person,WE,UTSC
+1773,FREB20H3,Fall,2025,"Mittler, S.",In-person,TH,UTSC
+1774,FREB22H3,Fall,2025,"Riendeau, P.",In-person,MO,UTSC
+1775,FREB35H3,Fall,2025,"Talahite-Moodley, A.",In-person,MO,UTSC
+1776,FREB37H3,Fall,2025,"Gaughan, C.",In-person,TU,UTSC
+1777,FREB44H3,Fall,2025,"Sonina, S.",In-person,TU,UTSC
+1778,FREB50H3,Fall,2025,"Gaughan, C.",In-person,MO,UTSC
+1779,FREC01H3,Fall,2025,"Zoghbi, S.",In-person,FR,UTSC
+1780,FREC01H3,Fall,2025,"Pillet, M.",In-person,TH,UTSC
+1781,FREC04H3,Fall,2025,"Pillet, M.",In-person,WE,UTSC
+1782,FREC63H3,Fall,2025,"Mittler, S.",In-person,TH,UTSC
+1783,FRED01H3,Fall,2025,"Pillet, M.",In-person,MO,UTSC
+1784,FRED01H3,Fall,2025,"Ballin, M.",In-person,WE,UTSC
+1785,FSTA01H3,Fall,2025,"Sharma, J.",In-person,TH,UTSC
+1786,FSTC13H3,Fall,2025,"Zaltz, D.",In-person,MO,UTSC
+1787,FSTC29H3,Fall,2025,"Bariola Gonzales, N.",In-person,TU,UTSC
+1788,GASB30H3,Fall,2025,"Salimjan, G.",In-person,WE,UTSC
+1789,GASB57H3,Fall,2025,"Raman, B.",In-person,TU,UTSC
+1790,GASB58H3,Fall,2025,"Lyu, H.",In-person,MO,UTSC
+1791,GASC48H3,Fall,2025,"deSouza, S.",In-person,TU,UTSC
+1792,GASC59H3,Fall,2025,"Maunaguru, S.",In-person,MO,UTSC
+1793,GASD13H3,Fall,2025,"Maunaguru, S.",In-person,WE,UTSC
+1794,GASD54H3,Fall,2025,"Raman, B.",In-person,TH,UTSC
+1795,GGRA02H3,Fall,2025,"Arik, H.",In-person,TU,UTSC
+1796,GGRA30H3,Fall,2025,"Brauen, G.",In-person,WE,UTSC
+1797,GGRB02H3,Fall,2025,"Majeed, M.",In-person,WE,UTSC
+1798,GGRB05H3,Fall,2025,"Bernard, O.",In-person,MO,UTSC
+1799,GGRB13H3,Fall,2025,"Goffe, R.",In-person,WE,UTSC
+1800,GGRB21H3,Fall,2025,"Ekers, M.",In-person,TU,UTSC
+1801,GGRB30H3,Fall,2025,"Calderon Figueroa, F.",In-person,TU,UTSC
+1802,GGRC10H3,Fall,2025,"McCormack, K.",In-person,TH,UTSC
+1803,GGRC26H3,Fall,2025,"Ekers, M.",In-person,TH,UTSC
+1804,GGRC30H3,Fall,2025,"Arku, R.",In-person,TH,UTSC
+1805,GGRC31H3,Fall,2025,"Arik, H.",In-person,TU,UTSC
+1806,GGRC44H3,Fall,2025,"Kepe, T.",In-person,MO,UTSC
+1807,GGRC50H3,Fall,2025,"Hunter, M.",In-person,MO,UTSC
+1808,GGRD10H3,Fall,2025,"Hunter, M.",In-person,TH,UTSC
+1809,HISA05H3,Fall,2025,"Gervers, M.",In-person,TH,UTSC
+1810,HISA07H3,Fall,2025,"Spurrier, T.",In-person,TU,UTSC
+1811,HISB03H3,Fall,2025,"Hastings, P.",In-person,MO,UTSC
+1812,HISB03H3,Fall,2025,"Hastings, P.",In-person,FR,UTSC
+1813,HISB10H3,Fall,2025,"Cooper, K.",In-person,TU,UTSC
+1814,HISB30H3,Fall,2025,"Kazal, R.",In-person,MO,UTSC
+1815,HISB30H3,Fall,2025,"Kazal, R.",In-person,WE,UTSC
+1816,HISB43H3,Fall,2025,"Cooper, A.",In-person,WE,UTSC
+1817,HISB51H3,Fall,2025,"Dinani, H.",In-person,TU,UTSC
+1818,HISB57H3,Fall,2025,"Raman, B.",In-person,TU,UTSC
+1819,HISB58H3,Fall,2025,"Lyu, H.",In-person,MO,UTSC
+1820,HISB63H3,Fall,2025,"Nickson, M.",In-person,MO,UTSC
+1821,HISC20H3,Fall,2025,"Arthurs, J.",In-person,TU,UTSC
+1822,HISC55H3,Fall,2025,"Rockel, S.",In-person,TU,UTSC
+1823,HISC59H3,Fall,2025,"Maunaguru, S.",In-person,MO,UTSC
+1824,HISC76H3,Fall,2025,"deSouza, S.",In-person,MO,UTSC
+1825,HISD16H3,Fall,2025,"Grewal, A.",In-person,FR,UTSC
+1826,HISD35H3,Fall,2025,"Kazal, R.",In-person,MO,UTSC
+1827,HISD47H3,Fall,2025,"Hastings, P.",In-person,WE,UTSC
+1828,HISD54H3,Fall,2025,"Raman, B.",In-person,TH,UTSC
+1829,HLTA02H3,Fall,2025,"Colaco, K.",In-person,TU,UTSC
+1830,HLTB11H3,Fall,2025,"Beaudry, J.",In-person,TU,UTSC
+1831,HLTB16H3,Fall,2025,"Schlueter, D.",In-person,WE,UTSC
+1832,HLTB33H3,Fall,2025,"Wong, C.",In-person,WE,UTSC
+1833,HLTB40H3,Fall,2025,"Sinno, J.",Online,TH,UTSC
+1834,HLTB50H3,Fall,2025,"Bytautas, J.",In-person,TU,UTSC
+1835,HLTB60H3,Fall,2025,"Chandran, I.",In-person,WE,UTSC
+1836,HLTC17H3,Fall,2025,"Tam-Seto, L.",In-person,TH,UTSC
+1837,HLTC19H3,Fall,2025,"Ha, E.",In-person,TU,UTSC
+1838,HLTC23H3,Fall,2025,"Rana, R.",In-person,WE,UTSC
+1839,HLTC24H3,Fall,2025,"Tsuji, L.",In-person,TU,UTSC
+1840,HLTC27H3,Fall,2025,"Schlueter, D.",In-person,TH,UTSC
+1841,HLTC31H3,Fall,2025,"Caron-Beaudoin, E.",In-person,MO,UTSC
+1842,HLTC42H3,Fall,2025,"Stutz, S.",In-person,MO,UTSC
+1843,HLTD04H3,Fall,2025,"Sicova, M.",In-person,MO,UTSC
+1844,HLTD06H3,Fall,2025,"Bisaillon, L.",In-person,MO,UTSC
+1845,HLTD22H3,Fall,2025,"Colaco, K.",In-person,TU,UTSC
+1846,HLTD23H3,Fall,2025,"Benoit, A.",In-person,TU,UTSC
+1847,HLTD29H3,Fall,2025,"Perri, M.",In-person,FR,UTSC
+1848,HLTD82H3,Fall,2025,"Massaquoi, N.",In-person,TH,UTSC
+1849,IDSA01H3,Fall,2025,"Kingsbury, D.",In-person,MO,UTSC
+1850,IDSB01H3,Fall,2025,"Isakson, R.",In-person,TH,UTSC
+1851,IDSB04H3,Fall,2025,"Birn, A.",In-person,TU,UTSC
+1852,IDSB10H3,Fall,2025,"Chan, L.",In-person,TH,UTSC
+1853,IDSC04H3,Fall,2025,"Tandon, N.",In-person,TH,UTSC
+1854,IDSC13H3,Fall,2025,"Kingston, P.",In-person,TH,UTSC
+1855,IDSC15H3,Fall,2025,"Ilmi, A.",In-person,MO,UTSC
+1856,IDSC16H3,Fall,2025,"Teichman, J.",In-person,WE,UTSC
+1857,IDSC17H3,Fall,2025,"Von Lieres, B.",In-person,TH,UTSC
+1858,IDSC18H3,Fall,2025,"Von Lieres, B.",In-person,TU,UTSC
+1859,IDSC19H3,Fall,2025,"Hossein, C.",In-person,WE,UTSC
+1860,IDSC19H3,Fall,2025,"Isakson, R.",In-person,TH,UTSC
+1861,IDSC19H3,Fall,2025,"Isakson, R.",In-person,TH,UTSC
+1862,IDSC19H3,Fall,2025,"Isakson, R.",In-person,TH,UTSC
+1863,IDSD07H3,Fall,2025,"Ilmi, A.",In-person,MO,UTSC
+1864,IDSD10H3,Fall,2025,"Kepe, T.",In-person,TU,UTSC
+1865,IDSD19H3,Fall,2025,"Von Lieres, B.",In-person,TU,UTSC
+1866,IDSD90H3,Fall,2025,"Teichman, J.",In-person,TU,UTSC
+1867,JOUA01H3,Fall,2025,"Martins, R.",In-person,MO,UTSC
+1868,JOUA06H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1869,JOUB01H3,Fall,2025,"Amani, A.",In-person,TU,UTSC
+1870,JOUB11H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1871,JOUB14H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1872,JOUB18H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1873,JOUB18H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1874,JOUB19H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1875,JOUB39H3,Fall,2025,"Roderique, H.",In-person,WE,UTSC
+1876,JOUC30H3,Fall,2025,"Roderique, H.",In-person,WE,UTSC
+1877,JOUC60H3,Fall,2025,"Kim, A.",In-person,TU,UTSC
+1878,JOUD13H3,Fall,2025,"Burchell, K.",In-person,WE,UTSC
+1879,LGGA10H3,Fall,2025,"Kim, H.",In-person,TU,UTSC
+1880,LGGA10H3,Fall,2025,"Kim, H.",In-person,TH,UTSC
+1881,LGGA10H3,Fall,2025,"Back, U.",In-person,MO,UTSC
+1882,LGGA10H3,Fall,2025,"Back, U.",In-person,WE,UTSC
+1883,LGGA60H3,Fall,2025,"Wang, R.",In-person,FR,UTSC
+1884,LGGA74H3,Fall,2025,"Vivekanandan, P.",In-person,TH,UTSC
+1885,LGGB60H3,Fall,2025,"Wang, R.",In-person,TU,UTSC
+1886,LINA01H3,Fall,2025,"Moghaddam, S.",In-person,MO,UTSC
+1887,LINA01H3,Fall,2025,"Moghaddam, S.",Online,,UTSC
+1888,LINB06H3,Fall,2025,"Moghaddam, S.",In-person,MO,UTSC
+1889,LINB06H3,Fall,2025,"Bhattasali, S.",In-person,WE,UTSC
+1890,LINB09H3,Fall,2025,"Kang, Y.",In-person,TU,UTSC
+1891,LINB20H3,Fall,2025,"Moghaddam, S.",In-person,WE,UTSC
+1892,LINB29H3,Fall,2025,"Monahan, P.",In-person,TH,UTSC
+1893,LINB30H3,Fall,2025,"Bhattasali, S.",In-person,TU,UTSC
+1894,LINB60H3,Fall,2025,"Wang, R.",In-person,TU,UTSC
+1895,LINB62H3,Fall,2025,"Pizzacalla, M.",In-person,FR,UTSC
+1896,LINB62H3,Fall,2025,"Pizzacalla, M.",In-person,TU,UTSC
+1897,LINC12H3,Fall,2025,"Milway, D.",In-person,TH,UTSC
+1898,LINC13H3,Fall,2025,"Moghaddam, S.",In-person,WE,UTSC
+1899,LINC28H3,Fall,2025,"Hachimi, A.",In-person,TH,UTSC
+1900,MATA29H3,Fall,2025,"Glynn-Adey, P.",In-person,WE,UTSC
+1901,MATA29H3,Fall,2025,"Glynn-Adey, P.",In-person,FR,UTSC
+1902,MATA29H3,Fall,2025,"Glynn-Adey, P.",In-person,MO,UTSC
+1903,MATA29H3,Fall,2025,"Glynn-Adey, P.",In-person,WE,UTSC
+1904,MATA29H3,Fall,2025,"Hessami Pilehrood, T.",In-person,TU,UTSC
+1905,MATA29H3,Fall,2025,"Hessami Pilehrood, T.",In-person,TH,UTSC
+1906,MATA30H3,Fall,2025,"Cavers, M.",In-person,TU,UTSC
+1907,MATA30H3,Fall,2025,"Cavers, M.",In-person,TH,UTSC
+1908,MATA30H3,Fall,2025,"Cavers, M.",In-person,TU,UTSC
+1909,MATA30H3,Fall,2025,"Cavers, M.",In-person,TH,UTSC
+1910,MATA31H3,Fall,2025,"Shahbazi, Z.",In-person,MO,UTSC
+1911,MATA31H3,Fall,2025,"Shahbazi, Z.",In-person,WE,UTSC
+1912,MATA31H3,Fall,2025,"Sarnataro, L.",In-person,TU,UTSC
+1913,MATA34H3,Fall,2025,"Kielstra, T.",In-person,TU,UTSC
+1914,MATA34H3,Fall,2025,"Kielstra, T.",In-person,TH,UTSC
+1915,MATA34H3,Fall,2025,"Kielstra, T.",In-person,TU,UTSC
+1916,MATA34H3,Fall,2025,"Kielstra, T.",In-person,TH,UTSC
+1917,MATA34H3,Fall,2025,"Kielstra, T.",In-person,TH,UTSC
+1918,MATA34H3,Fall,2025,"Kielstra, T.",In-person,TU,UTSC
+1919,MATB24H3,Fall,2025,"Jiang, X.",In-person,TU,UTSC
+1920,MATB24H3,Fall,2025,"Jiang, X.",In-person,TH,UTSC
+1921,MATB24H3,Fall,2025,"Jiang, X.",In-person,TU,UTSC
+1922,MATB24H3,Fall,2025,"Jiang, X.",In-person,TH,UTSC
+1923,MATB41H3,Fall,2025,"Glynn-Adey, P.",In-person,MO,UTSC
+1924,MATB41H3,Fall,2025,"Glynn-Adey, P.",In-person,FR,UTSC
+1925,MATB41H3,Fall,2025,"Hessami Pilehrood, T.",In-person,MO,UTSC
+1926,MATB41H3,Fall,2025,"Hessami Pilehrood, T.",In-person,FR,UTSC
+1927,MATB43H3,Fall,2025,"Scalamandre, M.",In-person,TU,UTSC
+1928,MATB43H3,Fall,2025,"Scalamandre, M.",In-person,TH,UTSC
+1929,MATB44H3,Fall,2025,"Aretakis, S.",In-person,TU,UTSC
+1930,MATB44H3,Fall,2025,"Aretakis, S.",In-person,TH,UTSC
+1931,MATB61H3,Fall,2025,"Jiang, X.",In-person,MO,UTSC
+1932,MATB61H3,Fall,2025,"Jiang, X.",In-person,WE,UTSC
+1933,MATC01H3,Fall,2025,"Smith, K.",In-person,WE,UTSC
+1934,MATC01H3,Fall,2025,"Smith, K.",In-person,FR,UTSC
+1935,MATC09H3,Fall,2025,"Alam, I.",In-person,TU,UTSC
+1936,MATC09H3,Fall,2025,"Alam, I.",In-person,TH,UTSC
+1937,MATC15H3,Fall,2025,"Elmanto, E.",In-person,MO,UTSC
+1938,MATC15H3,Fall,2025,"Elmanto, E.",In-person,FR,UTSC
+1939,MATC27H3,Fall,2025,"Elmanto, E.",In-person,MO,UTSC
+1940,MATC27H3,Fall,2025,"Elmanto, E.",In-person,FR,UTSC
+1941,MATC32H3,Fall,2025,"Virag, B.",In-person,MO,UTSC
+1942,MATC32H3,Fall,2025,"Virag, B.",In-person,TH,UTSC
+1943,MATC34H3,Fall,2025,"Annala, T.",In-person,TU,UTSC
+1944,MATC34H3,Fall,2025,"Annala, T.",In-person,FR,UTSC
+1945,MATC44H3,Fall,2025,"Cavers, M.",In-person,TU,UTSC
+1946,MATC44H3,Fall,2025,"Cavers, M.",In-person,TH,UTSC
+1947,MATD02H3,Fall,2025,"Aretakis, S.",In-person,MO,UTSC
+1948,MATD02H3,Fall,2025,"Aretakis, S.",In-person,TH,UTSC
+1949,MATD11H3,Fall,2025,"Aretakis, S.",In-person,TU,UTSC
+1950,MATD16H3,Fall,2025,"Memarpanahi, P.",In-person,MO,UTSC
+1951,MATD16H3,Fall,2025,"Memarpanahi, P.",In-person,FR,UTSC
+1952,MATD26H3,Fall,2025,"Aretakis, S.",In-person,TU,UTSC
+1953,MATD26H3,Fall,2025,"Aretakis, S.",In-person,WE,UTSC
+1954,MATD67H3,Fall,2025,"Jeffrey, L.",In-person,TU,UTSC
+1955,MATD67H3,Fall,2025,"Jeffrey, L.",In-person,TH,UTSC
+1956,MBTB11H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1957,MBTB12H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1958,MBTB30H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1959,MBTB51H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1960,MBTC60H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1961,MBTC66H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1962,MBTC71H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1963,MBTC73H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+1964,MDSA10H3,Fall,2025,"Rault, J.",In-person,WE,UTSC
+1965,MDSB11H3,Fall,2025,"Lobo, R.",In-person,TH,UTSC
+1966,MDSB12H3,Fall,2025,"Jensen, S.",In-person,MO,UTSC
+1967,MDSB14H3,Fall,2025,"Guzman, C.",Online,,UTSC
+1968,MDSB22H3,Fall,2025,"Jensen, S.",In-person,MO,UTSC
+1969,MDSB28H3,Fall,2025,"Paz, A.",In-person,WE,UTSC
+1970,MDSB30H3,Fall,2025,"Idiz, D.",Online,,UTSC
+1971,MDSB30H3,Fall,2025,"Idiz, D.",Online,,UTSC
+1972,MDSB31H3,Fall,2025,"Simon, G.",In-person,WE,UTSC
+1973,MDSB31H3,Fall,2025,"Simon, G.",In-person,WE,UTSC
+1974,MDSB32H3,Fall,2025,"Lobo, R.",In-person,FR,UTSC
+1975,MDSC10H3,Fall,2025,"Rault, J.",In-person,TU,UTSC
+1976,MDSC11H3,Fall,2025,"Lobo, R.",In-person,MO,UTSC
+1977,MDSC13H3,Fall,2025,"Knight, L.",In-person,TH,UTSC
+1978,MDSC20H3,Fall,2025,"Cudjoe, J.",In-person,WE,UTSC
+1979,MDSC23H3,Fall,2025,"Cudjoe, J.",In-person,TH,UTSC
+1980,MDSC27H3,Fall,2025,"Cudjoe, J.",In-person,WE,UTSC
+1981,MDSC33H3,Fall,2025,"Jacobs, Q.",Hybrid,FR,UTSC
+1982,MDSC34H3,Fall,2025,"Kim, A.",In-person,TU,UTSC
+1983,MDSD10H3,Fall,2025,"Cowan, T.",In-person,WE,UTSC
+1984,MDSD20H3,Fall,2025,"Do Nascimento Grohmann, R.",In-person,TH,UTSC
+1985,MDSD30H3,Fall,2025,"Simon, G.",In-person,WE,UTSC
+1986,MGAB01H3,Fall,2025,"Shalev, R.",In-person,MO,UTSC
+1987,MGAB01H3,Fall,2025,"Daga, S.",In-person,TU,UTSC
+1988,MGAB01H3,Fall,2025,"Quan Fun, G.",In-person,MO,UTSC
+1989,MGAB01H3,Fall,2025,"Shalev, R.",In-person,MO,UTSC
+1990,MGAB01H3,Fall,2025,"Down, A.",In-person,TH,UTSC
+1991,MGAB01H3,Fall,2025,"Daga, S.",In-person,TU,UTSC
+1992,MGAB01H3,Fall,2025,"Down, A.",In-person,TH,UTSC
+1993,MGAB01H3,Fall,2025,"Down, A.",In-person,TH,UTSC
+1994,MGAB01H3,Fall,2025,"Chen, L./ Chen, L.",In-person,TU,UTSC
+1995,MGAB01H3,Fall,2025,"Quan Fun, G.",In-person,MO,UTSC
+1996,MGAB02H3,Fall,2025,"Chen, L./ Chen, L.",In-person,TU,UTSC
+1997,MGAB03H3,Fall,2025,"Chen, L./ Chen, L.",In-person,WE,UTSC
+1998,MGAB03H3,Fall,2025,"Chen, L./ Chen, L.",In-person,WE,UTSC
+1999,MGAB03H3,Fall,2025,"Chen, L./ Chen, L.",In-person,WE,UTSC
+2000,MGAB03H3,Fall,2025,"Chen, L./ Chen, L.",In-person,WE,UTSC
+2001,MGAC01H3,Fall,2025,"Quan Fun, G.",In-person,TU,UTSC
+2002,MGAC01H3,Fall,2025,"Quan Fun, G.",In-person,TU,UTSC
+2003,MGAC03H3,Fall,2025,"Quan Fun, G.",In-person,MO,UTSC
+2004,MGAC10H3,Fall,2025,"Harvey, L.",In-person,TU,UTSC
+2005,MGAC50H3,Fall,2025,"Ratnam, S./ Vivekanandasothy, S.",In-person,TU,UTSC
+2006,MGAD20H3,Fall,2025,"Harvey, L.",In-person,TH,UTSC
+2007,MGEA01H3,Fall,2025,"Ho, M.",In-person,TH,UTSC
+2008,MGEA02H3,Fall,2025,"Parkinson, J.",In-person,MO,UTSC
+2009,MGEA02H3,Fall,2025,"Parkinson, J.",In-person,WE,UTSC
+2010,MGEA02H3,Fall,2025,"Parkinson, J.",In-person,MO,UTSC
+2011,MGEA02H3,Fall,2025,"Parkinson, J.",In-person,WE,UTSC
+2012,MGEA02H3,Fall,2025,"Parkinson, J.",In-person,TU,UTSC
+2013,MGEB01H3,Fall,2025,"Ho, M.",In-person,WE,UTSC
+2014,MGEB02H3,Fall,2025,"Mazaheri, A.",In-person,TU,UTSC
+2015,MGEB02H3,Fall,2025,"Mazaheri, A.",In-person,TU,UTSC
+2016,MGEB02H3,Fall,2025,"Mazaheri, A.",In-person,FR,UTSC
+2017,MGEB02H3,Fall,2025,"Mazaheri, A.",In-person,WE,UTSC
+2018,MGEB02H3,Fall,2025,"Mazaheri, A.",In-person,WE,UTSC
+2019,MGEB02H3,Fall,2025,"Mazaheri, A.",In-person,MO,UTSC
+2020,MGEB05H3,Fall,2025,"Au, I.",In-person,FR,UTSC
+2021,MGEB06H3,Fall,2025,"Parkinson, J.",In-person,MO,UTSC
+2022,MGEB06H3,Fall,2025,"Parkinson, J.",In-person,TH,UTSC
+2023,MGEB06H3,Fall,2025,"Parkinson, J.",In-person,FR,UTSC
+2024,MGEB11H3,Fall,2025,"Turner, L.",In-person,FR,UTSC
+2025,MGEB11H3,Fall,2025,"Yu, V.",In-person,TH,UTSC
+2026,MGEB11H3,Fall,2025,"Turner, L.",Online,,UTSC
+2027,MGEB12H3,Fall,2025,"Mazaheri, A.",In-person,TH,UTSC
+2028,MGEB12H3,Fall,2025,"Mazaheri, A.",In-person,MO,UTSC
+2029,MGEB32H3,Fall,2025,"Campolieti, M.",In-person,MO,UTSC
+2030,MGEC02H3,Fall,2025,"Sillamaa, M.",In-person,FR,UTSC
+2031,MGEC02H3,Fall,2025,"Sillamaa, M.",In-person,FR,UTSC
+2032,MGEC06H3,Fall,2025,"Cavenaile, L.",In-person,TU,UTSC
+2033,MGEC11H3,Fall,2025,"Yu, Y./ Yu, Y./ Yu, Y.",In-person,TH,UTSC
+2034,MGEC11H3,Fall,2025,"Yu, Y./ Yu, Y./ Yu, Y.",In-person,TH,UTSC
+2035,MGEC31H3,Fall,2025,"Krashinsky, M.",In-person,MO,UTSC
+2036,MGEC34H3,Fall,2025,"Campolieti, M.",In-person,MO,UTSC
+2037,MGEC41H3,Fall,2025,"Chandra, A.",In-person,TH,UTSC
+2038,MGEC45H3,Fall,2025,"Krashinsky, H.",In-person,MO,UTSC
+2039,MGEC51H3,Fall,2025,"Hicks, J.",In-person,TU,UTSC
+2040,MGEC81H3,Fall,2025,"Frazer, G.",Online,TU,UTSC
+2041,MGEC82H3,Fall,2025,"Frazer, G.",Online,TU,UTSC
+2042,MGEC92H3,Fall,2025,"Anjomshoa, M.",In-person,TH,UTSC
+2043,MGED06H3,Fall,2025,"Cavenaile, L.",In-person,TU,UTSC
+2044,MGED11H3,Fall,2025,"Yu, Y./ Yu, Y./ Yu, Y.",In-person,TH,UTSC
+2045,MGED63H3,Fall,2025,"Au, I.",In-person,WE,UTSC
+2046,MGFB10H3,Fall,2025,"Khapko, M.",In-person,TU,UTSC
+2047,MGFB10H3,Fall,2025,"Khapko, M.",In-person,TU,UTSC
+2048,MGFB10H3,Fall,2025,"Khapko, M.",In-person,WE,UTSC
+2049,MGFC10H3,Fall,2025,"Riddiough, S.",In-person,WE,UTSC
+2050,MGFC10H3,Fall,2025,"Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TU,UTSC
+2051,MGFC20H3,Fall,2025,"Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TU,UTSC
+2052,MGFC20H3,Fall,2025,"Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TH,UTSC
+2053,MGFC20H3,Fall,2025,"Ahmed, S./ Ahmed, S./ Ahmed, S.",In-person,TH,UTSC
+2054,MGFC30H3,Fall,2025,"Wei, J.",In-person,WE,UTSC
+2055,MGFC30H3,Fall,2025,"Wei, J.",In-person,WE,UTSC
+2056,MGFC35H3,Fall,2025,"Nash, J.",In-person,FR,UTSC
+2057,MGFC35H3,Fall,2025,"Nash, J.",In-person,MO,UTSC
+2058,MGFC50H3,Fall,2025,"Riddiough, S.",In-person,TU,UTSC
+2059,MGFC50H3,Fall,2025,"Riddiough, S.",In-person,TU,UTSC
+2060,MGFC60H3,Fall,2025,"Gao, J.",In-person,TU,UTSC
+2061,MGFD30H3,Fall,2025,"Mazaheri, A.",In-person,MO,UTSC
+2062,MGFD60H3,Fall,2025,"Chau, B.",In-person,TU,UTSC
+2063,MGHA12H3,Fall,2025,"Trougakos, J.",In-person,WE,UTSC
+2064,MGHA12H3,Fall,2025,"Trougakos, J.",In-person,WE,UTSC
+2065,MGHA12H3,Fall,2025,"Wilfred, S.",In-person,FR,UTSC
+2066,MGHA12H3,Fall,2025,"Trougakos, J.",In-person,FR,UTSC
+2067,MGHB02H3,Fall,2025,"McCarthy, J.",In-person,WE,UTSC
+2068,MGHB02H3,Fall,2025,"McCarthy, J.",In-person,TH,UTSC
+2069,MGHB02H3,Fall,2025,"McCarthy, J.",In-person,TH,UTSC
+2070,MGHB02H3,Fall,2025,"Saks, A.",In-person,TU,UTSC
+2071,MGHC02H3,Fall,2025,"Radhakrishnan, P.",In-person,TH,UTSC
+2072,MGHC02H3,Fall,2025,"Heathcote, J.",In-person,MO,UTSC
+2073,MGHC02H3,Fall,2025,"Radhakrishnan, P.",In-person,WE,UTSC
+2074,MGHC02H3,Fall,2025,"Radhakrishnan, P.",In-person,TH,UTSC
+2075,MGHC02H3,Fall,2025,"Addo-Bekoe, C.",In-person,TU,UTSC
+2076,MGHD14H3,Fall,2025,"Trougakos, J.",In-person,FR,UTSC
+2077,MGHD24H3,Fall,2025,"McCarthy, J.",In-person,WE,UTSC
+2078,MGHD27H3,Fall,2025,"Saks, A.",In-person,TH,UTSC
+2079,MGHD28H3,Fall,2025,"Radhakrishnan, P.",In-person,WE,UTSC
+2080,MGIA12H3,Fall,2025,"Connelly, B.",In-person,FR,UTSC
+2081,MGIA12H3,Fall,2025,"Connelly, B.",In-person,FR,UTSC
+2082,MGIC01H3,Fall,2025,"Jin, Y.",In-person,WE,UTSC
+2083,MGIC02H3,Fall,2025,"Heathcote, J.",In-person,MO,UTSC
+2084,MGID40H3,Fall,2025,"Zemel, M.",In-person,TH,UTSC
+2085,MGMA01H3,Fall,2025,"Aggarwal, P.",In-person,MO,UTSC
+2086,MGMA01H3,Fall,2025,"Aggarwal, P.",In-person,MO,UTSC
+2087,MGMA01H3,Fall,2025,"Dewan, T.",In-person,TU,UTSC
+2088,MGMA01H3,Fall,2025,"Maglio III, S.",In-person,WE,UTSC
+2089,MGMA01H3,Fall,2025,"Maglio III, S.",In-person,WE,UTSC
+2090,MGMB01H3,Fall,2025,"Dewan, T.",In-person,TH,UTSC
+2091,MGMB01H3,Fall,2025,"Dewan, T.",In-person,FR,UTSC
+2092,MGMB01H3,Fall,2025,"Dewan, T.",In-person,TH,UTSC
+2093,MGMB01H3,Fall,2025,"Dewan, T.",In-person,FR,UTSC
+2094,MGMB01H3,Fall,2025,"Dewan, T.",In-person,TH,UTSC
+2095,MGMC11H3,Fall,2025,"McConkey, W.",In-person,WE,UTSC
+2096,MGMC12H3,Fall,2025,"Aggarwal, P.",In-person,TU,UTSC
+2097,MGMC13H3,Fall,2025,"Dewan, T.",In-person,WE,UTSC
+2098,MGMD02H3,Fall,2025,"Maglio III, S.",In-person,WE,UTSC
+2099,MGOC10H3,Fall,2025,"Averbakh, I.",In-person,WE,UTSC
+2100,MGOC10H3,Fall,2025,"Averbakh, I.",In-person,TU,UTSC
+2101,MGOC10H3,Fall,2025,"Averbakh, I.",In-person,WE,UTSC
+2102,MGOC10H3,Fall,2025,"Averbakh, I.",In-person,TU,UTSC
+2103,MGOC20H3,Fall,2025,"Quan, V.",In-person,MO,UTSC
+2104,MGOC20H3,Fall,2025,"Quan, V.",In-person,TU,UTSC
+2105,MGSB01H3,Fall,2025,"de Bettignies, J.",In-person,WE,UTSC
+2106,MGSB01H3,Fall,2025,"de Bettignies, J.",In-person,WE,UTSC
+2107,MGSB22H3,Fall,2025,"McConkey, W.",In-person,MO,UTSC
+2108,MGSC05H3,Fall,2025,"Constantinou, P.",In-person,TH,UTSC
+2109,MGSC14H3,Fall,2025,"Constantinou, P.",In-person,TH,UTSC
+2110,MGSC20H3,Fall,2025,"Shibaeva, M.",In-person,WE,UTSC
+2111,MGSC30H3,Fall,2025,"Guiyab, J.",In-person,TH,UTSC
+2112,MGSD55H3,Fall,2025,"Jin, Y.",In-person,WE,UTSC
+2113,MGTA01H3,Fall,2025,"Shibaeva, M.",In-person,MO,UTSC
+2114,MGTA01H3,Fall,2025,"Zhu, B.",In-person,WE,UTSC
+2115,MGTA38H3,Fall,2025,"Shibaeva, M.",In-person,WE,UTSC
+2116,MGTA38H3,Fall,2025,"Shibaeva, M.",In-person,TH,UTSC
+2117,MGTA38H3,Fall,2025,"Visan, L.",In-person,WE,UTSC
+2118,MGTA38H3,Fall,2025,"Heathcote, J.",In-person,TU,UTSC
+2119,MGTA38H3,Fall,2025,"Heathcote, J.",In-person,TU,UTSC
+2120,MGTA38H3,Fall,2025,"Daga, S.",In-person,TU,UTSC
+2121,MGTA38H3,Fall,2025,"Daga, S.",In-person,WE,UTSC
+2122,MGTA38H3,Fall,2025,"Daga, S.",In-person,WE,UTSC
+2123,MGTA38H3,Fall,2025,"Shibaeva, M.",In-person,WE,UTSC
+2124,MGTA38H3,Fall,2025,"Daga, S.",In-person,TU,UTSC
+2125,MGTA38H3,Fall,2025,"Visan, L.",In-person,TH,UTSC
+2126,MGTA38H3,Fall,2025,"Visan, L.",In-person,TH,UTSC
+2127,MUZA02H3,Fall,2025,"Kurta, T.",In-person,FR,UTSC
+2128,MUZA60H3,Fall,2025,"Tucker, L.",In-person,TH,UTSC
+2129,MUZA61H3,Fall,2025,"Tucker, L.",In-person,TH,UTSC
+2130,MUZA62H3,Fall,2025,"Murray, P.",In-person,MO,UTSC
+2131,MUZA63H3,Fall,2025,"Murray, P.",In-person,MO,UTSC
+2132,MUZA64H3,Fall,2025,"Leong, T.",In-person,TU,UTSC
+2133,MUZA65H3,Fall,2025,"Leong, T.",In-person,TU,UTSC
+2134,MUZA66H3,Fall,2025,"Vithanage, D.",In-person,MO,UTSC
+2135,MUZA66H3,Fall,2025,"Leong, T.",In-person,WE,UTSC
+2136,MUZA67H3,Fall,2025,"Vithanage, D.",In-person,MO,UTSC
+2137,MUZA67H3,Fall,2025,"Leong, T.",In-person,WE,UTSC
+2138,MUZA80H3,Fall,2025,"Mantie, R.",In-person,WE,UTSC
+2139,MUZA81H3,Fall,2025,"Tellez Fina, F.",In-person,MO,UTSC
+2140,MUZB01H3,Fall,2025,"Zavitz, K.",In-person,WE,UTSC
+2141,MUZB21H3,Fall,2025,"Millares, M.",In-person,MO,UTSC
+2142,MUZB40H3,Fall,2025,"Tsang, A.",In-person,TU,UTSC
+2143,MUZB41H3,Fall,2025,"Campbell, M.",In-person,WE,UTSC
+2144,MUZB60H3,Fall,2025,"Tucker, L.",In-person,TH,UTSC
+2145,MUZB61H3,Fall,2025,"Tucker, L.",In-person,TH,UTSC
+2146,MUZB62H3,Fall,2025,"Murray, P.",In-person,MO,UTSC
+2147,MUZB63H3,Fall,2025,"Murray, P.",In-person,MO,UTSC
+2148,MUZB64H3,Fall,2025,"Leong, T.",In-person,TU,UTSC
+2149,MUZB65H3,Fall,2025,"Leong, T.",In-person,TU,UTSC
+2150,MUZB66H3,Fall,2025,"Vithanage, D.",In-person,MO,UTSC
+2151,MUZB66H3,Fall,2025,"Leong, T.",In-person,WE,UTSC
+2152,MUZB67H3,Fall,2025,"Vithanage, D.",In-person,MO,UTSC
+2153,MUZB67H3,Fall,2025,"Leong, T.",In-person,WE,UTSC
+2154,MUZB80H3,Fall,2025,"Leong, T.",In-person,TU,UTSC
+2155,MUZC20H3,Fall,2025,"Stanbridge, A.",In-person,WE,UTSC
+2156,MUZC22H3,Fall,2025,"Stanbridge, A.",In-person,TU,UTSC
+2157,MUZC40H3,Fall,2025,"Suzuki, K.",In-person,TU,UTSC
+2158,MUZC60H3,Fall,2025,"Tucker, L.",In-person,TH,UTSC
+2159,MUZC61H3,Fall,2025,"Tucker, L.",In-person,TH,UTSC
+2160,MUZC62H3,Fall,2025,"Murray, P.",In-person,MO,UTSC
+2161,MUZC63H3,Fall,2025,"Murray, P.",In-person,MO,UTSC
+2162,MUZC64H3,Fall,2025,"Leong, T.",In-person,TU,UTSC
+2163,MUZC65H3,Fall,2025,"Leong, T.",In-person,TU,UTSC
+2164,MUZC66H3,Fall,2025,"Vithanage, D.",In-person,MO,UTSC
+2165,MUZC66H3,Fall,2025,"Leong, T.",In-person,WE,UTSC
+2166,MUZC67H3,Fall,2025,"Vithanage, D.",In-person,MO,UTSC
+2167,MUZC67H3,Fall,2025,"Leong, T.",In-person,WE,UTSC
+2168,NMEA01H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2169,NMEA01H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2170,NMEA02H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2171,NMEA02H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2172,NMEA03H3,Fall,2025,CENTENNIAL,Online,,UTSC
+2173,NMEA03H3,Fall,2025,CENTENNIAL,Online,,UTSC
+2174,NMEA04H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2175,NMEA04H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2176,NMEC01H3,Fall,2025,"Couchie, A.",In-person,TH,UTSC
+2177,NMEC01H3,Fall,2025,"Reid, J.",In-person,TH,UTSC
+2178,NMEC01H3,Fall,2025,"Reid, J.",In-person,TH,UTSC
+2179,NMEC01H3,Fall,2025,"Reid, J.",In-person,TH,UTSC
+2180,NMEC01H3,Fall,2025,"Reid, J.",In-person,TH,UTSC
+2181,NMEC01H3,Fall,2025,"Reid, J.",In-person,TH,UTSC
+2182,NROB60H3,Fall,2025,"Gadziola, M.",In-person,TU,UTSC
+2183,NROC36H3,Fall,2025,"Arruda Carvalho, M.",In-person,WE,UTSC
+2184,NROC60H3,Fall,2025,"Arruda Carvalho, M.",In-person,MO,UTSC
+2185,NROC61H3,Fall,2025,"McNamara, T.",In-person,WE,UTSC
+2186,NROC69H3,Fall,2025,"Gadziola, M.",In-person,TH,UTSC
+2187,NROD60H3,Fall,2025,"Rozeske, R.",In-person,TU,UTSC
+2188,NROD60H3,Fall,2025,"Bercovici, D.",In-person,FR,UTSC
+2189,NROD60H3,Fall,2025,"Bercovici, D.",In-person,FR,UTSC
+2190,PHLA11H3,Fall,2025,"Gustafson, A.",In-person,TU,UTSC
+2191,PHLA11H3,Fall,2025,"Gustafson, A.",In-person,TH,UTSC
+2192,PHLB03H3,Fall,2025,"Sedivy, S.",In-person,TU,UTSC
+2193,PHLB05H3,Fall,2025,"Gustafson, A.",In-person,TH,UTSC
+2194,PHLB09H3,Fall,2025,"Mathison, E.",In-person,TU,UTSC
+2195,PHLB11H3,Fall,2025,"Kirley, M.",In-person,MO,UTSC
+2196,PHLB11H3,Fall,2025,"Kirley, M.",In-person,WE,UTSC
+2197,PHLB17H3,Fall,2025,"Beard, K.",In-person,MO,UTSC
+2198,PHLB20H3,Fall,2025,"Hellie, B.",In-person,WE,UTSC
+2199,PHLB31H3,Fall,2025,"Chaintreuil, U.",In-person,TU,UTSC
+2200,PHLB31H3,Fall,2025,"Chaintreuil, U.",In-person,TH,UTSC
+2201,PHLB35H3,Fall,2025,"Hamblin, C.",In-person,TU,UTSC
+2202,PHLB35H3,Fall,2025,"Hamblin, C.",In-person,TH,UTSC
+2203,PHLB50H3,Fall,2025,"Kremer, P.",In-person,WE,UTSC
+2204,PHLB50H3,Fall,2025,"Kremer, P.",In-person,FR,UTSC
+2205,PHLB99H3,Fall,2025,"Wilson, J.",In-person,TU,UTSC
+2206,PHLC05H3,Fall,2025,"Kirley, M.",In-person,FR,UTSC
+2207,PHLC07H3,Fall,2025,"Mathison, E.",In-person,TU,UTSC
+2208,PHLC09H3,Fall,2025,"Hamblin, C.",In-person,MO,UTSC
+2209,PHLC13H3,Fall,2025,"Beard, K.",In-person,MO,UTSC
+2210,PHLC14H3,Fall,2025,"Wilson, J.",In-person,WE,UTSC
+2211,PHLC31H3,Fall,2025,"Pfeiffer, C.",In-person,TH,UTSC
+2212,PHLC80H3,Fall,2025,"Kremer, P.",In-person,WE,UTSC
+2213,PHLC80H3,Fall,2025,"Kremer, P.",In-person,FR,UTSC
+2214,PHLC93H3,Fall,2025,"Tarsney, C.",In-person,TU,UTSC
+2215,PHLD09H3,Fall,2025,"Mathison, E.",In-person,TH,UTSC
+2216,PHLD87H3,Fall,2025,"Lee, A./ Lee, A.",In-person,FR,UTSC
+2217,PHLD87H3,Fall,2025,"Blezy, M./ Hamblin, C.",In-person,MO,UTSC
+2218,PHLD87H3,Fall,2025,"Blezy, M./ Hamblin, C.",In-person,MO,UTSC
+2219,PHLD87H3,Fall,2025,"Blezy, M./ Hamblin, C.",In-person,MO,UTSC
+2220,PHLD87H3,Fall,2025,"Blezy, M./ Hamblin, C.",In-person,MO,UTSC
+2221,PHLD87H3,Fall,2025,"Blezy, M./ Hamblin, C.",In-person,MO,UTSC
+2222,PHYA10H3,Fall,2025,"Tawfiq, S.",In-person,TU,UTSC
+2223,PHYA10H3,Fall,2025,"Tawfiq, S.",In-person,TH,UTSC
+2224,PHYA11H3,Fall,2025,"McGraw, P.",In-person,WE,UTSC
+2225,PHYA11H3,Fall,2025,"McGraw, P.",In-person,FR,UTSC
+2226,PHYB01H3,Fall,2025,"Bayer Carpintero, J.",In-person,TU,UTSC
+2227,PHYB10H3,Fall,2025,"McGraw, P.",In-person,TU,UTSC
+2228,PHYB56H3,Fall,2025,"Bayer Carpintero, J.",In-person,TU,UTSC
+2229,PHYB57H3,Fall,2025,"Menou, K.",In-person,MO,UTSC
+2230,PHYB57H3,Fall,2025,"Menou, K.",In-person,TH,UTSC
+2231,PHYC50H3,Fall,2025,"Tawfiq, S.",In-person,TU,UTSC
+2232,PHYC54H3,Fall,2025,"Bayer Carpintero, J.",In-person,TU,UTSC
+2233,PHYD01H3,Fall,2025,"Rein, H.",In-person,,UTSC
+2234,PHYD01H3,Fall,2025,"Rein, H.",In-person,,UTSC
+2235,PHYD01H3,Fall,2025,"Rein, H.",In-person,,UTSC
+2236,PHYD01H3,Fall,2025,"Rein, H.",In-person,,UTSC
+2237,PHYD37H3,Fall,2025,"Lowman, J.",In-person,MO,UTSC
+2238,PHYD37H3,Fall,2025,"Lowman, J.",In-person,TU,UTSC
+2239,PHYD57H3,Fall,2025,"Artymowicz, P.",In-person,FR,UTSC
+2240,PHYD72H3,Fall,2025,"Rein, H.",In-person,,UTSC
+2241,PLIC54H3,Fall,2025,"Sanjeevan, T.",In-person,TH,UTSC
+2242,PLIC55H3,Fall,2025,"Kush, D.",In-person,TU,UTSC
+2243,PLIC55H3,Fall,2025,"Kush, D.",In-person,TH,UTSC
+2244,PMDB22H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2245,PMDB25H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2246,PMDB33H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2247,PMDB41H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2248,PMDC40H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2249,PMDC42Y3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2250,PMDC43H3,Fall,2025,CENTENNIAL,In-person,,UTSC
+2251,POLA01H3,Fall,2025,"Campisi, J.",In-person,MO,UTSC
+2252,POLA01H3,Fall,2025,"Bernhardt, N.",In-person,WE,UTSC
+2253,POLA01H3,Fall,2025,"Way, L.",In-person,TU,UTSC
+2254,POLB56H3,Fall,2025,"Schertzer, R.",In-person,TU,UTSC
+2255,POLB72H3,Fall,2025,"Shanks, T.",In-person,TH,UTSC
+2256,POLB80H3,Fall,2025,"Ahmad, A.",In-person,TH,UTSC
+2257,POLB95H3,Fall,2025,"Way, L.",In-person,MO,UTSC
+2258,POLC07H3,Fall,2025,"Campisi, J.",In-person,FR,UTSC
+2259,POLC09H3,Fall,2025,"Ahmad, A.",In-person,TU,UTSC
+2260,POLC12H3,Fall,2025,"Soremi, T.",In-person,MO,UTSC
+2261,POLC32H3,Fall,2025,"Spahiu, I.",In-person,TH,UTSC
+2262,POLC33H3,Fall,2025,"Spahiu, I.",In-person,TH,UTSC
+2263,POLC34H3,Fall,2025,"McDougall, A.",In-person,TU,UTSC
+2264,POLC38H3,Fall,2025,"Acorn, E.",In-person,MO,UTSC
+2265,POLC42H3,Fall,2025,"Oron, O.",In-person,TH,UTSC
+2266,POLC44H3,Fall,2025,"Street, E.",In-person,TH,UTSC
+2267,POLC52H3,Fall,2025,"Cowie, C.",In-person,TH,UTSC
+2268,POLC54H3,Fall,2025,"Schertzer, R.",In-person,TU,UTSC
+2269,POLC65H3,Fall,2025,"Levine, R.",In-person,WE,UTSC
+2270,POLC69H3,Fall,2025,"Renckens, S.",In-person,TU,UTSC
+2271,POLC78H3,Fall,2025,"Levine, R.",In-person,WE,UTSC
+2272,POLC92H3,Fall,2025,"Kodolov, O.",In-person,WE,UTSC
+2273,POLC92H3,Fall,2025,"Kodolov, O.",In-person,WE,UTSC
+2274,POLC96H3,Fall,2025,"Kingston, P.",In-person,WE,UTSC
+2275,POLC98H3,Fall,2025,"Norrlof, C.",In-person,WE,UTSC
+2276,POLC98H3,Fall,2025,"Soremi, T.",In-person,TU,UTSC
+2277,POLC98H3,Fall,2025,"Soremi, T.",In-person,TU,UTSC
+2278,POLC98H3,Fall,2025,"Soremi, T.",In-person,TU,UTSC
+2279,POLD30H3,Fall,2025,"McDougall, A.",In-person,TH,UTSC
+2280,POLD38H3,Fall,2025,"Acorn, E.",In-person,TH,UTSC
+2281,POLD42H3,Fall,2025,"Baratalipour, M.",In-person,TU,UTSC
+2282,POLD50H3,Fall,2025,"Soremi, T.",In-person,MO,UTSC
+2283,POLD50H3,Fall,2025,"Soremi, T.",In-person,MO,UTSC
+2284,POLD58H3,Fall,2025,"MARQUEZ ESPINOZA, S.",In-person,WE,UTSC
+2285,POLD67H3,Fall,2025,"Carvounas, D.",In-person,MO,UTSC
+2286,POLD87H3,Fall,2025,"Norrlof, C.",In-person,WE,UTSC
+2287,POLD90H3,Fall,2025,"Teichman, J.",In-person,TU,UTSC
+2288,PPGB11H3,Fall,2025,"Levine, R.",In-person,FR,UTSC
+2289,PPGB66H3,Fall,2025,"Campisi, J.",In-person,WE,UTSC
+2290,PPGC67H3,Fall,2025,"Kodolov, O.",In-person,TU,UTSC
+2291,PSCB90H3,Fall,2025,"Sauer, E.",In-person,,UTSC
+2292,PSYA01H3,Fall,2025,"Joordens, S.",In-person,MO,UTSC
+2293,PSYA01H3,Fall,2025,"Joordens, S.",In-person,WE,UTSC
+2294,PSYA01H3,Fall,2025,"Joordens, S.",In-person,FR,UTSC
+2295,PSYA01H3,Fall,2025,"Joordens, S.",Online,,UTSC
+2296,PSYB03H3,Fall,2025,"Nestor, A.",In-person,FR,UTSC
+2297,PSYB07H3,Fall,2025,"Sama, M.",In-person,WE,UTSC
+2298,PSYB07H3,Fall,2025,"Sama, M.",In-person,FR,UTSC
+2299,PSYB10H3,Fall,2025,"Thiruchselvam, R.",In-person,WE,UTSC
+2300,PSYB20H3,Fall,2025,"Cirelli, L.",In-person,MO,UTSC
+2301,PSYB20H3,Fall,2025,"Cirelli, L.",In-person,TH,UTSC
+2302,PSYB20H3,Fall,2025,"Cirelli, L.",Online,,UTSC
+2303,PSYB32H3,Fall,2025,"Mascarenhas, M.",In-person,TU,UTSC
+2304,PSYB32H3,Fall,2025,"Mascarenhas, M.",Online,,UTSC
+2305,PSYB38H3,Fall,2025,"Morrissey, M.",In-person,WE,UTSC
+2306,PSYB38H3,Fall,2025,"Morrissey, M.",Online,,UTSC
+2307,PSYB55H3,Fall,2025,"Souza, M.",In-person,WE,UTSC
+2308,PSYB55H3,Fall,2025,"Souza, M.",Online,,UTSC
+2309,PSYB70H3,Fall,2025,"Shoura, M.",In-person,MO,UTSC
+2310,PSYB70H3,Fall,2025,"Shoura, M.",In-person,TH,UTSC
+2311,PSYB70H3,Fall,2025,"Shoura, M.",Online,,UTSC
+2312,PSYC01H3,Fall,2025,"Cupchik, G.",In-person,WE,UTSC
+2313,PSYC02H3,Fall,2025,"Schwartz, S.",In-person,WE,UTSC
+2314,PSYC08H3,Fall,2025,"Pare, D.",In-person,MO,UTSC
+2315,PSYC16H3,Fall,2025,"Cupchik, G.",In-person,TH,UTSC
+2316,PSYC18H3,Fall,2025,"Ford, B.",In-person,MO,UTSC
+2317,PSYC18H3,Fall,2025,"Ford, B.",In-person,MO,UTSC
+2318,PSYC19H3,Fall,2025,"Inzlicht, M.",In-person,WE,UTSC
+2319,PSYC19H3,Fall,2025,"Inzlicht, M.",In-person,TH,UTSC
+2320,PSYC23H3,Fall,2025,"Haley, D.",In-person,FR,UTSC
+2321,PSYC24H3,Fall,2025,"McPhee, A.",In-person,WE,UTSC
+2322,PSYC24H3,Fall,2025,"McPhee, A.",In-person,WE,UTSC
+2323,PSYC34H3,Fall,2025,"Thiruchselvam, R.",In-person,FR,UTSC
+2324,PSYC36H3,Fall,2025,"Cooper, A.",In-person,FR,UTSC
+2325,PSYC37H3,Fall,2025,"Dere, J.",In-person,WE,UTSC
+2326,PSYC39H3,Fall,2025,"Di Domenico, S.",In-person,TH,UTSC
+2327,PSYC50H3,Fall,2025,"Souza, M.",In-person,MO,UTSC
+2328,PSYC52H3,Fall,2025,"Niemeier, M.",In-person,TU,UTSC
+2329,PSYC70H3,Fall,2025,"Cree, G.",In-person,TU,UTSC
+2330,PSYC71H3,Fall,2025,"Schwartz, S.",In-person,WE,UTSC
+2331,PSYC73H3,Fall,2025,"Uliaszek, A.",In-person,TU,UTSC
+2332,PSYC74H3,Fall,2025,"Schmuckler, M.",In-person,WE,UTSC
+2333,PSYD13H3,Fall,2025,"Ford, B.",In-person,TH,UTSC
+2334,PSYD15H3,Fall,2025,"Tritt, S.",In-person,WE,UTSC
+2335,PSYD16H3,Fall,2025,"Cupchik, G.",In-person,WE,UTSC
+2336,PSYD19H3,Fall,2025,"Inzlicht, M.",In-person,WE,UTSC
+2337,PSYD24H3,Fall,2025,"Schmuckler, M.",In-person,MO,UTSC
+2338,PSYD31H3,Fall,2025,"Dere, J.",In-person,MO,UTSC
+2339,PSYD33H3,Fall,2025,"Segal, Z.",In-person,WE,UTSC
+2340,PSYD55H3,Fall,2025,"Lee, A.",In-person,FR,UTSC
+2341,PSYD59H3,Fall,2025,"Souza, M.",In-person,MO,UTSC
+2342,PSYD62H3,Fall,2025,"Thiruchselvam, R.",In-person,TU,UTSC
+2343,PSYD66H3,Fall,2025,"Bercovici, D.",In-person,FR,UTSC
+2344,PSYD66H3,Fall,2025,"Niemeier, M.",In-person,WE,UTSC
+2345,PSYD66H3,Fall,2025,"Danielson, K.",In-person,FR,UTSC
+2346,PSYD66H3,Fall,2025,"Danielson, K.",In-person,FR,UTSC
+2347,PSYD66H3,Fall,2025,"Danielson, K.",In-person,FR,UTSC
+2348,RLGA01H3,Fall,2025,"Perley, D.",In-person,TU,UTSC
+2349,SOCA05H3,Fall,2025,"Hashemi, b.",In-person,TU,UTSC
+2350,SOCB05H3,Fall,2025,"Landolt, P.",In-person,WE,UTSC
+2351,SOCB30H3,Fall,2025,"Philips, M.",In-person,WE,UTSC
+2352,SOCB42H3,Fall,2025,"Silver, D.",In-person,TH,UTSC
+2353,SOCB44H3,Fall,2025,"Hannigan, J.",In-person,MO,UTSC
+2354,SOCB60H3,Fall,2025,"Hashemi, b.",In-person,MO,UTSC
+2355,SOCC31H3,Fall,2025,"Mullen, A.",In-person,MO,UTSC
+2356,SOCC32H3,Fall,2025,"Philips, M.",In-person,TU,UTSC
+2357,SOCC37H3,Fall,2025,"Hannigan, J.",In-person,TH,UTSC
+2358,SOCC55H3,Fall,2025,"Kwan-Lafond, D.",In-person,FR,UTSC
+2359,SOCC61H3,Fall,2025,"Kwan-Lafond, D.",In-person,FR,UTSC
+2360,SOCC70H3,Fall,2025,"Fosse, E.",In-person,MO,UTSC
+2361,SOCD01H3,Fall,2025,"Knezevic, I.",In-person,TH,UTSC
+2362,SOCD08H3,Fall,2025,"Landolt, P.",In-person,TH,UTSC
+2363,SOCD15H3,Fall,2025,"Hashemi, b.",In-person,WE,UTSC
+2364,STAB22H3,Fall,2025,"Kang, S.",In-person,TU,UTSC
+2365,STAB22H3,Fall,2025,"Kang, S.",In-person,TH,UTSC
+2366,STAB22H3,Fall,2025,"Kang, S.",In-person,FR,UTSC
+2367,STAB22H3,Fall,2025,"Kang, S.",In-person,TU,UTSC
+2368,STAB22H3,Fall,2025,"Kang, S.",In-person,TH,UTSC
+2369,STAB22H3,Fall,2025,"Kang, S.",In-person,FR,UTSC
+2370,STAB23H3,Fall,2025,"Selvaratnam, S.",In-person,TU,UTSC
+2371,STAB23H3,Fall,2025,"Selvaratnam, S.",In-person,TH,UTSC
+2372,STAB40H3,Fall,2025,"Gao, J.",In-person,TH,UTSC
+2373,STAB52H3,Fall,2025,"Damouras, S.",In-person,TU,UTSC
+2374,STAB52H3,Fall,2025,"Damouras, S.",In-person,TH,UTSC
+2375,STAB52H3,Fall,2025,"Damouras, S.",In-person,TU,UTSC
+2376,STAB52H3,Fall,2025,"Damouras, S.",In-person,TH,UTSC
+2377,STAB53H3,Fall,2025,"Samarakoon, M.",In-person,WE,UTSC
+2378,STAB53H3,Fall,2025,"Samarakoon, M.",In-person,FR,UTSC
+2379,STAB57H3,Fall,2025,"Shams, S.",In-person,TU,UTSC
+2380,STAB57H3,Fall,2025,"Shams, S.",In-person,TH,UTSC
+2381,STAC32H3,Fall,2025,"Butler, K.",In-person,TU,UTSC
+2382,STAC32H3,Fall,2025,"Butler, K.",In-person,TH,UTSC
+2383,STAC50H3,Fall,2025,"Ghaznavi, M.",In-person,MO,UTSC
+2384,STAC50H3,Fall,2025,"Ghaznavi, M.",In-person,WE,UTSC
+2385,STAC51H3,Fall,2025,"Samarakoon, M.",In-person,TU,UTSC
+2386,STAC51H3,Fall,2025,"Samarakoon, M.",In-person,TH,UTSC
+2387,STAC53H3,Fall,2025,"Goodhand, A.",In-person,TU,UTSC
+2388,STAC53H3,Fall,2025,"Goodhand, A.",In-person,TH,UTSC
+2389,STAC62H3,Fall,2025,"Evans, M./ Evans, M.",In-person,MO,UTSC
+2390,STAC62H3,Fall,2025,"Evans, M./ Evans, M.",In-person,WE,UTSC
+2391,STAC67H3,Fall,2025,"Kang, S.",In-person,WE,UTSC
+2392,STAC67H3,Fall,2025,"Kang, S.",In-person,FR,UTSC
+2393,STAD37H3,Fall,2025,"Shams, S.",In-person,MO,UTSC
+2394,STAD37H3,Fall,2025,"Shams, S.",In-person,TH,UTSC
+2395,STAD57H3,Fall,2025,"Damouras, S.",In-person,TU,UTSC
+2396,STAD57H3,Fall,2025,"Damouras, S.",In-person,TH,UTSC
+2397,STAD95H3,Fall,2025,"Bremer Jr, J./ Vinogradov, V.",In-person,,UTSC
+2398,THRA10H3,Fall,2025,"Grech, A.",In-person,TH,UTSC
+2399,THRB21H3,Fall,2025,"Freeman, B.",In-person,TU,UTSC
+2400,THRB30H3,Fall,2025,"Da Silva Melo, C.",In-person,MO,UTSC
+2401,THRB30H3,Fall,2025,"Da Silva Melo, C.",In-person,WE,UTSC
+2402,THRB50H3,Fall,2025,"DeGrow, D.",In-person,TU,UTSC
+2403,THRB50H3,Fall,2025,"DeGrow, D.",In-person,TH,UTSC
+2404,THRC20H3,Fall,2025,"Livingstone, D.",In-person,FR,UTSC
+2405,THRC21H3,Fall,2025,"Da Silva Melo, C.",In-person,TH,UTSC
+2406,THRC50H3,Fall,2025,"Da Silva Melo, C.",In-person,MO,UTSC
+2407,THRD30H3,Fall,2025,"Livingstone, D.",In-person,FR,UTSC
+2408,VPAA10H3,Fall,2025,"Cardwell, E.",In-person,TU,UTSC
+2409,VPAA10H3,Fall,2025,"Alanis, S.",In-person,TH,UTSC
+2410,VPAB13H3,Fall,2025,"Flynn, S.",Online,TH,UTSC
+2411,VPAB16H3,Fall,2025,"Untiks, I.",Online,TH,UTSC
+2412,VPAB17H3,Fall,2025,"Sundar Singh, C.",In-person,FR,UTSC
+2413,VPAC13H3,Fall,2025,"Untiks, I.",In-person,WE,UTSC
+2414,VPAC16H3,Fall,2025,"Sicondolfo, C.",In-person,MO,UTSC
+2415,VPAC17H3,Fall,2025,"Edworthy, S.",In-person,WE,UTSC
+2416,VPAC18H3,Fall,2025,"Sundar Singh, C.",In-person,TH,UTSC
+2417,VPAC22H3,Fall,2025,"Sicondolfo, C.",In-person,TU,UTSC
+2418,VPAD11H3,Fall,2025,"Abel, V.",In-person,FR,UTSC
+2419,VPAD14H3,Fall,2025,"Sundar Singh, C.",In-person,,UTSC
+2420,VPHA46H3,Fall,2025,"Walker, E.",In-person,TU,UTSC
+2421,VPHB50H3,Fall,2025,"Harney, E.",In-person,WE,UTSC
+2422,VPHB73H3,Fall,2025,"Durayappah, S.",In-person,TH,UTSC
+2423,VPHB74H3,Fall,2025,"Webster, E.",In-person,FR,UTSC
+2424,VPHC45H3,Fall,2025,"Harney, E.",In-person,WE,UTSC
+2425,VPHC54H3,Fall,2025,"Webster, E.",In-person,TU,UTSC
+2426,VPHC54H3,Fall,2025,"Webster, E.",In-person,TU,UTSC
+2427,VPHC75H3,Fall,2025,"Webster, E.",In-person,TH,UTSC
+2428,VPSA62H3,Fall,2025,"Kwan, W.",In-person,TU,UTSC
+2429,VPSA62H3,Fall,2025,"Goreas, L.",In-person,WE,UTSC
+2430,VPSA62H3,Fall,2025,"Pivato, J.",In-person,TH,UTSC
+2431,VPSA62H3,Fall,2025,"Kwan, W.",In-person,FR,UTSC
+2432,VPSA63H3,Fall,2025,"Brown, A.",In-person,TU,UTSC
+2433,VPSB01H3,Fall,2025,"Abdallah, H.",In-person,TU,UTSC
+2434,VPSB56H3,Fall,2025,"Jalal-Zadeh, N.",In-person,WE,UTSC
+2435,VPSB58H3,Fall,2025,"Onodera, M.",In-person,TH,UTSC
+2436,VPSB59H3,Fall,2025,"Goreas, L.",In-person,WE,UTSC
+2437,VPSB62H3,Fall,2025,"Cruz, P.",In-person,TU,UTSC
+2438,VPSB73H3,Fall,2025,"Fearon, A.",In-person,FR,UTSC
+2439,VPSB74H3,Fall,2025,"Osahor, E.",In-person,MO,UTSC
+2440,VPSB88H3,Fall,2025,"Kado, S.",In-person,TH,UTSC
+2441,VPSC56H3,Fall,2025,"Onodera, M.",In-person,MO,UTSC
+2442,VPSC56H3,Fall,2025,"Klie, J.",In-person,MO,UTSC
+2443,VPSC85H3,Fall,2025,"Cruz, P.",In-person,FR,UTSC
+2444,VPSC90H3,Fall,2025,"Cho, H.",In-person,TU,UTSC
+2445,VPSC90H3,Fall,2025,"Cho, H.",In-person,TU,UTSC
+2446,VPSC91H3,Fall,2025,"Pivato, J.",In-person,MO,UTSC
+2447,VPSC92H3,Fall,2025,"Warrington, L.",In-person,WE,UTSC
+2448,VPSC95H3,Fall,2025,"Abdallah, H.",In-person,TH,UTSC
+2449,VPSD61H3,Fall,2025,"Brown, A.",In-person,TU,UTSC
+2450,WSTA01H3,Fall,2025,"Talahite-Moodley, A.",In-person,WE,UTSC
+2451,WSTB05H3,Fall,2025,"Guberman, C.",In-person,TU,UTSC
+2452,WSTB09H3,Fall,2025,"Talahite-Moodley, A.",In-person,FR,UTSC
+2453,WSTB23H3,Fall,2025,"Maynard, R.",In-person,MO,UTSC
+2454,WSTC02H3,Fall,2025,"Guberman, C.",In-person,TU,UTSC
+2455,WSTC10H3,Fall,2025,"Dinani, H.",In-person,TU,UTSC
+2456,WSTC28H3,Fall,2025,"Hachimi, A.",In-person,TH,UTSC
+2457,WSTC40H3,Fall,2025,"Johnston, N.",In-person,TH,UTSC
+2458,WSTD08H3,Fall,2025,"Maynard, R.",In-person,MO,UTSC
+2459,WSTD10H3,Fall,2025,"Guberman, C.",In-person,TH,UTSC
+2460,WSTD16H3,Fall,2025,"Grewal, A.",In-person,FR,UTSC
