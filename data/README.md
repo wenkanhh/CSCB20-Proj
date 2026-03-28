@@ -26,12 +26,15 @@ The cleaned dataset includes the following files:
 
 
 3. programs.csv - stores every academic program offered by the institution (majors, specialists, minors)
-- program_code: unique short code that identifies the program, used as the primary key and referenced by other tables
-- program_name: the full official name of the program
-- department_id: the department id associated with this program 
-- program_type: whether this is a Major, Specialist, or Minor
+- program_code: unique identifier for the program extracted from the calendar heading such as SCSPE1150C or SCMAJ1762C, used as the primary key and referenced by all program-related tables
+- program_name: the full official title of the program exactly as it appears in the calendar heading such as SPECIALIST (CO-OPERATIVE) PROGRAM IN CONSERVATION AND BIODIVERSITY (SCIENCE)
+- department_id: the department this program belongs to as listed at the bottom of each program block such as Biological Sciences or Management Co-op, used to infer which department owns this program 
+- program_type: the category of the program, one of Specialist, Specialist Co-op, Major, Major Co-op, Minor, Certificate, or Combined Degreem
 - is_coop: 1 for coop program, 0 for non-coop program
-- notes: any special notes about the program such as limited enrolment conditions
+- is_limited_enrolment: 1 if the program explicitly states enrolment is limited or limited enrolment in its text, 0 otherwise
+- total_credits: the total number of required credits of specified courses groups a student must complete to finish this program, extracted from phrases like students must complete a total of 14.5 credits
+- min_enrolment_cgpa: the minimum cumulative GPA required to apply for or be admitted into this program, extracted from the enrolment requirements section
+- description: the full descriptive paragraph that appears at the start of each program block explaining what the program is about and what graduates can expect
 
 
 4. user_programs.csv - junction table that links students to the programs they are enrolled in, allowing one student to be in multiple programs simultaneously
@@ -59,7 +62,7 @@ The cleaned dataset includes the following files:
 - min_credits: the minimum number of credits required, only filled when item_type is MIN_CREDITS_TOTAL or MIN_CREDITS_DEPT
 - department_id: the department the minimum credits must come from, only filled when item_type is MIN_CREDITS_DEPT
 - min_cgpa: the minimum CGPA the student must have, only filled when item_type is MIN_CGPA
-- program_name: the program the student must be enrolled in, only filled when item_type is PROGRAM_ENROLLMENT
+- program_code: the program the student must be enrolled in, only filled when item_type is PROGRAM_ENROLLMENT
 - year_standing: the minimum year of study required, only filled when item_type is YEAR_STANDING
 - notes: a human readable fallback description for any condition that does not fit neatly into the other columns
 
@@ -74,14 +77,14 @@ The cleaned dataset includes the following files:
 8. program_requirement.csv - stores each requirement block for a program, one row per logical chunk of requirements such as Core Courses or Bin 1 Electives, separating the group structure from the individual courses inside it
 - group_id: unique number identifying each requirement block, referenced by program_requirement_courses to know which block each course belongs to
 - program_code: references the program from programs.csv that this requirement block belongs to
-- group_type: how the student satisfies this block, one of ALL (must take every course), PICK (take a minimum number or credits), CREDIT_LEVEL (a credit threshold at a specific course level), or OPTIONAL (encouraged but not required)
+- group_type: how the student satisfies this block, one of ALL meaning every course in the block must be taken, PICK meaning the student chooses a minimum number or credit amount from the listed options, CREDIT_LEVEL meaning a credit threshold at a specific course level must be met without a fixed course list such as at least 1.0 credit at D-level, or OPTIONAL meaning the courses are encouraged but not required for graduation
 - min_courses: the minimum number of courses the student must take from this block, only relevant when group_type is PICK
 - min_credits: the minimum credits the student must earn from this block, only relevant when group_type is PICK
-- path_id: NULL for most blocks, an integer when this block is one of several alternative ways to satisfy a requirement, the student only needs to complete all blocks sharing ONE path_id value
-- combined_group_id: NULL for most blocks, an integer when credits from multiple blocks are pooled toward a shared total minimum such as Bin 1 and Bin 2 together requiring 4.0 credits combined
-- combined_min_credits: the shared credit total that must be reached across all blocks sharing the same combined_group_id, NULL if not applicable
-- category: the category label for this block such as Required, Elective, Graduation Requirement, Co-op, or Optional
-- notes: any special notes about this requirement block
+- path_id: NULL for most blocks, an integer when this block is one of several mutually exclusive ways to satisfy a requirement such as Calculus Option A versus Calculus Option B where the student only needs to complete all blocks sharing ONE path_id value to satisfy the requirement
+- combined_group_id: NULL for most blocks, an integer when credits from multiple separate blocks are pooled together toward a shared total minimum such as Bin 1 and Bin 2 electives which separately each require 1.0 credit but together must total 4.0 credits, all blocks sharing the same combined_group_id contribute to the same combined pool
+- combined_min_credits: the total shared credit minimum that must be reached by summing all credits earned across every block sharing the same combined_group_id, NULL if this block does not participate in a combined pool
+- category:  the category label for this block indicating its role in the program, one of Required for mandatory core courses, Elective for optional or choice-based courses, Graduation Requirement for zero-credit CR/NCR courses that must be completed to graduate, Co-op for work term and co-op preparation courses, or Optional for research or enrichment courses that are encouraged but not required
+- notes: the original text of the section heading or any special instruction associated with this block copied from the calendar, used to preserve context that does not fit into the structured columns above
 
 
 9. past_offerings.csv - records every time a course has been offered in a past semester, used by the recommendation engine to show students when a course is typically available
@@ -124,13 +127,29 @@ The cleaned dataset includes the following files:
 
 13. program_requirement_courses.csv - stores each individual course that belongs to a requirement block, one row per course per block, keeps course-level detail separate from block-level structure
 - id: unique number identifying each row
-- group_id: references the requirement block from program_requirement_groups.csv that this course belongs to
+- group_id: references the requirement block from program_requirements.csv that this course belongs to
 - course_code: references the course from courses.csv that is part of this requirement block
 - is_mandatory: 1 if this specific course is always required within the block, 0 if it is one of several options the student can choose from
 - notes: any course-specific note within this block such as zero credit CR/NCR graduation requirement
 
+
+14. enrolment_requirements.csv - stores the individual conditions a student must meet before they can apply to or be admitted into a program, parsed from the Enrolment Requirements section of each program block, one row per individual condition
+- group_id: unique number identifying each condition row, used as the primary key for this table
+- program_code: references the program from programs.csv that this enrolment condition belongs to
+- req_category: always ENROLMENT for every row in this file, distinguishes these conditions from program completion requirements
+- item_type: the kind of condition this row represents, one of COURSE meaning a specific course must be completed, MIN_CREDITS_TOTAL meaning a minimum number of total credits must be earned, MIN_CREDITS_DEPT meaning a minimum number of credits from a specific department must be earned, or MIN_CGPA meaning a minimum cumulative GPA must be achieved
+- course_code: the specific course that must be completed before applying, only filled when item_type is COURSE, references courses.csv, NULL otherwise
+- min_credits: the minimum number of credits required, only filled when item_type is MIN_CREDITS_TOTAL or MIN_CREDITS_DEPT such as 4.0 for programs requiring at least 4.0 credits before applying, NULL otherwise
+- max_credits: the maximum number of credits allowed at time of application, only filled for programs that specify a credit window such as minimum 4.0 to maximum 10.0 credits, NULL otherwise
+- department_id: the course_code_prefix identifying which department the minimum credits must come from such as BIO for biology credits, only filled when item_type is MIN_CREDITS_DEPT, NULL otherwise
+- min_cgpa: the minimum cumulative GPA the student must have achieved, only filled when item_type is MIN_CGPA such as 2.5 for most co-op programs, NULL otherwise
+- notes: a human readable explanation of this condition copied or summarised from the original calendar text, used as a fallback description and for any condition that does not fit neatly into the other columns
+
 IMPORTANT REMARKS:
 1. this is how everything should be linked together:
-courses.csv is the central file everything else points back to. The course_code column is the primary key — every other file uses it as a foreign key to reference a course.
-
+1 — the three independent anchors with no incoming foreign keys. departments, courses, and programs are inserted first. Everything else points to at least one of them.
+Row 1.5 — dept_prefixes sits just below departments because it only depends on departments.
+2 — the prerequisite and exclusion system. requirement_groups links to courses for which course has the requirement. requirement_items links to requirement_groups for the block, back to courses for COURSE-type items, and to departments for MIN_CREDITS_DEPT items. course_exclusions links to courses twice.
+3 — the program requirement system. enrolment_requirements and prog_req_groups both link to programs. prog_req_groups generates a group_id that prog_req_courses uses. Both enrolment_requirements and prog_req_courses link back to courses.
+4 — the student layer. past_offerings links to courses. users links down to user_programs and completed_courses. user_programs bridges users and programs. completed_courses bridges users and courses.
 
