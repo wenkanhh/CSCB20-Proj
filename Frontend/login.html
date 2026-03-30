@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div data-navbar></div>
+  <main class="container page-shell">
+    
+<section class="grid two">
+  <div class="hero-card">
+    <h1>Login</h1>
+    <p class="muted">Sign in to use the profile, dashboard, recommendations, and degree audit pages.</p>
+    <div id="loginAlert"></div>
+    <form id="loginForm" class="form-card">
+      <div class="form-row">
+        <div>
+          <label for="username">Username</label>
+          <input id="username" name="username" required />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required />
+        </div>
+      </div>
+      <button class="primary" type="submit">Login</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Quick notes</h2>
+    <ul>
+      <li>Backend must be running on <code>http://127.0.0.1:5000</code>.</li>
+      <li>This frontend uses Flask session cookies, so requests include credentials automatically.</li>
+      <li>If you do not have an account yet, go to the register page first.</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+  <div data-footer></div>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    renderNavbar('login');
+    renderFooter();
+    
+const loginAlert = $('#loginAlert');
+$('#loginForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  clearAlert(loginAlert);
+  const payload = {
+    username: $('#username').value.trim(),
+    password: $('#password').value,
+  };
+  try {
+    const result = await AuthAPI.login(payload);
+    showAlert(loginAlert, 'success', result.message || 'Logged in.');
+    setTimeout(() => {
+      window.location.href = 'dashboard.html';
+    }, 500);
+  } catch (error) {
+    showAlert(loginAlert, 'error', error.message);
+  }
+});
+
+  </script>
+</body>
+</html>

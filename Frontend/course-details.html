@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Details</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div data-navbar></div>
+  <main class="container page-shell">
+    
+<section class="hero-card">
+  <h1>Course Details</h1>
+  <p class="muted">Open this page with a query string like <code>?code=MGTA01H3</code>.</p>
+  <div id="detailsAlert"></div>
+</section>
+
+<section id="courseInfo" class="card" style="margin-top:1rem;"></section>
+
+<section class="grid two" style="margin-top:1rem; align-items:start;">
+  <section class="list-card">
+    <h2>Prerequisites</h2>
+    <div id="prereqGroups" class="simple-list"></div>
+  </section>
+  <section class="list-card">
+    <h2>Corequisites</h2>
+    <div id="coreqGroups" class="simple-list"></div>
+  </section>
+</section>
+
+<section class="grid two" style="margin-top:1rem; align-items:start;">
+  <section class="list-card">
+    <h2>Exclusions</h2>
+    <div id="exclusionsList" class="simple-list"></div>
+  </section>
+  <section class="list-card">
+    <div class="actions" style="margin-top:0; justify-content:space-between; align-items:center;">
+      <h2 style="margin:0;">Offerings</h2>
+      <button class="secondary" id="loadOfferingsBtn" type="button">Load Offerings</button>
+    </div>
+    <div id="offeringsList" class="simple-list"></div>
+  </section>
+</section>
+
+  </main>
+  <div data-footer></div>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    renderNavbar('courses');
+    renderFooter();
+    
+function renderRequirementGroupList(groups, mountSelector) {
+  const mount = $(mountSelector);
+  mount.innerHTML = groups.length
+    ? groups.map(group => `
+        <div class="simple-item">
+          <div><strong>Group ${escapeHtml(group.group_id)}</strong></div>
+          <div class="meta">Logic: ${escapeHtml(group.group_logic || '')} | Path: ${escapeHtml(group.path_id || '')}</div>
+          <div class="small">Items: ${(group.items || []).map(item => escapeHtml(item.course_code || item.item_type || '')).join(', ') || 'None'}</div>
+        </div>
+      `).join('')
+    : `<div class="empty-state">No groups found.</div>`;
+}
+
+async function loadCourseDetails() {
+  const detailsAlert = $('#detailsAlert');
+  clearAlert(detailsAlert);
+  const code = (getQueryParam('code') || '').trim().toUpperCase();
+  if (!code) {
+    showAlert(detailsAlert, 'warning', 'Please open this page with ?code=YOURCOURSECODE.');
+    return;
+  }
+
+  try {
+    const data = await CourseAPI.getCourse(code);
+    const course = data.course || {};
+    $('#courseInfo').innerHTML = `
+      <h2>${escapeHtml(course.course_code || code)} — ${escapeHtml(course.course_name || '')}</h2>
+      <p class="meta">Credits: ${escapeHtml(course.credits || '0.5')} | Prefix: ${escapeHtml(course.course_code_prefix || course.course_prefix || '')}</p>
+      <p>${escapeHtml(course.course_details || 'No course details available.')}</p>
+      <div class="grid two">
+        <div>
+          <h3>Extra Information</h3>
+          <p class="small"><strong>Breadth:</strong> ${escapeHtml(course.breadth_requirements || '—')}</p>
+          <p class="small"><strong>Experience:</strong> ${escapeHtml(course.course_experience || '—')}</p>
+          <p class="small"><strong>Note:</strong> ${escapeHtml(course.note || '—')}</p>
+        </div>
+        <div>
+          <h3>Link</h3>
+          <p class="small">${course.course_link ? `<a href="${escapeHtml(course.course_link)}" target="_blank">Open official course link</a>` : 'No link available.'}</p>
+        </div>
+      </div>
+    `;
+
+    renderRequirementGroupList(data.prereq_groups || [], '#prereqGroups');
+    renderRequirementGroupList(data.coreq_groups || [], '#coreqGroups');
+
+    $('#exclusionsList').innerHTML = (data.exclusions || []).length
+      ? data.exclusions.map(item => `
+          <div class="simple-item">
+            <strong>${escapeHtml(item.excluded_course || item.course_code || 'Excluded course')}</strong>
+            <div class="meta">${escapeHtml(item.note || 'Course exclusion')}</div>
+          </div>
+        `).join('')
+      : `<div class="empty-state">No exclusions listed.</div>`;
+
+    $('#loadOfferingsBtn').addEventListener('click', async () => {
+      try {
+        const result = await CourseAPI.getOfferings(code);
+        $('#offeringsList').innerHTML = result.offerings.length
+          ? result.offerings.map(item => `
+              <div class="simple-item">
+                <strong>${escapeHtml(item.semester || item.term || 'Offering')}</strong>
+                <div class="meta">Year: ${escapeHtml(item.year || '—')}</div>
+                <div class="meta">Instructor: ${escapeHtml(item.instructor || '—')}</div>
+                <div class="meta">Delivery: ${escapeHtml(item.delivery || '—')}</div>
+              </div>
+            `).join('')
+          : `<div class="empty-state">No offering rows were found in the SQL database.</div>`;
+      } catch (error) {
+        showAlert(detailsAlert, 'error', error.message);
+      }
+    }, { once: true });
+  } catch (error) {
+    showAlert(detailsAlert, 'error', error.message);
+  }
+}
+
+loadCourseDetails();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div data-navbar></div>
+  <main class="container page-shell">
+    
+<section class="hero-card">
+  <h1>Course List + Search</h1>
+  <p class="muted">Search by course title/code or filter by prefix.</p>
+  <div id="coursesAlert"></div>
+  <form id="searchForm" class="form-card">
+    <div class="form-row two">
+      <div>
+        <label>Search</label>
+        <input id="searchInput" placeholder="Try database, management, MGTA01..." />
+      </div>
+      <div>
+        <label>Prefix</label>
+        <input id="prefixInput" placeholder="e.g. MGA" />
+      </div>
+    </div>
+    <div class="actions">
+      <button class="primary" type="submit">Search Courses</button>
+      <button class="secondary" type="button" id="loadProgramsBtn">Load Programs</button>
+    </div>
+  </form>
+</section>
+
+<section class="grid two" style="margin-top:1rem; align-items:start;">
+  <section class="list-card">
+    <h2>Courses</h2>
+    <div id="courseResults" class="course-list"></div>
+  </section>
+
+  <section class="list-card">
+    <h2>Programs</h2>
+    <div id="programResults" class="simple-list"></div>
+  </section>
+</section>
+
+  </main>
+  <div data-footer></div>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    renderNavbar('courses');
+    renderFooter();
+    
+const coursesAlert = $('#coursesAlert');
+
+async function loadCourses() {
+  clearAlert(coursesAlert);
+  try {
+    const search = $('#searchInput').value.trim();
+    const prefix = $('#prefixInput').value.trim().toUpperCase();
+    const results = await CourseAPI.listCourses({ search, prefix, limit: 100 });
+    $('#courseResults').innerHTML = results.length
+      ? results.map(course => createCourseCard(course)).join('')
+      : `<div class="empty-state">No matching courses found.</div>`;
+  } catch (error) {
+    showAlert(coursesAlert, 'error', error.message);
+  }
+}
+
+async function loadPrograms() {
+  clearAlert(coursesAlert);
+  try {
+    const programs = await CourseAPI.listPrograms({ search: '', type: '' });
+    $('#programResults').innerHTML = programs.length
+      ? programs.slice(0, 50).map(program => `
+          <div class="simple-item">
+            <strong>${escapeHtml(program.program_code || 'No code')}</strong>
+            <div>${escapeHtml(program.program_name || '')}</div>
+            <div class="meta">Type: ${escapeHtml(program.program_type || '')}</div>
+          </div>
+        `).join('')
+      : `<div class="empty-state">No programs found.</div>`;
+  } catch (error) {
+    showAlert(coursesAlert, 'error', error.message);
+  }
+}
+
+$('#searchForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  await loadCourses();
+});
+
+$('#loadProgramsBtn').addEventListener('click', loadPrograms);
+loadCourses();
+
+  </script>
+</body>
+</html>

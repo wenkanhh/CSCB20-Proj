@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div data-navbar></div>
+  <main class="container page-shell">
+    
+<section class="grid two">
+  <div class="hero-card">
+    <h1>Register</h1>
+    <p class="muted">Create a student account for the planner app.</p>
+    <div id="registerAlert"></div>
+    <form id="registerForm" class="form-card">
+      <div class="form-row two">
+        <div>
+          <label for="regUsername">Username</label>
+          <input id="regUsername" required />
+        </div>
+        <div>
+          <label for="regEmail">Email</label>
+          <input id="regEmail" type="email" required />
+        </div>
+      </div>
+      <div class="form-row two">
+        <div>
+          <label for="regPassword">Password</label>
+          <input id="regPassword" type="password" required />
+        </div>
+        <div>
+          <label for="regCgpa">CGPA</label>
+          <input id="regCgpa" type="number" step="0.01" min="0" max="4" value="0.0" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="regYear">Year Standing</label>
+          <input id="regYear" type="number" min="1" max="6" value="1" />
+        </div>
+      </div>
+      <button class="primary" type="submit">Create Account</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>What happens next?</h2>
+    <p class="muted">After registering, the backend logs you in right away using Flask session storage.</p>
+    <p class="muted">Then you can go straight to your profile and start adding programs and completed courses.</p>
+  </div>
+</section>
+
+  </main>
+  <div data-footer></div>
+  <script src="js/api.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    renderNavbar('register');
+    renderFooter();
+    
+const registerAlert = $('#registerAlert');
+$('#registerForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  clearAlert(registerAlert);
+  const payload = {
+    username: $('#regUsername').value.trim(),
+    email: $('#regEmail').value.trim(),
+    password: $('#regPassword').value,
+    cgpa: Number($('#regCgpa').value || 0),
+    year_standing: Number($('#regYear').value || 1),
+  };
+  try {
+    const result = await AuthAPI.register(payload);
+    showAlert(registerAlert, 'success', result.message || 'Registered successfully.');
+    setTimeout(() => {
+      window.location.href = 'profile.html';
+    }, 600);
+  } catch (error) {
+    showAlert(registerAlert, 'error', error.message);
+  }
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Course Planner{% endblock %}</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="dashboard.html">Course Planner</a>
+      <nav class="navbar">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="courses.html">Courses</a>
+        <a href="recommendations.html">Recommendations</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-shell">
+    {% block content %}
+    <section class="hero-card">
+      <h1>Base Layout</h1>
+      <p>This file shows the shared structure: header, navbar, page container, and footer.</p>
+      <p>If you later convert the frontend into Flask/Jinja templates, the other pages can extend this file.</p>
+    </section>
+    {% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Frontend starter for the course planner project.</div>
+  </footer>
+</body>
+</html>
