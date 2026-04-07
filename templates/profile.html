@@ -1,255 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Profile</title>
-  <link rel="stylesheet" href="static/styles.css" />
-</head>
-<body>
-  <div data-navbar></div>
-  <main class="container page-shell">
-    
-<section class="grid two">
-  <div>
+{% extends "base.html" %}
+
+{% block title %}Profile - Course Planner{% endblock %}
+
+{% block content %}
+<div class="grid" style="gap: 1.25rem;">
     <section class="hero-card">
-      <h1>Profile Page</h1>
-      <p class="muted">View and update student information, add enrolled programs, and add completed courses.</p>
-      <div id="profileAlert"></div>
+        <h1>Profile</h1>
+        <p class="muted">This page shows your account info, saved programs, and completed courses.</p>
     </section>
 
-    <section class="form-card" style="margin-top:1rem;">
-      <h2>Profile Details</h2>
-      <form id="profileForm">
-        <div class="form-row two">
-          <div>
-            <label>Username</label>
-            <input id="profileUsername" disabled />
-          </div>
-          <div>
-            <label>Email</label>
-            <input id="profileEmail" />
-          </div>
+    <section class="grid two">
+        <div class="card">
+            <h2>Account Info</h2>
+
+            {% if user %}
+                <p><strong>Username:</strong> {{ user.username }}</p>
+                <p><strong>Email:</strong> {{ user.email }}</p>
+                <p><strong>CGPA:</strong> {{ user.cgpa }}</p>
+                <p><strong>Year Standing:</strong> {{ user.year_standing }}</p>
+            {% else %}
+                <div class="empty-state">User info not found.</div>
+            {% endif %}
         </div>
-        <div class="form-row two">
-          <div>
-            <label>CGPA</label>
-            <input id="profileCgpa" type="number" step="0.01" min="0" max="4" />
-          </div>
-          <div>
-            <label>Year Standing</label>
-            <input id="profileYear" type="number" min="1" max="6" />
-          </div>
+
+        <div class="list-card">
+            <h2>Your Programs</h2>
+
+            {% if user_programs %}
+                <div class="simple-list">
+                    {% for row in user_programs %}
+                        <div class="simple-item">
+                            <strong>{{ row.program_code }}</strong>
+                            <div class="meta">Status: {{ row.status }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="empty-state">No programs saved yet.</div>
+            {% endif %}
         </div>
-        <button class="primary" type="submit">Update Profile</button>
-      </form>
     </section>
 
-    <section class="form-card" style="margin-top:1rem;">
-      <h2>Add Program</h2>
-      <form id="programForm">
-        <div class="form-row two">
-          <div>
-            <label>Program Code</label>
-            <input id="programCode" placeholder="e.g. MGMTSPEC" required />
-          </div>
-          <div>
-            <label>Status</label>
-            <select id="programStatus">
-              <option>ACTIVE</option>
-              <option>COMPLETED</option>
-              <option>WITHDRAWN</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row two">
-          <div>
-            <label>Start Year</label>
-            <input id="programStartYear" type="number" min="2000" max="2100" />
-          </div>
-          <div>
-            <label>End Year</label>
-            <input id="programEndYear" type="number" min="2000" max="2100" />
-          </div>
-        </div>
-        <button class="success" type="submit">Add Program</button>
-      </form>
+    <section class="table-card">
+        <h2>Completed Courses</h2>
+
+        {% if completed_courses %}
+            <div style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Status</th>
+                            <th>Credits</th>
+                            <th>Semester</th>
+                            <th>Year</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in completed_courses %}
+                            <tr>
+                                <td>{{ row.course_code }}</td>
+                                <td>{{ row.status }}</td>
+                                <td>{{ row.credits_earned }}</td>
+                                <td>{{ row.semester or "-" }}</td>
+                                <td>{{ row.year or "-" }}</td>
+                                <td>{{ row.grade or row.numeric_grade or "-" }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <div class="empty-state">No completed courses saved yet.</div>
+        {% endif %}
     </section>
-
-    <section class="form-card" style="margin-top:1rem;">
-      <h2>Add Completed Course</h2>
-      <form id="courseRecordForm">
-        <div class="form-row two">
-          <div>
-            <label>Course Code</label>
-            <input id="recordCourseCode" placeholder="e.g. MGTA01H3" required />
-          </div>
-          <div>
-            <label>Status</label>
-            <select id="recordStatus">
-              <option>COMPLETED</option>
-              <option>IN_PROGRESS</option>
-              <option>FAILED</option>
-              <option>TRANSFER</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row two">
-          <div>
-            <label>Semester</label>
-            <select id="recordSemester">
-              <option value="">-- Optional --</option>
-              <option>Fall</option>
-              <option>Winter</option>
-              <option>Summer</option>
-            </select>
-          </div>
-          <div>
-            <label>Year</label>
-            <input id="recordYear" type="number" min="2000" max="2100" />
-          </div>
-        </div>
-        <div class="form-row two">
-          <div>
-            <label>Letter Grade</label>
-            <input id="recordGrade" placeholder="e.g. A-" />
-          </div>
-          <div>
-            <label>Numeric Grade</label>
-            <input id="recordNumeric" type="number" min="0" max="100" step="0.01" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div>
-            <label>Credits Earned</label>
-            <input id="recordCredits" type="number" step="0.5" min="0" value="0.5" />
-          </div>
-        </div>
-        <button class="success" type="submit">Save Course</button>
-      </form>
-    </section>
-  </div>
-
-  <div class="grid">
-    <section class="list-card">
-      <h2>My Programs</h2>
-      <div id="programList" class="simple-list"></div>
-    </section>
-
-    <section class="list-card">
-      <h2>Completed Courses</h2>
-      <div id="completedCoursesList" class="simple-list"></div>
-    </section>
-  </div>
-</section>
-
-  </main>
-  <div data-footer></div>
-  <script src="static/api.js"></script>
-  <script src="static/common.js"></script>
-  <script>
-    renderNavbar('profile');
-    renderFooter();
-    
-const profileAlert = $('#profileAlert');
-
-async function loadProfilePage() {
-  try {
-    const [profile, programs, records] = await Promise.all([
-      UserAPI.profile(),
-      UserAPI.programs(),
-      UserAPI.completedCourses(),
-    ]);
-
-    $('#profileUsername').value = profile.username || '';
-    $('#profileEmail').value = profile.email || '';
-    $('#profileCgpa').value = profile.cgpa ?? '';
-    $('#profileYear').value = profile.year_standing ?? '';
-
-    const programList = $('#programList');
-    programList.innerHTML = programs.length
-      ? programs.map(item => `
-          <div class="simple-item">
-            <strong>${escapeHtml(item.program_code)}</strong>
-            <div class="meta">Status: ${escapeHtml(item.status || '')}</div>
-            <div class="meta">Start: ${escapeHtml(item.start_year || '—')} | End: ${escapeHtml(item.end_year || '—')}</div>
-          </div>
-        `).join('')
-      : `<div class="empty-state">No programs added yet.</div>`;
-
-    const completedCoursesList = $('#completedCoursesList');
-    completedCoursesList.innerHTML = records.length
-      ? records.map(item => `
-          <div class="simple-item">
-            <strong>${escapeHtml(item.course_code)}</strong>
-            <div class="meta">Status: ${escapeHtml(item.status || '')} | Semester: ${escapeHtml(item.semester || '—')} ${escapeHtml(item.year || '')}</div>
-            <div class="meta">Grade: ${escapeHtml(item.grade || item.numeric_grade || '—')} | Credits: ${escapeHtml(item.credits_earned || '0')}</div>
-          </div>
-        `).join('')
-      : `<div class="empty-state">No completed courses saved yet.</div>`;
-  } catch (error) {
-    showAlert(profileAlert, 'error', `Could not load profile page: ${error.message}`);
-  }
-}
-
-$('#profileForm').addEventListener('submit', async (event) => {
-  event.preventDefault();
-  clearAlert(profileAlert);
-  try {
-    const result = await UserAPI.updateProfile({
-      email: $('#profileEmail').value.trim(),
-      cgpa: Number($('#profileCgpa').value),
-      year_standing: Number($('#profileYear').value),
-    });
-    showAlert(profileAlert, 'success', result.message || 'Profile updated.');
-    await loadProfilePage();
-  } catch (error) {
-    showAlert(profileAlert, 'error', error.message);
-  }
-});
-
-$('#programForm').addEventListener('submit', async (event) => {
-  event.preventDefault();
-  clearAlert(profileAlert);
-  try {
-    const result = await UserAPI.addProgram({
-      program_code: $('#programCode').value.trim().toUpperCase(),
-      status: $('#programStatus').value,
-      start_year: $('#programStartYear').value ? Number($('#programStartYear').value) : null,
-      end_year: $('#programEndYear').value ? Number($('#programEndYear').value) : null,
-    });
-    showAlert(profileAlert, 'success', result.message || 'Program added.');
-    event.target.reset();
-    await loadProfilePage();
-  } catch (error) {
-    showAlert(profileAlert, 'error', error.message);
-  }
-});
-
-$('#courseRecordForm').addEventListener('submit', async (event) => {
-  event.preventDefault();
-  clearAlert(profileAlert);
-  try {
-    const result = await UserAPI.addCompletedCourse({
-      course_code: $('#recordCourseCode').value.trim().toUpperCase(),
-      semester: $('#recordSemester').value || null,
-      year: $('#recordYear').value ? Number($('#recordYear').value) : null,
-      grade: $('#recordGrade').value.trim() || null,
-      numeric_grade: $('#recordNumeric').value ? Number($('#recordNumeric').value) : null,
-      status: $('#recordStatus').value,
-      credits_earned: Number($('#recordCredits').value || 0.5),
-    });
-    showAlert(profileAlert, 'success', result.message || 'Course saved to profile.');
-    event.target.reset();
-    $('#recordCredits').value = 0.5;
-    await loadProfilePage();
-  } catch (error) {
-    showAlert(profileAlert, 'error', error.message);
-  }
-});
-
-loadProfilePage();
-
-  </script>
-</body>
-</html>
+</div>
+{% endblock %}

@@ -1,62 +1,71 @@
-from __future__ import annotations
+from flask import render_template, request, redirect, url_for, session, flash, jsonify
 
-from typing import Any
+from validation import is_valid_course_code
 
-from flask import Blueprint, jsonify, request
+def init_course_routes(app, repo, planner_service):
+    @app.route("/courses")
+    def courses():
+        if "user_id" not in session:
+            flash("Please log in first.")
+            return redirect(url_for("login"))
 
-from data_repository import DataRepository
+        keyword = request.args.get("keyword", "").strip()
 
+        if keyword == "":
+            course_list = repo.get_all_courses()
+        else:
+            course_list = repo.search_courses(keyword)
 
-def create_course_blueprint(repo: DataRepository) -> Blueprint:
-    course_bp = Blueprint('courses', __name__, url_prefix='/api')
+        return render_template("courses.html", courses=course_list, keyword=keyword)
 
-    @course_bp.get('/courses')
-    def list_courses() -> Any:
-        search = request.args.get('search', '')
-        prefix = request.args.get('prefix', '')
-        limit = int(request.args.get('limit', 200))
-        return jsonify(repo.list_courses(search=search, prefix=prefix, limit=limit))
+    @app.route("/course/<course_code>")
+    def course_page(course_code):
+        if "user_id" not in session:
+            flash("Please log in first.")
+            return redirect(url_for("login"))
 
-    @course_bp.get('/courses/<course_code>')
-    def get_course(course_code: str) -> Any:
-        course = repo.get_course(course_code)
-        if not course:
-            return jsonify({'error': 'Course not found.'}), 404
-        exclusions = repo.get_course_exclusions(course_code)
-        prereq_groups = repo.get_course_requirements(course_code, 'PREREQ')
-        coreq_groups = repo.get_course_requirements(course_code, 'COREQ')
-        for group in prereq_groups + coreq_groups:
-            group['items'] = repo.get_requirement_items(int(group['group_id']))
-        return jsonify({
-            'course': course,
-            'exclusions': exclusions,
-            'prereq_groups': prereq_groups,
-            'coreq_groups': coreq_groups,
-        })
+        course_code = course_code.strip().upper()
 
-    @course_bp.get('/courses/<course_code>/offerings')
-    def get_course_offerings(course_code: str) -> Any:
-        offerings = repo.get_course_offerings(course_code)
-        return jsonify({
-            'course_code': course_code.upper().strip(),
-            'offerings': offerings,
-            'source': 'sql/database.db' if offerings else 'No offering rows found in sql/database.db',
-        })
+        if not is_valid_course_code(course_code):
+            flash("Invalid course code.")
+            return redirect(url_for("courses"))
 
-    @course_bp.get('/programs')
-    def list_programs() -> Any:
-        search = request.args.get('search', '')
-        program_type = request.args.get('type', '')
-        return jsonify(repo.list_programs(search=search, program_type=program_type))
+        details = planner_service.get_course_details(course_code)
 
-    @course_bp.get('/programs/<program_code>')
-    def get_program(program_code: str) -> Any:
-        program = repo.get_program(program_code)
-        if not program:
-            return jsonify({'error': 'Program not found.'}), 404
-        groups = repo.get_program_requirement_groups(program_code)
-        for group in groups:
-            group['courses'] = repo.get_program_requirement_courses(int(group['group_id']))
-        return jsonify({'program': program, 'requirement_groups': groups})
+        if not details:
+            flash("Course not found.")
+            return redirect(url_for("courses"))
 
-    return course_bp
+        return render_template("course-details.html", details=details)
+
+    @app.route("/api/course/<course_code>")
+    def api_course_details(course_code):
+        if "user_id" not in session:
+            return jsonify({"error": "Please log in first."}), 401
+
+        course_code = course_code.strip().upper()
+
+        if not is_valid_course_code(course_code):
+            return jsonify({"error": "Invalid course code."}), 400
+
+        details = planner_service.get_course_details(course_code)
+
+        if not details:
+            return jsonify({"error": "Course not found."}), 404
+
+        return jsonify(details)
+
+    @app.route("/search-courses")
+    def search_courses():
+        if "user_id" not in session:
+            flash("Please log in first.")
+            return redirect(url_for("login"))
+
+        keyword = request.args.get("keyword", "").strip()
+
+        if keyword == "":
+            return redirect(url_for("courses"))
+
+        course_list = repo.search_courses(keyword)
+
+        return render_template("courses.html", courses=course_list, keyword=keyword)

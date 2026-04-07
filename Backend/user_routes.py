@@ -1,112 +1,183 @@
-from __future__ import annotations
+from flask import render_template, request, redirect, url_for, session, flash
 
-from typing import Any
-
-from flask import Blueprint, jsonify, request, session
-
-from auth_routes import login_required
-from data_repository import DataRepository
-from planner_service import PlannerService
-from runtime_db import get_conn, init_runtime_db
-from validation import ValidationError, optional_float, optional_int, optional_str, parse_json, required_str
+from runtime_db import get_conn
+from validation import is_valid_program_code, is_valid_course_code
 
 
-def create_user_blueprint(service: PlannerService, repo: DataRepository) -> Blueprint:
-    user_bp = Blueprint('users', __name__, url_prefix='/api')
+def init_user_routes(app, repo):
+    @app.route("/dashboard")
+    def dashboard():
+        if "user_id" not in session:
+            flash("Please log in first.")
+            return redirect(url_for("login"))
 
-    @user_bp.get('/me/profile')
-    @login_required
-    def get_profile() -> Any:
-        user = service.get_user(int(session['user_id']))
-        if not user:
-            return jsonify({'error': 'User not found.'}), 404
-        return jsonify(user)
+        user_id = session["user_id"]
+        programs = repo.get_all_programs()
 
-    @user_bp.put('/me/profile')
-    @login_required
-    def update_profile() -> Any:
-        try:
-            data = parse_json(request)
-            email = optional_str(data, 'email')
-            cgpa = optional_float(data, 'cgpa')
-            year_standing = optional_int(data, 'year_standing')
-        except ValidationError as exc:
-            return jsonify({'error': str(exc)}), 400
+        conn = get_conn()
 
-        fields = []
-        values = []
-        if email is not None:
-            fields.append('email = ?')
-            values.append(email)
-        if cgpa is not None:
-            fields.append('cgpa = ?')
-            values.append(cgpa)
-        if year_standing is not None:
-            fields.append('year_standing = ?')
-            values.append(year_standing)
-        if not fields:
-            return jsonify({'error': 'Nothing to update.'}), 400
+        user_programs = conn.execute("""
+            SELECT *
+            FROM user_programs
+            WHERE user_id = ?
+            ORDER BY id
+        """, (user_id,)).fetchall()
 
-        values.append(int(session['user_id']))
-        init_runtime_db()
-        with get_conn() as conn:
-            conn.execute(f"UPDATE users SET {', '.join(fields)} WHERE user_id = ?", tuple(values))
-        return jsonify({'message': 'Profile updated.'})
+        conn.close()
 
-    @user_bp.post('/me/programs')
-    @login_required
-    def add_program() -> Any:
-        try:
-            data = parse_json(request)
-            program_code = required_str(data, 'program_code').upper()
-            status = optional_str(data, 'status', 'ACTIVE') or 'ACTIVE'
-            start_year = optional_int(data, 'start_year')
-            end_year = optional_int(data, 'end_year')
-        except ValidationError as exc:
-            return jsonify({'error': str(exc)}), 400
-
-        if not repo.get_program(program_code):
-            return jsonify({'error': 'Program not found in programs.csv.'}), 400
-        row_id = service.add_user_program(int(session['user_id']), program_code, status, start_year, end_year)
-        return jsonify({'message': 'Program added.', 'id': row_id}), 201
-
-    @user_bp.get('/me/programs')
-    @login_required
-    def list_my_programs() -> Any:
-        return jsonify(service.get_user_programs(int(session['user_id'])))
-
-    @user_bp.post('/me/completed-courses')
-    @login_required
-    def add_completed_course() -> Any:
-        try:
-            data = parse_json(request)
-            course_code = required_str(data, 'course_code').upper()
-            semester = optional_str(data, 'semester')
-            year = optional_int(data, 'year')
-            grade = optional_str(data, 'grade')
-            numeric_grade = optional_float(data, 'numeric_grade')
-            status = optional_str(data, 'status', 'COMPLETED') or 'COMPLETED'
-            credits_earned = optional_float(data, 'credits_earned', 0.5) or 0.5
-        except ValidationError as exc:
-            return jsonify({'error': str(exc)}), 400
-
-        if not repo.get_course(course_code):
-            return jsonify({'error': 'Course not found in courses.csv.'}), 400
-        record_id = service.add_completed_course(
-            int(session['user_id']),
-            course_code,
-            semester,
-            year,
-            grade,
-            numeric_grade,
-            status,
-            credits_earned,
+        return render_template(
+            "dashboard.html",
+            programs=programs,
+            user_programs=user_programs
         )
-        return jsonify({'message': 'Course saved to profile.', 'record_id': record_id}), 201
 
-    @user_bp.get('/me/completed-courses')
-    @login_required
-    def list_completed_courses() -> Any:
-        return jsonify(service.get_completed_courses(int(session['user_id'])))
+    @app.route("/profile")
+    def profile():
+        if "user_id" not in session:
+            flash("Please log in first.")
+            return redirect(url_for("login"))
 
-    return user_bp
+        user_id = session["user_id"]
+
+        conn = get_conn()
+
+        user = conn.execute("""
+            SELECT *
+            FROM users
+            WHERE user_id = ?
+        """, (user_id,)).fetchone()
+
+        user_programs = conn.execute("""
+            SELECT *
+            FROM user_programs
+            WHERE user_id = ?
+            ORDER BY id
+        """, (user_id,)).fetchall()
+
+        completed_courses = conn.execute("""
+            SELECT *
+            FROM completed_courses
+            WHERE user_id = ?
+            ORDER BY record_id
+        """, (user_id,)).fetchall()
+
+        conn.close()
+
+        return render_template(
+            "profile.html",
+            user=user,
+            user_programs=user_programs,
+            completed_courses=completed_courses
+        )
+
+    @app.route("/save-program", methods=["POST"])
+    def save_program():
+        if "user_id" not in session:
+            flash("Please log in first.")
+            return redirect(url_for("login"))
+
+        user_id = session["user_id"]
+        program_code = request.form.get("program_code", "").strip().upper()
+        start_year = request.form.get("start_year", "").strip()
+
+        if not is_valid_program_code(program_code):
+            flash("Invalid program code.")
+            return redirect(url_for("dashboard"))
+
+        program = repo.get_program_by_code(program_code)
+
+        if not program:
+            flash("Program not found.")
+            return redirect(url_for("dashboard"))
+
+        conn = get_conn()
+
+        existing_program = conn.execute("""
+            SELECT *
+            FROM user_programs
+            WHERE user_id = ?
+              AND program_code = ?
+        """, (user_id, program_code)).fetchone()
+
+        if existing_program:
+            conn.close()
+            flash("Program already saved.")
+            return redirect(url_for("dashboard"))
+
+        if start_year == "":
+            conn.execute("""
+                INSERT INTO user_programs (user_id, program_code, status)
+                VALUES (?, ?, 'ACTIVE')
+            """, (user_id, program_code))
+        else:
+            conn.execute("""
+                INSERT INTO user_programs (user_id, program_code, status, start_year)
+                VALUES (?, ?, 'ACTIVE', ?)
+            """, (user_id, program_code, int(start_year)))
+
+        conn.commit()
+        conn.close()
+
+        flash("Program saved.")
+        return redirect(url_for("dashboard"))
+
+    @app.route("/remove-program/<int:program_id>")
+    def remove_program(program_id):
+        if "user_id" not in session:
+            flash("Please log in first.")
+            return redirect(url_for("login"))
+
+        user_id = session["user_id"]
+
+        conn = get_conn()
+
+        conn.execute("""
+            DELETE FROM user_programs
+            WHERE id = ?
+              AND user_id = ?
+        """, (program_id, user_id))
+
+        conn.commit()
+        conn.close()
+
+        flash("Program removed.")
+        return redirect(url_for("dashboard"))
+
+    @app.route("/save-completed-courses", methods=["POST"])
+    def save_completed_courses():
+        if "user_id" not in session:
+            flash("Please log in first.")
+            return redirect(url_for("login"))
+
+        user_id = session["user_id"]
+        course_codes = request.form.getlist("course_codes")
+
+        conn = get_conn()
+
+        conn.execute("""
+            DELETE FROM completed_courses
+            WHERE user_id = ?
+        """, (user_id,))
+
+        for course_code in course_codes:
+            course_code = course_code.strip().upper()
+
+            if is_valid_course_code(course_code):
+                course = repo.get_course_by_code(course_code)
+
+                if course:
+                    conn.execute("""
+                        INSERT INTO completed_courses (
+                            user_id,
+                            course_code,
+                            status,
+                            credits_earned
+                        )
+                        VALUES (?, ?, 'COMPLETED', ?)
+                    """, (user_id, course_code, course["credits"]))
+
+        conn.commit()
+        conn.close()
+
+        flash("Completed courses updated.")
+        return redirect(url_for("dashboard"))

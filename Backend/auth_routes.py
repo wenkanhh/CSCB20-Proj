@@ -1,83 +1,136 @@
-from __future__ import annotations
+from flask import render_template, request, redirect, url_for, session, flash
+from werkzeug.security import generate_password_hash, check_password_hash
 
-from functools import wraps
-from typing import Any, Callable
+from runtime_db import get_conn
+from validation import (
+    is_valid_email,
+    is_valid_username,
+    is_valid_password,
+    is_valid_cgpa,
+    is_valid_year_standing
+)
+#when you sign up, it will guide you through one by one step if done wrong, flash a message
 
-from flask import Blueprint, jsonify, request, session
-from werkzeug.security import check_password_hash, generate_password_hash
+#app in the bracket here cus it substitutes app = Flask(__name__)
+def init_auth_routes(app):
+    @app.route("/register", methods=["GET", "POST"])
+    def register():
+        # If user just opened the page, show the form
+        if request.method == "GET":
+            return render_template("register.html")
 
-from runtime_db import get_conn, init_runtime_db
-from validation import ValidationError, optional_float, optional_int, parse_json, required_str
+        # Get form data
+        username = request.form.get("username", "").strip()
+        password = request.form.get("password", "").strip()
+        email = request.form.get("email", "").strip()
+        cgpa = request.form.get("cgpa", "").strip()
+        year_standing = request.form.get("year_standing", "").strip()
 
+        # Check the input
+        if not is_valid_username(username):
+            flash("Username must be at least 3 characters.")
+            return render_template("register.html")
 
-auth_bp = Blueprint('auth', __name__, url_prefix='/api/auth')
+        if not is_valid_password(password):
+            flash("Password must be at least 6 characters.")
+            return render_template("register.html")
 
+        if not is_valid_email(email):
+            flash("Please enter a valid email.")
+            return render_template("register.html")
 
-def login_required(view: Callable[..., Any]) -> Callable[..., Any]:
-    @wraps(view)
-    def wrapped(*args: Any, **kwargs: Any) -> Any:
-        user_id = session.get('user_id')
-        if not user_id:
-            return jsonify({'error': 'Authentication required.'}), 401
-        return view(*args, **kwargs)
+        if not is_valid_cgpa(cgpa):
+            flash("CGPA must be between 0.0 and 4.0.")
+            return render_template("register.html")
 
-    return wrapped
+        if not is_valid_year_standing(year_standing):
+            flash("Year standing must be between 1 and 4.")
+            return render_template("register.html")
 
+        conn = get_conn()
 
-@auth_bp.post('/register')
-def register() -> Any:
-    try:
-        data = parse_json(request)
-        username = required_str(data, 'username')
-        password = required_str(data, 'password')
-        email = required_str(data, 'email')
-        cgpa = optional_float(data, 'cgpa', 0.0) or 0.0
-        year_standing = optional_int(data, 'year_standing', 1) or 1
-    except ValidationError as exc:
-        return jsonify({'error': str(exc)}), 400
+        # Check if username already exists
+        existing_user = conn.execute("""
+            SELECT *
+            FROM users
+            WHERE username = ?
+        """, (username,)).fetchone()
 
-    init_runtime_db()
-    try:
-        with get_conn() as conn:
-            cursor = conn.execute(
-                'INSERT INTO users (username, password_hash, email, cgpa, year_standing) VALUES (?, ?, ?, ?, ?)',
-                (username, generate_password_hash(password), email, cgpa, year_standing),
-            )
-            user_id = int(cursor.lastrowid)
-    except Exception as exc:
-        return jsonify({'error': f'Could not register user: {exc}'}), 400
+        if existing_user:
+            conn.close()
+            flash("Username already exists.")
+            return render_template("register.html")
 
-    session['user_id'] = user_id
-    return jsonify({'message': 'Registered successfully.', 'user_id': user_id}), 201
+        # Check if email already exists
+        existing_email = conn.execute("""
+            SELECT *
+            FROM users
+            WHERE email = ?
+        """, (email,)).fetchone()
 
+        if existing_email:
+            conn.close()
+            flash("Email already exists.")
+            return render_template("register.html")
 
-@auth_bp.post('/login')
-def login() -> Any:
-    try:
-        data = parse_json(request)
-        username = required_str(data, 'username')
-        password = required_str(data, 'password')
-    except ValidationError as exc:
-        return jsonify({'error': str(exc)}), 400
+        # Hash the password before saving
+        hashed_password = generate_password_hash(password)
 
-    init_runtime_db()
-    with get_conn() as conn:
-        row = conn.execute('SELECT * FROM users WHERE username = ?', (username,)).fetchone()
+        # Save new user
+        conn.execute("""
+            INSERT INTO users (username, password, email, cgpa, year_standing)
+            VALUES (?, ?, ?, ?, ?)
+        """, (username, hashed_password, email, float(cgpa), int(year_standing)))
 
-    if not row or not check_password_hash(row['password_hash'], password):
-        return jsonify({'error': 'Invalid username or password.'}), 401
+        conn.commit()
+        conn.close()
 
-    session['user_id'] = int(row['user_id'])
-    return jsonify({'message': 'Logged in.', 'user_id': int(row['user_id'])})
+        flash("Account created successfully. Please log in.")
+        return redirect(url_for("login"))
 
+    @app.route("/login", methods=["GET", "POST"])
+    def login():
+        # If user just opened the page, show the form
+        if request.method == "GET":
+            return render_template("login.html")
 
-@auth_bp.post('/logout')
-def logout() -> Any:
-    session.clear()
-    return jsonify({'message': 'Logged out.'})
+        # Get form data
+        username = request.form.get("username", "").strip()
+        password = request.form.get("password", "").strip()
 
+        conn = get_conn()
 
-@auth_bp.get('/session')
-@login_required
-def get_session_info() -> Any:
-    return jsonify({'authenticated': True, 'user_id': session.get('user_id')})
+        # Find user by username
+        user = conn.execute("""
+            SELECT *
+            FROM users
+            WHERE username = ?
+        """, (username,)).fetchone()
+
+        conn.close()
+
+        # Check if user exists
+        if not user:
+            flash("Invalid username or password.")
+            return render_template("login.html")
+
+        # Check password
+        if not check_password_hash(user["password"], password):
+            flash("Invalid username or password.")
+            return render_template("login.html")
+
+        # Save login info in session
+        session["user_id"] = user["user_id"]
+        session["username"] = user["username"]
+
+        flash("Login successful.")
+        return redirect(url_for("dashboard"))
+
+    @app.route("/logout")
+    def logout():
+        # Remove login data from session
+        session.pop("user_id", None)
+        session.pop("username", None)
+
+        flash("You have been logged out.")
+        return redirect(url_for("login"))

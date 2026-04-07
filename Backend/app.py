@@ -1,61 +1,36 @@
-from __future__ import annotations
+from flask import Flask, redirect, url_for, session
 
-from typing import Any
-
-from flask import Flask, jsonify
-
-from auth_routes import auth_bp
-from config import DATA_DIR, DEBUG, EXISTING_PROJECT_DB_PATH, PROJECT_ROOT, RUNTIME_DB_PATH, SECRET_KEY, SQL_DIR
-from course_routes import create_course_blueprint
+from runtime_db import init_runtime_db
 from data_repository import DataRepository
 from planner_service import PlannerService
-from recommendation_routes import create_recommendation_blueprint
-from runtime_db import init_runtime_db
-from user_routes import create_user_blueprint
-from validation import ValidationError
+
+from auth_routes import init_auth_routes
+from user_routes import init_user_routes
+from course_routes import init_course_routes
+from recommendation_routes import init_recommendation_routes
+
+app = Flask(__name__)
+app.secret_key = "my_secret_key"
+
+init_runtime_db()
+
+repo = DataRepository()
+planner_service = PlannerService(repo)
 
 
-def create_app() -> Flask:
-    app = Flask(__name__)
-    app.config['SECRET_KEY'] = SECRET_KEY
-    app.config['JSON_SORT_KEYS'] = False
+@app.route("/")
+def home():
+    if "user_id" in session:
+        return redirect(url_for("dashboard"))
 
-    init_runtime_db()
-    repo = DataRepository.load()
-    service = PlannerService(repo)
-
-    app.register_blueprint(auth_bp)
-    app.register_blueprint(create_user_blueprint(service, repo))
-    app.register_blueprint(create_course_blueprint(repo))
-    app.register_blueprint(create_recommendation_blueprint(service))
-
-    @app.get('/api/health')
-    def health() -> Any:
-        return jsonify({
-            'status': 'ok',
-            'project_root': str(PROJECT_ROOT),
-            'data_dir': str(DATA_DIR),
-            'sql_dir': str(SQL_DIR),
-            'runtime_db': str(RUNTIME_DB_PATH),
-            'existing_project_db': str(EXISTING_PROJECT_DB_PATH),
-        })
-
-    @app.errorhandler(ValidationError)
-    def handle_validation_error(error: ValidationError) -> Any:
-        return jsonify({'error': str(error)}), 400
-
-    @app.errorhandler(404)
-    def handle_not_found(_: Any) -> Any:
-        return jsonify({'error': 'Route not found.'}), 404
-
-    @app.errorhandler(500)
-    def handle_server_error(error: Exception) -> Any:
-        return jsonify({'error': 'Internal server error.', 'detail': str(error)}), 500
-
-    return app
+    return redirect(url_for("login"))
 
 
-app = create_app()
+init_auth_routes(app)
+init_user_routes(app, repo)
+init_course_routes(app, repo, planner_service)
+init_recommendation_routes(app, planner_service)
 
-if __name__ == '__main__':
-    app.run(debug=DEBUG)
+
+if __name__ == "__main__":
+    app.run()

@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}Course Planner{% endblock %}</title>
-  <link rel="stylesheet" href="static/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Course Planner{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='api.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='common.js') }}" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="dashboard.html">Course Planner</a>
-      <nav class="navbar">
-        <a href="dashboard.html">Dashboard</a>
-        <a href="courses.html">Courses</a>
-        <a href="recommendations.html">Recommendations</a>
-        <a href="profile.html">Profile</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
-      </nav>
-    </div>
-  </header>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="{{ url_for('home') }}">Course Planner</a>
 
-  <main class="container page-shell">
-    {% block content %}
-    <section class="hero-card">
-      <h1>Base Layout</h1>
-      <p>This file shows the shared structure: header, navbar, page container, and footer.</p>
-      <p>If you later convert the frontend into Flask/Jinja templates, the other pages can extend this file.</p>
-    </section>
-    {% endblock %}
-  </main>
+            <nav class="navbar">
+                {% if "user_id" in session %}
+                    <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                    <a href="{{ url_for('courses') }}">Courses</a>
+                    <a href="{{ url_for('profile') }}">Profile</a>
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                {% else %}
+                    <a href="{{ url_for('login') }}">Login</a>
+                    <a href="{{ url_for('register') }}">Register</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
 
-  <footer class="site-footer">
-    <div class="container">Frontend starter for the course planner project.</div>
-  </footer>
+    <main class="page-shell">
+        <div class="container">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert info">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            Course Planner
+        </div>
+    </footer>
 </body>
 </html>

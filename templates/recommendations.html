@@ -1,119 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Recommendations</title>
-  <link rel="stylesheet" href="static/styles.css" />
-</head>
-<body>
-  <div data-navbar></div>
-  <main class="container page-shell">
-    
-<section class="hero-card">
-  <h1>Recommendations Page</h1>
-  <p class="muted">Get recommended courses, optionally for a selected program, and save them.</p>
-  <div id="recAlert"></div>
-  <form id="recommendationForm" class="form-card">
-    <div class="form-row two">
-      <div>
-        <label>Program Code (optional)</label>
-        <input id="recommendationProgramCode" placeholder="e.g. MGMTMAJOR" />
-      </div>
-      <div>
-        <label>Limit</label>
-        <input id="recommendationLimit" type="number" min="1" max="50" value="10" />
-      </div>
-    </div>
-    <button class="primary" type="submit">Load Recommendations</button>
-  </form>
-</section>
+{% extends "base.html" %}
 
-<section class="grid two" style="margin-top:1rem; align-items:start;">
-  <section class="list-card">
-    <h2>Suggested Courses</h2>
-    <div id="recommendationResults" class="course-list"></div>
-  </section>
-  <section class="list-card">
-    <h2>Saved Recommendations</h2>
-    <button id="loadSavedBtn" class="secondary" type="button">Refresh Saved Items</button>
-    <div id="savedRecommendationResults" class="simple-list" style="margin-top:1rem;"></div>
-  </section>
-</section>
+{% block title %}Planner - Course Planner{% endblock %}
 
-  </main>
-  <div data-footer></div>
-  <script src="static/api.js"></script>
-  <script src="static/common.js"></script>
-  <script>
-    renderNavbar('recommendations');
-    renderFooter();
-    
-const recAlert = $('#recAlert');
+{% block content %}
+<div class="grid" style="gap: 1.25rem;">
+    <section class="hero-card">
+        <h1>{{ plan.program.program_code }} — {{ plan.program.program_name }}</h1>
+        <p class="muted">This page shows the requirement groups for the selected program and marks which courses are already completed.</p>
+    </section>
 
-async function loadRecommendations() {
-  clearAlert(recAlert);
-  try {
-    const programCode = $('#recommendationProgramCode').value.trim().toUpperCase();
-    const limit = Number($('#recommendationLimit').value || 10);
-    const results = await PlannerAPI.recommendations({ programCode, limit });
+    <section class="grid three">
+        <div class="card kpi">
+            <span class="label">Total Courses</span>
+            <span class="value">{{ plan.summary.total_courses }}</span>
+        </div>
 
-    $('#recommendationResults').innerHTML = results.length
-      ? results.map(item => createCourseCard(item.course || item, `
-          <div class="actions">
-            <span class="badge good">Score: ${escapeHtml(item.score || 0)}</span>
-            <button type="button" class="secondary save-rec-btn" data-code="${escapeHtml(item.course?.course_code || item.course_code || '')}" data-program="${escapeHtml(programCode)}">Save</button>
-          </div>
-          <p class="small">Reason: ${escapeHtml(item.reason || 'Recommended based on your progress.')}</p>
-        `)).join('')
-      : `<div class="empty-state">No recommendations found.</div>`;
+        <div class="card kpi">
+            <span class="label">Completed</span>
+            <span class="value">{{ plan.summary.completed_courses }}</span>
+        </div>
 
-    document.querySelectorAll('.save-rec-btn').forEach(button => {
-      button.addEventListener('click', async () => {
-        try {
-          const payload = {
-            course_code: button.dataset.code,
-            program_code: button.dataset.program || null,
-            reason: 'Saved from recommendations page',
-          };
-          const result = await PlannerAPI.saveRecommendation(payload);
-          showAlert(recAlert, 'success', result.message || 'Recommendation saved.');
-          await loadSavedRecommendations();
-        } catch (error) {
-          showAlert(recAlert, 'error', error.message);
-        }
-      });
-    });
-  } catch (error) {
-    showAlert(recAlert, 'error', error.message);
-  }
-}
+        <div class="card kpi">
+            <span class="label">Remaining</span>
+            <span class="value">{{ plan.summary.remaining_courses }}</span>
+        </div>
+    </section>
 
-async function loadSavedRecommendations() {
-  clearAlert(recAlert);
-  try {
-    const results = await PlannerAPI.savedRecommendations();
-    $('#savedRecommendationResults').innerHTML = results.length
-      ? results.map(item => `
-          <div class="simple-item">
-            <strong>${escapeHtml(item.course_code)}</strong>
-            <div class="meta">Program: ${escapeHtml(item.program_code || '—')}</div>
-            <div class="meta">Reason: ${escapeHtml(item.reason || '—')}</div>
-          </div>
-        `).join('')
-      : `<div class="empty-state">No saved recommendations yet.</div>`;
-  } catch (error) {
-    showAlert(recAlert, 'error', error.message);
-  }
-}
+    <section class="list-card">
+        <h2>Requirement Groups</h2>
 
-$('#recommendationForm').addEventListener('submit', async (event) => {
-  event.preventDefault();
-  await loadRecommendations();
-});
-$('#loadSavedBtn').addEventListener('click', loadSavedRecommendations);
-loadSavedRecommendations();
+        {% if plan.groups %}
+            <div class="audit-list">
+                {% for group in plan.groups %}
+                    <article class="audit-item">
+                        <div class="actions" style="justify-content: space-between; align-items: center; margin-top: 0;">
+                            <div>
+                                <h3 style="margin-bottom: 0.35rem;">Requirement Group {{ group.group_id }}</h3>
+                                <div class="meta">
+                                    Type: {{ group.group_type or "ALL" }}
+                                    {% if group.category %} | Category: {{ group.category }}{% endif %}
+                                </div>
+                            </div>
+                        </div>
 
-  </script>
-</body>
-</html>
+                        {% if group.notes %}
+                            <p class="small">{{ group.notes }}</p>
+                        {% endif %}
+
+                        {% if group.courses %}
+                            <div class="simple-list">
+                                {% for course in group.courses %}
+                                    <div class="simple-item">
+                                        <div class="actions" style="justify-content: space-between; align-items: center; margin-top: 0;">
+                                            <div>
+                                                <strong>{{ course.course_code }} — {{ course.course_name }}</strong>
+                                                <div class="meta">Credits: {{ course.credits }}</div>
+                                            </div>
+
+                                            {% if course.is_completed %}
+                                                <span class="badge good">Completed</span>
+                                            {% else %}
+                                                <span class="badge warn">Not Completed</span>
+                                            {% endif %}
+                                        </div>
+
+                                        {% if course.notes %}
+                                            <p class="small">{{ course.notes }}</p>
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="empty-state">No courses listed in this group.</div>
+                        {% endif %}
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-state">No requirement groups found.</div>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

@@ -1,99 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Courses</title>
-  <link rel="stylesheet" href="static/styles.css" />
-</head>
-<body>
-  <div data-navbar></div>
-  <main class="container page-shell">
-    
-<section class="hero-card">
-  <h1>Course List + Search</h1>
-  <p class="muted">Search by course title/code or filter by prefix.</p>
-  <div id="coursesAlert"></div>
-  <form id="searchForm" class="form-card">
-    <div class="form-row two">
-      <div>
-        <label>Search</label>
-        <input id="searchInput" placeholder="Try database, management, MGTA01..." />
-      </div>
-      <div>
-        <label>Prefix</label>
-        <input id="prefixInput" placeholder="e.g. MGA" />
-      </div>
-    </div>
-    <div class="actions">
-      <button class="primary" type="submit">Search Courses</button>
-      <button class="secondary" type="button" id="loadProgramsBtn">Load Programs</button>
-    </div>
-  </form>
-</section>
+{% extends "base.html" %}
 
-<section class="grid two" style="margin-top:1rem; align-items:start;">
-  <section class="list-card">
-    <h2>Courses</h2>
-    <div id="courseResults" class="course-list"></div>
-  </section>
+{% block title %}Courses - Course Planner{% endblock %}
 
-  <section class="list-card">
-    <h2>Programs</h2>
-    <div id="programResults" class="simple-list"></div>
-  </section>
-</section>
+{% block content %}
+<div class="grid" style="gap: 1.25rem;">
+    <section class="hero-card">
+        <h1>Courses</h1>
+        <p class="muted">Browse all courses or search by code or course name.</p>
 
-  </main>
-  <div data-footer></div>
-  <script src="static/api.js"></script>
-  <script src="static/common.js"></script>
-  <script>
-    renderNavbar('courses');
-    renderFooter();
-    
-const coursesAlert = $('#coursesAlert');
+        <form method="GET" action="{{ url_for('search_courses') }}">
+            <div class="form-row two" style="align-items: end;">
+                <div>
+                    <label for="keyword">Search</label>
+                    <input id="keyword" name="keyword" type="text" value="{{ keyword or '' }}" placeholder="Try MATA, management, MGTA01...">
+                </div>
 
-async function loadCourses() {
-  clearAlert(coursesAlert);
-  try {
-    const search = $('#searchInput').value.trim();
-    const prefix = $('#prefixInput').value.trim().toUpperCase();
-    const results = await CourseAPI.listCourses({ search, prefix, limit: 100 });
-    $('#courseResults').innerHTML = results.length
-      ? results.map(course => createCourseCard(course)).join('')
-      : `<div class="empty-state">No matching courses found.</div>`;
-  } catch (error) {
-    showAlert(coursesAlert, 'error', error.message);
-  }
-}
+                <div class="actions" style="margin-top: 1.8rem;">
+                    <button class="primary" type="submit">Search</button>
+                    <a class="badge" href="{{ url_for('courses') }}">Show All</a>
+                </div>
+            </div>
+        </form>
+    </section>
 
-async function loadPrograms() {
-  clearAlert(coursesAlert);
-  try {
-    const programs = await CourseAPI.listPrograms({ search: '', type: '' });
-    $('#programResults').innerHTML = programs.length
-      ? programs.slice(0, 50).map(program => `
-          <div class="simple-item">
-            <strong>${escapeHtml(program.program_code || 'No code')}</strong>
-            <div>${escapeHtml(program.program_name || '')}</div>
-            <div class="meta">Type: ${escapeHtml(program.program_type || '')}</div>
-          </div>
-        `).join('')
-      : `<div class="empty-state">No programs found.</div>`;
-  } catch (error) {
-    showAlert(coursesAlert, 'error', error.message);
-  }
-}
+    <section class="list-card">
+        <h2>Course List</h2>
 
-$('#searchForm').addEventListener('submit', async (event) => {
-  event.preventDefault();
-  await loadCourses();
-});
+        {% if courses %}
+            <div class="course-list">
+                {% for course in courses %}
+                    <article class="course-item">
+                        <div class="actions" style="justify-content: space-between; align-items: center; margin-top: 0;">
+                            <div>
+                                <h3 style="margin-bottom: 0.35rem;">
+                                    {{ course.course_code }} — {{ course.course_name }}
+                                </h3>
+                                <div class="meta">
+                                    Credits: {{ course.credits or "0.5" }}
+                                </div>
+                            </div>
 
-$('#loadProgramsBtn').addEventListener('click', loadPrograms);
-loadCourses();
+                            <a class="badge" href="{{ url_for('course_page', course_code=course.course_code) }}">Open details</a>
+                        </div>
 
-  </script>
-</body>
-</html>
+                        {% if course.course_details %}
+                            <p class="muted">
+                                {{ course.course_details[:220] }}{% if course.course_details|length > 220 %}...{% endif %}
+                            </p>
+                        {% endif %}
+                    </article>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-state">No courses found.</div>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

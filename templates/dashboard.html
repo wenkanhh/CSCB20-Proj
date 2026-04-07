@@ -1,164 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Planner Dashboard</title>
-  <link rel="stylesheet" href="static/styles.css" />
-</head>
-<body>
-  <div data-navbar></div>
-  <main class="container page-shell">
-    
-<section class="hero-card">
-  <h1>Planner Dashboard</h1>
-  <p class="muted">One page summary for your profile, active programs, audit status, and recommendation preview.</p>
-  <div id="dashboardAlert"></div>
-  <form id="dashboardForm" class="form-card">
-    <div class="form-row two">
-      <div>
-        <label>Program Code (optional)</label>
-        <input id="dashboardProgramCode" placeholder="Used for dashboard audit" />
-      </div>
-      <div>
-        <label>API Base URL</label>
-        <input id="apiBaseInput" placeholder="http://127.0.0.1:5000/api" />
-      </div>
-    </div>
-    <div class="actions">
-      <button class="primary" type="submit">Load Dashboard</button>
-      <button class="secondary" id="saveApiBaseBtn" type="button">Save API Base</button>
-    </div>
-  </form>
-</section>
+{% extends "base.html" %}
 
-<section class="grid three" style="margin-top:1rem;">
-  <article class="card kpi">
-    <span class="label">Completed Courses</span>
-    <span class="value" id="kpiCompletedCourses">0</span>
-  </article>
-  <article class="card kpi">
-    <span class="label">Completed Credits</span>
-    <span class="value" id="kpiCredits">0.0</span>
-  </article>
-  <article class="card kpi">
-    <span class="label">Active Programs</span>
-    <span class="value" id="kpiPrograms">0</span>
-  </article>
-</section>
+{% block title %}Dashboard - Course Planner{% endblock %}
 
-<section class="grid two" style="margin-top:1rem; align-items:start;">
-  <section class="list-card">
-    <h2>Profile Snapshot</h2>
-    <div id="profileSnapshot" class="simple-list"></div>
-  </section>
-  <section class="list-card">
-    <h2>Recommendation Preview</h2>
-    <div id="dashboardRecommendations" class="course-list"></div>
-  </section>
-</section>
+{% block content %}
+<div class="grid" style="gap: 1.25rem;">
+    <section class="hero-card">
+        <h1>Dashboard</h1>
+        <p class="muted">This is where you save your programs and jump to the planner page for each one.</p>
+    </section>
 
-<section class="grid two" style="margin-top:1rem; align-items:start;">
-  <section class="list-card">
-    <h2>Active Programs</h2>
-    <div id="activePrograms" class="simple-list"></div>
-  </section>
-  <section class="list-card">
-    <h2>Saved Recommendations</h2>
-    <div id="savedRecommendations" class="simple-list"></div>
-  </section>
-</section>
+    <section class="grid two">
+        <div class="table-card">
+            <h2>Add a Program</h2>
+            <form method="POST" action="{{ url_for('save_program') }}">
+                <div class="form-row">
+                    <div>
+                        <label for="program_code">Program</label>
+                        <select id="program_code" name="program_code" required>
+                            <option value="">Choose a program</option>
+                            {% for program in programs %}
+                                <option value="{{ program.program_code }}">
+                                    {{ program.program_code }} - {{ program.program_name }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
 
-<section class="list-card" style="margin-top:1rem;">
-  <h2>Degree Audit</h2>
-  <div id="auditSummary"></div>
-  <div id="auditGroups" class="audit-list" style="margin-top:1rem;"></div>
-</section>
+                <div class="form-row">
+                    <div>
+                        <label for="start_year">Start Year (optional)</label>
+                        <input id="start_year" name="start_year" type="number" min="1900" max="2100">
+                    </div>
+                </div>
 
-  </main>
-  <div data-footer></div>
-  <script src="static/api.js"></script>
-  <script src="static/common.js"></script>
-  <script>
-    renderNavbar('dashboard');
-    renderFooter();
-    
-const dashboardAlert = $('#dashboardAlert');
-$('#apiBaseInput').value = getApiBase();
-
-async function loadDashboard() {
-  clearAlert(dashboardAlert);
-  try {
-    const programCode = $('#dashboardProgramCode').value.trim().toUpperCase();
-    const data = await PlannerAPI.dashboard({ programCode });
-
-    $('#kpiCompletedCourses').textContent = data.completed_courses_count ?? 0;
-    $('#kpiCredits').textContent = data.completed_credits ?? 0;
-    $('#kpiPrograms').textContent = (data.active_programs || []).length;
-
-    const profile = data.profile || {};
-    $('#profileSnapshot').innerHTML = `
-      <div class="simple-item"><strong>${escapeHtml(profile.username || 'Unknown user')}</strong><div class="meta">Email: ${escapeHtml(profile.email || '—')}</div></div>
-      <div class="simple-item"><strong>CGPA</strong><div class="meta">${escapeHtml(profile.cgpa ?? '—')}</div></div>
-      <div class="simple-item"><strong>Year Standing</strong><div class="meta">${escapeHtml(profile.year_standing ?? '—')}</div></div>
-    `;
-
-    $('#activePrograms').innerHTML = (data.active_programs || []).length
-      ? data.active_programs.map(item => `
-          <div class="simple-item">
-            <strong>${escapeHtml(item.program_code)}</strong>
-            <div class="meta">Status: ${escapeHtml(item.status || '')}</div>
-          </div>
-        `).join('')
-      : `<div class="empty-state">No active programs saved.</div>`;
-
-    $('#savedRecommendations').innerHTML = (data.saved_recommendations || []).length
-      ? data.saved_recommendations.map(item => `
-          <div class="simple-item">
-            <strong>${escapeHtml(item.course_code)}</strong>
-            <div class="meta">Reason: ${escapeHtml(item.reason || '—')}</div>
-          </div>
-        `).join('')
-      : `<div class="empty-state">No saved recommendations yet.</div>`;
-
-    $('#dashboardRecommendations').innerHTML = (data.recommendations || []).length
-      ? data.recommendations.map(item => createCourseCard(item.course || item, `<span class="badge good">Score: ${escapeHtml(item.score || 0)}</span>`)).join('')
-      : `<div class="empty-state">No recommendation preview available.</div>`;
-
-    const audit = data.degree_audit;
-    if (audit && audit.program) {
-      $('#auditSummary').innerHTML = `
-        <div class="simple-item">
-          <strong>${escapeHtml(audit.program.program_code || '')} — ${escapeHtml(audit.program.program_name || '')}</strong>
-          <div class="meta">Overall status: ${audit.satisfied ? 'Satisfied' : 'Still missing requirements'}</div>
-          <div class="meta">Missing required courses: ${(audit.missing_required_courses || []).map(escapeHtml).join(', ') || 'None'}</div>
+                <div class="actions">
+                    <button class="primary" type="submit">Save Program</button>
+                </div>
+            </form>
         </div>
-      `;
-      $('#auditGroups').innerHTML = (audit.groups || []).length
-        ? audit.groups.map(createAuditGroupCard).join('')
-        : `<div class="empty-state">No requirement groups returned.</div>`;
-    } else {
-      $('#auditSummary').innerHTML = `<div class="empty-state">No degree audit loaded. Enter a program code above if you want one shown on the dashboard.</div>`;
-      $('#auditGroups').innerHTML = '';
-    }
-  } catch (error) {
-    showAlert(dashboardAlert, 'error', error.message);
-  }
-}
 
-$('#dashboardForm').addEventListener('submit', async (event) => {
-  event.preventDefault();
-  await loadDashboard();
-});
+        <div class="list-card">
+            <h2>Your Saved Programs</h2>
 
-$('#saveApiBaseBtn').addEventListener('click', () => {
-  const value = $('#apiBaseInput').value.trim() || 'http://127.0.0.1:5000/api';
-  setApiBase(value);
-  showAlert(dashboardAlert, 'success', 'API base URL saved.');
-});
+            {% if user_programs %}
+                <div class="simple-list">
+                    {% for row in user_programs %}
+                        <div class="simple-item">
+                            <h3 style="margin-bottom: 0.4rem;">{{ row.program_code }}</h3>
+                            <p class="small">Status: {{ row.status }}</p>
 
-loadDashboard();
+                            {% if row.start_year %}
+                                <p class="small">Start Year: {{ row.start_year }}</p>
+                            {% endif %}
 
-  </script>
-</body>
-</html>
+                            <div class="actions">
+                                <a class="badge" href="{{ url_for('planner') }}?program_code={{ row.program_code }}">Open Planner</a>
+                                <a class="badge bad" href="{{ url_for('remove_program', program_id=row.id) }}">Remove</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="empty-state">You have not saved any programs yet.</div>
+            {% endif %}
+        </div>
+    </section>
+</div>
+{% endblock %}
