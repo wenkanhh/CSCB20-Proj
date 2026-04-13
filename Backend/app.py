@@ -9,7 +9,7 @@ from user_routes import init_user_routes
 from course_routes import init_course_routes
 from recommendation_routes import init_recommendation_routes
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../templates", static_folder="../static")
 app.secret_key = "my_secret_key"
 
 init_runtime_db()

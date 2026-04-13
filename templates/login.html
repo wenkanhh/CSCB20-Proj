@@ -5,13 +5,13 @@
 {% block content %}
 <div class="form-card" style="max-width: 520px; margin: 0 auto;">
     <h1>Login</h1>
-    <p class="muted">Log in to view your dashboard, saved programs, and completed courses.</p>
+    <p class="muted">Log in with your username or email to view your dashboard, saved programs, and completed courses.</p>
 
     <form method="POST" action="{{ url_for('login') }}">
         <div class="form-row">
             <div>
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text" required>
+                <label for="login_value">Username or Email</label>
+                <input id="login_value" name="login_value" type="text" required>
             </div>
         </div>
 
