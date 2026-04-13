@@ -421,14 +421,15 @@ def load_users(conn):
     for r in rows:
         cursor.execute('''
             INSERT OR IGNORE INTO users
-                (user_id, username, password, email, cgpa)
-            VALUES (?, ?, ?, ?, ?)
+                (user_id, username, password, email, cgpa, year_standing)
+            VALUES (?, ?, ?, ?, ?, ?)
         ''', (
             to_int(r['user_id']),
             r['username'],
             r['password'],
             r['email'],
-            to_float(r['cgpa'])
+            to_float(r['cgpa']),
+            to_int_or_default(r.get('year_standing'), 1)
         ))
         count += cursor.rowcount
     report('users', count)

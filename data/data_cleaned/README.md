@@ -1,7 +1,7 @@
 The cleaned dataset includes the following files:
 
 1. courses.csv - the central table that stores every course offered by the institution, all other tables link back to this one:
-- course_code: unique code that identifies the course (e.g. MGAC03), used as the primary key across the entire system
+- course_code: unique code that identifies the course (e.g. MGAC03H3), used as the primary key across the entire system
 - course_code_prefix: the subject area prefix extracted from the course code (e.g. MGA), identifies which department the course belongs to
 - offering_code: the specific offering identifier extracted from the course code (e.g. C03)
 - course_name: the full official name of the course
@@ -29,7 +29,7 @@ The cleaned dataset includes the following files:
 - program_code: unique identifier for the program extracted from the calendar heading such as SCSPE1150C or SCMAJ1762C, used as the primary key and referenced by all program-related tables
 - program_name: the full official title of the program exactly as it appears in the calendar heading such as SPECIALIST (CO-OPERATIVE) PROGRAM IN CONSERVATION AND BIODIVERSITY (SCIENCE)
 - department_id: the department this program belongs to as listed at the bottom of each program block such as Biological Sciences or Management Co-op, used to infer which department owns this program 
-- program_type: the category of the program, one of Specialist, Specialist Co-op, Major, Major Co-op, Minor, Certificate, or Combined Degreem
+- program_type: the category of the program, one of Specialist, Major, Minor, Certificate, Combined, or Double
 - is_coop: 1 for coop program, 0 for non-coop program
 - is_limited_enrolment: 1 if the program explicitly states enrolment is limited or limited enrolment in its text, 0 otherwise
 - total_credits: the total number of required credits of specified courses groups a student must complete to finish this program, extracted from phrases like students must complete a total of 14.5 credits
@@ -60,7 +60,7 @@ The cleaned dataset includes the following files:
 - item_type: the kind of condition this row represents, one of COURSE, MIN_CREDITS_TOTAL, MIN_CREDITS_DEPT, MIN_CGPA, PROGRAM_ENROLLMENT, YEAR_STANDING, or PERMISSION
 - course_code: the specific course that must be completed, only filled when item_type is COURSE
 - min_credits: the minimum number of credits required, only filled when item_type is MIN_CREDITS_TOTAL or MIN_CREDITS_DEPT
-- department_id: the department the minimum credits must come from, only filled when item_type is MIN_CREDITS_DEPT
+- department_prefix: the course code prefix (e.g. CSC, MAT) identifying which department the minimum credits must come from, only filled when item_type is MIN_CREDITS_DEPT; the importer resolves this to a department_id when loading into the database
 - min_cgpa: the minimum CGPA the student must have, only filled when item_type is MIN_CGPA
 - program_code: the program the student must be enrolled in, only filled when item_type is PROGRAM_ENROLLMENT
 - year_standing: the minimum year of study required, only filled when item_type is YEAR_STANDING
