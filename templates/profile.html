@@ -4,9 +4,21 @@
 
 {% block content %}
 <div class="grid" style="gap: 1.25rem;">
+    {% if academic_summary and academic_summary.can_graduate %}
+        <section class="hero-card" style="border: 2px solid rgba(53, 211, 154, 0.9); background: rgba(16, 80, 56, 0.78); box-shadow: 0 0 18px rgba(53, 211, 154, 0.28);">
+            <h2 style="margin-bottom: 0.45rem;">🎓 Graduation Status: Eligible</h2>
+            <p style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.35rem;">
+                You can graduate now. Congratulations!
+            </p>
+            <p class="small" style="margin-bottom: 0;">
+                You have completed {{ academic_summary.completed_credits }} credits.
+            </p>
+        </section>
+    {% endif %}
+
     <section class="hero-card">
         <h1>Profile</h1>
-        <p class="muted">This page shows your account info, saved programs, and completed courses.</p>
+        <p class="muted">This page shows your account info, saved programs, completed courses, and your calculated academic summary.</p>
     </section>
 
     <section class="grid two">
@@ -23,6 +35,26 @@
             {% endif %}
         </div>
 
+        <div class="card">
+            <h2>Academic Summary</h2>
+
+            {% if academic_summary %}
+                <p><strong>Completed Credits:</strong> {{ academic_summary.completed_credits }}</p>
+                <p><strong>Calculated CGPA:</strong> {{ academic_summary.cgpa }}</p>
+                <p><strong>Calculated Year Standing:</strong> {{ academic_summary.year_standing }}</p>
+
+                {% if academic_summary.can_graduate %}
+                    <div class="empty-state" style="margin-top: 1rem; border: 1px solid rgba(53, 211, 154, 0.7); background: rgba(16, 80, 56, 0.45);">
+                        You can graduate now. Congratulations!
+                    </div>
+                {% endif %}
+            {% else %}
+                <div class="empty-state">Academic summary not available yet.</div>
+            {% endif %}
+        </div>
+    </section>
+
+    <section class="grid two">
         <div class="list-card">
             <h2>Your Programs</h2>
 
@@ -38,6 +70,17 @@
             {% else %}
                 <div class="empty-state">No programs saved yet.</div>
             {% endif %}
+        </div>
+
+        <div class="card">
+            <h2>Quick Notes</h2>
+            <p class="small">Your CGPA and year standing are based on the courses you save in the planner.</p>
+            <p class="small">if you completed 4.5 credits, the app shows Year 1</p>
+            <p class="small">if you completed 6.0 credits, it shows Year 2</p>
+            <p class="small">if you completed 11.0 credits, it shows Year 3</p>
+            <p class="small">if you completed 16.0 credits, it shows Year 4</p>
+            <p class="small">When you have completed 20.0 Credits, you can graduate.</p>
+            <p class="small">However, you will still need to complete all the credits required for your selected program(s)</p>
         </div>
     </section>
 
@@ -65,7 +108,17 @@
                                 <td>{{ row.credits_earned }}</td>
                                 <td>{{ row.semester or "-" }}</td>
                                 <td>{{ row.year or "-" }}</td>
-                                <td>{{ row.grade or row.numeric_grade or "-" }}</td>
+                                <td>
+                                    {% if row.numeric_grade is not none and row.grade %}
+                                        {{ row.numeric_grade }} ({{ row.grade }})
+                                    {% elif row.numeric_grade is not none %}
+                                        {{ row.numeric_grade }}
+                                    {% elif row.grade %}
+                                        {{ row.grade }}
+                                    {% else %}
+                                        -
+                                    {% endif %}
+                                </td>
                             </tr>
                         {% endfor %}
                     </tbody>

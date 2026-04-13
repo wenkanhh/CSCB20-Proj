@@ -6,79 +6,168 @@
 <div class="grid" style="gap: 1.25rem;">
     <section class="hero-card">
         <h1>{{ plan.program.program_code }} — {{ plan.program.program_name }}</h1>
-        <p class="muted">This page shows the requirement groups for the selected program and marks which courses are already completed.</p>
+        <p class="muted">This page shows the requirement groups for the selected program and lets you mark completed courses with semester, year, and numeric grade. The letter grade will be calculated automatically from the numeric grade.</p>
     </section>
 
     <section class="grid three">
         <div class="card kpi">
-            <span class="label">Total Courses</span>
-            <span class="value">{{ plan.summary.total_courses }}</span>
+            <span class="label">Requirement Groups</span>
+            <span class="value">{{ plan.summary.total_groups }}</span>
         </div>
 
         <div class="card kpi">
-            <span class="label">Completed</span>
-            <span class="value">{{ plan.summary.completed_courses }}</span>
+            <span class="label">Satisfied Groups</span>
+            <span class="value">{{ plan.summary.satisfied_groups }}</span>
         </div>
 
         <div class="card kpi">
-            <span class="label">Remaining</span>
-            <span class="value">{{ plan.summary.remaining_courses }}</span>
+            <span class="label">Remaining Groups</span>
+            <span class="value">{{ plan.summary.remaining_groups }}</span>
         </div>
     </section>
 
-    <section class="list-card">
-        <h2>Requirement Groups</h2>
+    <form method="POST" action="{{ url_for('save_completed_courses') }}">
+        <input type="hidden" name="current_program_code" value="{{ plan.program.program_code }}">
 
-        {% if plan.groups %}
-            <div class="audit-list">
-                {% for group in plan.groups %}
-                    <article class="audit-item">
-                        <div class="actions" style="justify-content: space-between; align-items: center; margin-top: 0;">
-                            <div>
-                                <h3 style="margin-bottom: 0.35rem;">Requirement Group {{ group.group_id }}</h3>
-                                <div class="meta">
-                                    Type: {{ group.group_type or "ALL" }}
-                                    {% if group.category %} | Category: {{ group.category }}{% endif %}
+        <section class="list-card">
+            <div class="actions" style="justify-content: space-between; align-items: center; margin-top: 0; margin-bottom: 1rem;">
+                <h2 style="margin-bottom: 0;">Requirement Groups</h2>
+                <button class="primary" type="submit">Save Completed Courses</button>
+            </div>
+
+            {% if plan.groups %}
+                <div class="audit-list">
+                    {% for group in plan.groups %}
+                        <article class="audit-item">
+                            <div class="actions" style="justify-content: space-between; align-items: center; margin-top: 0;">
+                                <div>
+                                    <h3 style="margin-bottom: 0.35rem;">Requirement Group {{ group.group_id }}</h3>
+                                    <div class="meta">
+                                        Type: {{ group.group_type or "ALL" }}
+                                        {% if group.category %} | Category: {{ group.category }}{% endif %}
+                                    </div>
                                 </div>
+
+                                {% if group.group_is_optional %}
+                                    <span class="badge">Optional Group</span>
+                                {% elif group.group_is_satisfied %}
+                                    <span class="badge good">Group Satisfied</span>
+                                {% else %}
+                                    <span class="badge warn">Group Not Yet Satisfied</span>
+                                {% endif %}
                             </div>
-                        </div>
 
-                        {% if group.notes %}
-                            <p class="small">{{ group.notes }}</p>
-                        {% endif %}
+                            {% if group.group_progress_text %}
+                                <p class="small">{{ group.group_progress_text }}</p>
+                            {% endif %}
 
-                        {% if group.courses %}
-                            <div class="simple-list">
-                                {% for course in group.courses %}
-                                    <div class="simple-item">
-                                        <div class="actions" style="justify-content: space-between; align-items: center; margin-top: 0;">
-                                            <div>
-                                                <strong>{{ course.course_code }} — {{ course.course_name }}</strong>
-                                                <div class="meta">Credits: {{ course.credits }}</div>
+                            {% set group_notes = group.notes if group.notes is string else '' %}
+                            {% if group_notes %}
+                                <p class="small">{{ group_notes }}</p>
+                            {% endif %}
+
+                            {% if group.courses %}
+                                <div class="simple-list">
+                                    {% for course in group.courses %}
+                                        <input type="hidden" name="visible_course_codes" value="{{ course.course_code }}">
+
+                                        <div class="simple-item">
+                                            <div class="actions" style="justify-content: space-between; align-items: flex-start; margin-top: 0;">
+                                                <div style="flex: 1;">
+                                                    <label style="display: flex; gap: 0.75rem; align-items: flex-start; margin: 0;">
+                                                        <input
+                                                            type="checkbox"
+                                                            name="course_codes"
+                                                            value="{{ course.course_code }}"
+                                                            {% if course.is_completed %}checked{% endif %}
+                                                            style="width: auto; margin-top: 0.15rem;"
+                                                        >
+                                                        <span>
+                                                            <strong>{{ course.course_code }} — {{ course.course_name }}</strong>
+                                                            <div class="meta">Credits: {{ course.credits }}</div>
+                                                        </span>
+                                                    </label>
+                                                </div>
+
+                                                {% if course.is_completed %}
+                                                    {% if course.is_completed_by_exclusion %}
+                                                        <span class="badge good">Satisfied by exclusion{% if course.completed_by_exclusion_code %}: {{ course.completed_by_exclusion_code }}{% endif %}</span>
+                                                    {% else %}
+                                                        <span class="badge good">Completed</span>
+                                                    {% endif %}
+                                                {% elif course.is_optional_now %}
+                                                    <span class="badge">Optional now</span>
+                                                {% else %}
+                                                    <span class="badge warn">Not Completed</span>
+                                                {% endif %}
                                             </div>
 
-                                            {% if course.is_completed %}
-                                                <span class="badge good">Completed</span>
-                                            {% else %}
-                                                <span class="badge warn">Not Completed</span>
+                                            <div class="form-row two" style="margin-top: 0.9rem;">
+                                                <div>
+                                                    <label for="semester_{{ course.course_code }}">Semester</label>
+                                                    <select id="semester_{{ course.course_code }}" name="semester_{{ course.course_code }}">
+                                                        <option value="">Choose one</option>
+                                                        <option value="Fall" {% if course.saved_semester == "Fall" %}selected{% endif %}>Fall</option>
+                                                        <option value="Winter" {% if course.saved_semester == "Winter" %}selected{% endif %}>Winter</option>
+                                                        <option value="Summer" {% if course.saved_semester == "Summer" %}selected{% endif %}>Summer</option>
+                                                    </select>
+                                                </div>
+
+                                                <div>
+                                                    <label for="year_{{ course.course_code }}">Year</label>
+                                                    <input
+                                                        id="year_{{ course.course_code }}"
+                                                        name="year_{{ course.course_code }}"
+                                                        type="number"
+                                                        min="1900"
+                                                        max="2100"
+                                                        value="{{ course.saved_year or '' }}"
+                                                        placeholder="2026"
+                                                    >
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div>
+                                                    <label for="numeric_grade_{{ course.course_code }}">Numeric Grade</label>
+                                                    <input
+                                                        id="numeric_grade_{{ course.course_code }}"
+                                                        name="numeric_grade_{{ course.course_code }}"
+                                                        type="number"
+                                                        step="0.01"
+                                                        min="0"
+                                                        max="100"
+                                                        value="{{ course.saved_numeric_grade if course.saved_numeric_grade is not none else '' }}"
+                                                        placeholder="85"
+                                                    >
+                                                </div>
+                                            </div>
+
+                                            {% if course.saved_grade %}
+                                                <p class="small">Calculated letter grade: {{ course.saved_grade }}</p>
+                                            {% endif %}
+
+                                            {% set course_notes = course.notes if course.notes is string else '' %}
+                                            {% if course_notes %}
+                                                <p class="small">{{ course_notes }}</p>
                                             {% endif %}
                                         </div>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                <div class="empty-state">No courses listed in this group.</div>
+                            {% endif %}
+                        </article>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="empty-state">No requirement groups found.</div>
+            {% endif %}
 
-                                        {% if course.notes %}
-                                            <p class="small">{{ course.notes }}</p>
-                                        {% endif %}
-                                    </div>
-                                {% endfor %}
-                            </div>
-                        {% else %}
-                            <div class="empty-state">No courses listed in this group.</div>
-                        {% endif %}
-                    </article>
-                {% endfor %}
+            <div class="actions">
+                <button class="primary" type="submit">Save Completed Courses</button>
             </div>
-        {% else %}
-            <div class="empty-state">No requirement groups found.</div>
-        {% endif %}
-    </section>
+        </section>
+    </form>
 </div>
 {% endblock %}

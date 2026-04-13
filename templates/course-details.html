@@ -4,11 +4,15 @@
 
 {% block content %}
 <div class="grid" style="gap: 1.25rem;">
+    {% set course = details["course"] %}
+    {% set description = course["course_details"] if course["course_details"] not in [None, "", "nan", "NaN"] else "" %}
+
     <section class="hero-card">
-        <h1>{{ details.course.course_code }} — {{ details.course.course_name }}</h1>
-        <p class="muted">{{ details.course.course_details or "No description available." }}</p>
+        <h1>{{ course["course_code"] }} — {{ course["course_name"] }}</h1>
+        <p class="muted">{{ description or "No description available." }}</p>
+
         <div class="actions">
-            <span class="badge">Credits: {{ details.course.credits or "0.5" }}</span>
+            <span class="badge">Credits: {{ course["credits"] or "0.5" }}</span>
             <a class="badge" href="{{ url_for('courses') }}">Back to Courses</a>
         </div>
     </section>
@@ -17,14 +21,19 @@
         <div class="list-card">
             <h2>Past Offerings</h2>
 
-            {% if details.past_offerings %}
+            {% if details["past_offerings"] %}
                 <div class="simple-list">
-                    {% for row in details.past_offerings %}
+                    {% for row in details["past_offerings"] %}
+                        {% set year_value = row.get("year") %}
+                        {% set semester_value = row.get("semester") %}
+                        {% set instructor_value = row.get("instructor") %}
+                        {% set delivery_value = row.get("delivery_type") or row.get("delivery") %}
+
                         <div class="simple-item">
-                            <p><strong>Year:</strong> {{ row.year or "-" }}</p>
-                            <p><strong>Semester:</strong> {{ row.semester or "-" }}</p>
-                            <p><strong>Instructor:</strong> {{ row.instructor or "-" }}</p>
-                            <p><strong>Delivery:</strong> {{ row.delivery_type or row.delivery or "-" }}</p>
+                            <p><strong>Year:</strong> {{ year_value if year_value not in [None, "", "nan", "NaN"] else "-" }}</p>
+                            <p><strong>Semester:</strong> {{ semester_value if semester_value not in [None, "", "nan", "NaN"] else "-" }}</p>
+                            <p><strong>Instructor:</strong> {{ instructor_value if instructor_value not in [None, "", "nan", "NaN"] else "-" }}</p>
+                            <p><strong>Delivery:</strong> {{ delivery_value if delivery_value not in [None, "", "nan", "NaN"] else "-" }}</p>
                         </div>
                     {% endfor %}
                 </div>
@@ -36,11 +45,18 @@
         <div class="list-card">
             <h2>Exclusions</h2>
 
-            {% if details.exclusions %}
+            {% if details["exclusions"] %}
                 <div class="simple-list">
-                    {% for row in details.exclusions %}
+                    {% for row in details["exclusions"] %}
+                        {% set excluded = row.get("excluded_course") %}
+                        {% set note = row.get("note") %}
+
                         <div class="simple-item">
-                            {{ row.excluded_course_code or row.course_code_2 or row.exclusion_code or row }}
+                            <div>{{ excluded if excluded not in [None, "", "nan", "NaN"] else "Other exclusion" }}</div>
+
+                            {% if note not in [None, "", "nan", "NaN"] %}
+                                <div class="meta">{{ note }}</div>
+                            {% endif %}
                         </div>
                     {% endfor %}
                 </div>
@@ -53,22 +69,35 @@
     <section class="table-card">
         <h2>Requirements</h2>
 
-        {% if details.requirements %}
+        {% if details["requirements"] %}
             <div class="simple-list">
-                {% for group in details.requirements %}
+                {% for group in details["requirements"] %}
                     <div class="simple-item">
                         <h3 style="margin-bottom: 0.35rem;">
-                            {{ group.req_type }} - {{ group.group_logic }} Group
+                            {{ group["req_type"] }} - {{ group["group_logic"] }} Group
                         </h3>
 
-                        {% if group.items %}
+                        {% if group["items"] %}
                             <ul>
-                                {% for item in group.items %}
+                                {% for item in group["items"] %}
+                                    {% set item_type = item.get("item_type") %}
+                                    {% set course_code = item.get("course_code") %}
+                                    {% set min_credits = item.get("min_credits") %}
+                                    {% set department_prefix = item.get("department_prefix") %}
+                                    {% set min_cgpa = item.get("min_cgpa") %}
+                                    {% set program_code = item.get("program_code") %}
+                                    {% set year_standing = item.get("year_standing") %}
+                                    {% set notes = item.get("notes") %}
+
                                     <li>
-                                        {{ item.item_type or "Item" }}
-                                        {% if item.course_code %} - {{ item.course_code }}{% endif %}
-                                        {% if item.value %} - {{ item.value }}{% endif %}
-                                        {% if item.notes %} - {{ item.notes }}{% endif %}
+                                        {{ item_type or "Item" }}
+                                        {% if course_code not in [None, "", "nan", "NaN"] %} - {{ course_code }}{% endif %}
+                                        {% if min_credits not in [None, "", "nan", "NaN"] %} - {{ min_credits }} credits{% endif %}
+                                        {% if department_prefix not in [None, "", "nan", "NaN"] %} in {{ department_prefix }}{% endif %}
+                                        {% if min_cgpa not in [None, "", "nan", "NaN"] %} - CGPA {{ min_cgpa }}{% endif %}
+                                        {% if program_code not in [None, "", "nan", "NaN"] %} - Program {{ program_code }}{% endif %}
+                                        {% if year_standing not in [None, "", "nan", "NaN"] %} - Year {{ year_standing }}{% endif %}
+                                        {% if notes not in [None, "", "nan", "NaN"] %} - {{ notes }}{% endif %}
                                     </li>
                                 {% endfor %}
                             </ul>

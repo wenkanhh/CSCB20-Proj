@@ -19,18 +19,11 @@
                         <select id="program_code" name="program_code" required>
                             <option value="">Choose a program</option>
                             {% for program in programs %}
-                                <option value="{{ program.program_code }}">
-                                    {{ program.program_code }} - {{ program.program_name }}
+                                <option value="{{ program['program_code'] }}">
+                                    {{ program['program_code'] }} - {{ program['program_name'] }}
                                 </option>
                             {% endfor %}
                         </select>
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div>
-                        <label for="start_year">Start Year (optional)</label>
-                        <input id="start_year" name="start_year" type="number" min="1900" max="2100">
                     </div>
                 </div>
 
@@ -49,10 +42,6 @@
                         <div class="simple-item">
                             <h3 style="margin-bottom: 0.4rem;">{{ row.program_code }}</h3>
                             <p class="small">Status: {{ row.status }}</p>
-
-                            {% if row.start_year %}
-                                <p class="small">Start Year: {{ row.start_year }}</p>
-                            {% endif %}
 
                             <div class="actions">
                                 <a class="badge" href="{{ url_for('planner') }}?program_code={{ row.program_code }}">Open Planner</a>

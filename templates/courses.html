@@ -6,7 +6,7 @@
 <div class="grid" style="gap: 1.25rem;">
     <section class="hero-card">
         <h1>Courses</h1>
-        <p class="muted">Browse all courses or search by code or course name.</p>
+        <p class="muted">Browse all courses or search by code or course name. You can also save electives or any completed course here even if it is not part of a selected planner page.</p>
 
         <form method="GET" action="{{ url_for('search_courses') }}">
             <div class="form-row two" style="align-items: end;">
@@ -23,37 +23,105 @@
         </form>
     </section>
 
-    <section class="list-card">
-        <h2>Course List</h2>
+    <form method="POST" action="{{ url_for('save_completed_courses') }}">
+        <input type="hidden" name="current_page" value="courses">
+        <input type="hidden" name="current_keyword" value="{{ keyword or '' }}">
 
-        {% if courses %}
-            <div class="course-list">
-                {% for course in courses %}
-                    <article class="course-item">
-                        <div class="actions" style="justify-content: space-between; align-items: center; margin-top: 0;">
-                            <div>
-                                <h3 style="margin-bottom: 0.35rem;">
-                                    {{ course.course_code }} — {{ course.course_name }}
-                                </h3>
-                                <div class="meta">
-                                    Credits: {{ course.credits or "0.5" }}
+        <section class="list-card">
+            <div class="actions" style="justify-content: space-between; align-items: center; margin-top: 0; margin-bottom: 1rem;">
+                <h2 style="margin-bottom: 0;">Course List</h2>
+                <button class="primary" type="submit">Save Selected Courses</button>
+            </div>
+
+            {% if courses %}
+                <div class="course-list">
+                    {% for course in courses %}
+                        {% set saved = completed_map.get(course.course_code) %}
+                        <input type="hidden" name="visible_course_codes" value="{{ course.course_code }}">
+
+                        <article class="course-item">
+                            <div class="actions" style="justify-content: space-between; align-items: flex-start; margin-top: 0;">
+                                <div style="flex: 1;">
+                                    <label style="display: flex; gap: 0.75rem; align-items: flex-start; margin: 0;">
+                                        <input
+                                            type="checkbox"
+                                            name="course_codes"
+                                            value="{{ course.course_code }}"
+                                            {% if saved and saved.status in ["COMPLETED", "TRANSFER"] %}checked{% endif %}
+                                            style="width: auto; margin-top: 0.15rem;"
+                                        >
+                                        <span>
+                                            <strong>{{ course.course_code }} — {{ course.course_name }}</strong>
+                                            <div class="meta">Credits: {{ course.credits or "0.5" }}</div>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <a class="badge" href="{{ url_for('course_page', course_code=course.course_code) }}">Open details</a>
+                            </div>
+
+                            {% set details = course.course_details if course.course_details is string else '' %}
+                            {% if details %}
+                                <p class="muted">
+                                    {{ details[:220] }}{% if details|length > 220 %}...{% endif %}
+                                </p>
+                            {% endif %}
+
+                            <div class="form-row two" style="margin-top: 0.9rem;">
+                                <div>
+                                    <label for="semester_{{ course.course_code }}">Semester</label>
+                                    <select id="semester_{{ course.course_code }}" name="semester_{{ course.course_code }}">
+                                        <option value="">Choose one</option>
+                                        <option value="Fall" {% if saved and saved.semester == "Fall" %}selected{% endif %}>Fall</option>
+                                        <option value="Winter" {% if saved and saved.semester == "Winter" %}selected{% endif %}>Winter</option>
+                                        <option value="Summer" {% if saved and saved.semester == "Summer" %}selected{% endif %}>Summer</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="year_{{ course.course_code }}">Year</label>
+                                    <input
+                                        id="year_{{ course.course_code }}"
+                                        name="year_{{ course.course_code }}"
+                                        type="number"
+                                        min="1900"
+                                        max="2100"
+                                        value="{{ saved.year if saved and saved.year is not none else '' }}"
+                                        placeholder="2026"
+                                    >
                                 </div>
                             </div>
 
-                            <a class="badge" href="{{ url_for('course_page', course_code=course.course_code) }}">Open details</a>
-                        </div>
+                            <div class="form-row">
+                                <div>
+                                    <label for="numeric_grade_{{ course.course_code }}">Numeric Grade</label>
+                                    <input
+                                        id="numeric_grade_{{ course.course_code }}"
+                                        name="numeric_grade_{{ course.course_code }}"
+                                        type="number"
+                                        step="0.01"
+                                        min="0"
+                                        max="100"
+                                        value="{{ saved.numeric_grade if saved and saved.numeric_grade is not none else '' }}"
+                                        placeholder="85"
+                                    >
+                                </div>
+                            </div>
 
-                        {% if course.course_details %}
-                            <p class="muted">
-                                {{ course.course_details[:220] }}{% if course.course_details|length > 220 %}...{% endif %}
-                            </p>
-                        {% endif %}
-                    </article>
-                {% endfor %}
+                            {% if saved and saved.grade %}
+                                <p class="small">Calculated letter grade: {{ saved.grade }}</p>
+                            {% endif %}
+                        </article>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="empty-state">No courses found.</div>
+            {% endif %}
+
+            <div class="actions">
+                <button class="primary" type="submit">Save Selected Courses</button>
             </div>
-        {% else %}
-            <div class="empty-state">No courses found.</div>
-        {% endif %}
-    </section>
+        </section>
+    </form>
 </div>
 {% endblock %}
