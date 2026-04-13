@@ -4,8 +4,8 @@ DROP TABLE IF EXISTS completed_courses;
 DROP TABLE IF EXISTS user_programs;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS past_offerings;
-DROP TABLE IF EXISTS prog_req_courses;
-DROP TABLE IF EXISTS prog_req_groups;
+DROP TABLE IF EXISTS program_requirement_courses;
+DROP TABLE IF EXISTS program_requirements;
 DROP TABLE IF EXISTS enrolment_requirements;
 DROP TABLE IF EXISTS course_exclusions;
 DROP TABLE IF EXISTS requirement_items;
@@ -51,7 +51,7 @@ CREATE TABLE programs (
     program_code TEXT PRIMARY KEY,
     program_name TEXT NOT NULL,
     department_id INTEGER NOT NULL,
-    program_type TEXT NOT NULL CHECK(program_type IN ('Specialist', 'Major', 'Minor', 'Certificate', 'Combined')),
+    program_type TEXT NOT NULL CHECK(program_type IN ('Specialist', 'Major', 'Minor', 'Certificate', 'Combined', 'Double')),
     is_coop INTEGER NOT NULL DEFAULT 0,
     is_limited_enrolment INTEGER NOT NULL DEFAULT 0,
     total_credits REAL,
@@ -163,7 +163,8 @@ CREATE TABLE users (
     username TEXT NOT NULL UNIQUE,
     password TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE,
-    cgpa REAL NOT NULL DEFAULT 0.0
+    cgpa REAL NOT NULL DEFAULT 0.0,
+    year_standing INTEGER NOT NULL DEFAULT 1
     );
 
 CREATE TABLE user_programs (
