@@ -118,7 +118,7 @@ CREATE TABLE enrolment_requirements (
     FOREIGN KEY (course_code)  REFERENCES courses(course_code)
 );
 
-CREATE TABLE program_requirements (
+CREATE TABLE program_requirement (
     group_id INTEGER PRIMARY KEY AUTOINCREMENT,
     program_code TEXT NOT NULL,
     group_type TEXT NOT NULL CHECK(group_type IN ('ALL','PICK', 'CREDIT_LEVEL', 'OPTIONAL')),

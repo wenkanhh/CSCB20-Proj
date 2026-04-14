@@ -71,7 +71,7 @@ The cleaned dataset includes the following files:
 - exclusion_id: unique number that identifies each exclusion pair
 - course_code: the course being described, references the courses table
 - excluded_course: the course that conflicts with it, also references the courses table, a student who has completed this course cannot take course_code
-- note: for other exclusions that special for the course and can't be fit into the other columns
+- notes: for other exclusions that special for the course and can't be fit into the other columns
 
 
 8. program_requirement.csv - stores each requirement block for a program, one row per logical chunk of requirements such as Core Courses or Bin 1 Electives, separating the group structure from the individual courses inside it
