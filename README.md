@@ -276,7 +276,7 @@ program_requirement_courses(id, group_id, course_code, is_mandatory, notes)
 
 1. **Clone or Extract Repository**
    ```bash
-   cd c:\Users\admin\Documents\UNIVERSITY\UofT\Third\ year\CSCB20-Proj
+   cd ...............
    ```
 
 2. **Create Virtual Environment** (if not already present)
@@ -304,22 +304,10 @@ program_requirement_courses(id, group_id, course_code, is_mandatory, notes)
    - Copy to `sql/database.db` when ready to deploy to app
    - Restart Flask app to reload the updated database
 
-5. **Fix Table Name Queries** (CRITICAL — currently broken)
-   
-   Edit [Backend/data_repository.py](Backend/data_repository.py):
-   - Line 108: change `FROM program_requirement` to `FROM program_requirements`
-   - Line 135: change `FROM requirements_groups` to `FROM requirement_groups`
-
-6. **Run Flask App**
+5. **Run Flask App**
    ```bash
    cd Backend
    python app.py
-   ```
-   
-   Output should show:
-   ```
-   WARNING in app.runserver: This is a development server. Do not use it in production.
-   Running on http://127.0.0.1:5000
    ```
 
 7. **Open Browser**
@@ -327,18 +315,6 @@ program_requirement_courses(id, group_id, course_code, is_mandatory, notes)
    - Redirects to `/login` if not authenticated
    - Create test account (any username/password/CGPA/year)
    - Access dashboard, save a program, explore planning
-
-### Environment Variables (Optional)
-- `FLASK_DEBUG=1` — enable auto-reload and verbose errors (already default)
-- `COURSE_PLANNER_SECRET_KEY=...` — override hardcoded secret key (recommended for production)
-
-### Data Import (Advanced)
-To regenerate catalog database from CSVs:
-```bash
-cd scripts
-python csv_to_sql.py
-```
-This re-creates `database.db` by reading from [data/data_cleaned/](data/data_cleaned/) and running [sql/schema.sql](sql/schema.sql).
 
 ---
 
@@ -366,36 +342,24 @@ This re-creates `database.db` by reading from [data/data_cleaned/](data/data_cle
 - Foreign key relationships in schema
 - Comprehensive data model (courses, programs, prerequisites, offerings, requirements)
 
-### ❌ What Does Not Work / Is Broken
-
-**Critical Issues (App Cannot Start Without These Fixes):**
-1. ❌ **Table Name Mismatches in Data Repository**
-   - `program_requirement` should be `program_requirements` (line 108 in data_repository.py)
-   - `requirements_groups` should be `requirement_groups` (line 135 in data_repository.py)
-   - Impact: Planner and course detail pages crash with "no such table"
-   - Fix: Correct query table names in data_repository.py
-
-**Infrastructure (Resolved):**
-2.  **Database Path & Sync** — Fixed by copying `database.db` to `sql/database.db`
-   - App now reads populated catalog from `sql/database.db`
-   - Root `database.db` serves as staging/source for updates
+### What Does Not Work / Is Broken
 
 **Missing/Incomplete Features:**
-3. ❌ **Prerequisite Eligibility Checking** — App displays course lists but does NOT verify if student meets prerequisites
+1. **Prerequisite Eligibility Checking** — App displays course lists but does NOT verify if student meets prerequisites
    - Would require evaluating complex AND/OR requirement trees
    - Would need CGPA and year standing checks
    - Foundation exists (schema, data structure) but logic not implemented
 
-4. ❌ **Course Recommendation Engine** — No smart suggestions beyond "here's what you need"
+2. **Course Recommendation Engine** — No smart suggestions beyond "here's what you need"
    - Mentioned in README but never implemented
    - Could recommend courses based on prerequisites met, typical offerings, degree progress
 
-5. ❌ **API Integration** — JavaScript API helpers (`CourseAPI`, `PlannerAPI`) are defined but never used
+3. **API Integration** — JavaScript API helpers (`CourseAPI`, `PlannerAPI`) are defined but never used
    - Rest of app uses traditional form submissions and server-side rendering
    - CORS headers missing (not configured for mobile/third-party clients)
    - Would require frontend refactoring to adopt
 
-6. ❌ **Security Improvements Missing**
+4. **Security Improvements Missing**
    - Hardcoded Flask secret key (should use environment variable)
    - No CSRF tokens (acceptable for same-origin forms, risky for API)
    - No rate limiting on login/register
@@ -403,27 +367,21 @@ This re-creates `database.db` by reading from [data/data_cleaned/](data/data_cle
    - Passwords never expire
    - No SQL injection defense (app uses parameterized queries but no ORM abstraction)
 
-7. ❌ **Performance Optimizations Missing**
+5. **Performance Optimizations Missing**
    - New connection opened for each database read (no connection pooling)
    - No caching of frequently accessed data (programs, courses)
    - Templates render full course lists without pagination
    - Large tables (past offerings, requirement items) not indexed
 
-8. ❌ **Data Quality Issues**
+6. **Data Quality Issues**
    - CSV import script references `course_code_prefix` column but populates as `course_prefix` elsewhere
    - Some CSV columns documented but not used in schema (e.g., breadth_requirements not queried)
    - Null handling inconsistent (empty strings vs None)
 
-9. ❌ **Error Handling**
+7. **Error Handling**
    - Silent failures if course/program not found (returns None, template renders empty)
    - No 404 pages (user sees blank page instead of clear "course not found")
    - Database connection errors not caught or reported
-
-10. ❌ **Documentation & Code Organization**
-    - [Backend/README.md](Backend/README.md) describes JSON API endpoints that don't exist
-    - [templates/README.md](templates/README.md) describes separate frontend arrangement inconsistent with actual code
-    - No inline comments in route handlers
-    - Config assumptions outdated (references data_cleaned at project root, actual data in data/ subdirectory)
 
 ### ⚠️ Partially Working
 
@@ -431,28 +389,6 @@ This re-creates `database.db` by reading from [data/data_cleaned/](data/data_cle
 - **Completed Courses Interface** — Form on profile page exists but allows bulk replace only; no fine-grained add/remove per course
 - **Requirement Evaluation** — Requirement groups loaded and displayed, but AND/OR logic and path alternatives not evaluated (just shown to user)
 
----
-
-## 6. Division of Work
-
-**Single Developer Project**
-
-This appears to be a solo implementation for a university assignment (CSCB20, University of Toronto). There is no evidence of multiple contributors:
-- Git history not provided
-- Single authorship style throughout
-- Cohesive architectural decisions (Flask + SQLite + Jinja)
-- No conflicting patterns or merge artifacts
-
-**Components as if assigned to roles (hypothetical allocation):**
-- **Backend Routes & Auth:** One developer wrote all of [Backend/auth_routes.py](Backend/auth_routes.py), [Backend/user_routes.py](Backend/user_routes.py), [Backend/course_routes.py](Backend/course_routes.py), [Backend/recommendation_routes.py](Backend/recommendation_routes.py), and app.py structure
-- **Service & Data Layers:** Same developer wrote [Backend/planner_service.py](Backend/planner_service.py) and [Backend/data_repository.py](Backend/data_repository.py)
-- **Frontend Templates:** Same developer wrote all Jinja templates with consistent styling and structure
-- **CSS & UI:** [static/styles.css](static/styles.css) is hand-written with consistent design system (colors, spacing, responsive grid)
-- **JavaScript Helpers:** [static/api.js](static/api.js) and [static/common.js](static/common.js) written, though largely unused
-- **Database Schema & Import:** [sql/schema.sql](sql/schema.sql) and [scripts/csv_to_sql.py](scripts/csv_to_sql.py) written to ingest 13 CSV files into catalog
-- **Data Cleaning:** CSV files in [data/data_cleaned/](data/data_cleaned/) and their documentation appear to be prepared separately (data engineering task) but integration into schema indicates same developer
-
----
 
 ## 7. External Libraries, Frameworks, and Tools
 
@@ -463,7 +399,7 @@ This appears to be a solo implementation for a university assignment (CSCB20, Un
 | Flask | 3.0.3 | Web framework, routing, templating, session management | [Backend/app.py](Backend/app.py), all route modules |
 | pandas | 2.2.3 | Data manipulation (likely for CSV → DataFrame processing) | Not directly used in app.py; may be legacy (csv_to_sql.py uses built-in csv module) |
 
-### Python Standard Library (No Version)
+### Python Standard Library 
 
 | Module | Purpose |
 |--------|---------|
@@ -479,7 +415,7 @@ This appears to be a solo implementation for a university assignment (CSCB20, Un
 | `werkzeug.security.generate_password_hash` | Hash user passwords before storage |
 | `werkzeug.security.check_password_hash` | Verify password on login |
 
-### Frontend Dependencies (No Package Manager)
+### Frontend Dependencies 
 
 | Resource | Type | Purpose |
 |----------|------|---------|
@@ -488,7 +424,7 @@ This appears to be a solo implementation for a university assignment (CSCB20, Un
 | JavaScript (handwritten) | Helpers | Fetch wrapper, DOM utilities, unused SPA hooks |
 | HTML5 | Markup | Standard HTML form, table, nav elements |
 
-### Development/Data Tools (Not in production)
+### Development/Data Tools 
 
 | Tool | Purpose |
 |------|---------|
@@ -496,9 +432,6 @@ This appears to be a solo implementation for a university assignment (CSCB20, Un
 | [scripts/csv_to_sql.py](scripts/csv_to_sql.py) | One-time data import utility (not deployed with app) |
 | SQLite CLI / DB Browser | For manual database inspection (used during analysis, not app dependency) |
 
-### Third-Party Services / External Integration
-
-- **None** — Application is fully self-contained; no external APIs, CDNs, analytics, or cloud services
 
 ### Why These Choices?
 
@@ -552,42 +485,4 @@ All custom code (routes, templates, styling, database schema design, CSV import 
 - No load balancing, caching, or CDN (suitable for small institution or demo, not campus-wide)
 - Session cookie stored in browser (works for one server instance; would need Redis/Memcached for multi-server)
 
-**Path to Production:**
-1. Deploy on application server (Gunicorn/uWSGI)
-2. Use production WSGI server (nginx as reverse proxy)
-3. Migrate to PostgreSQL if concurrent users expected
-4. Add Redis for session/caching layer
-5. Enable HTTPS (SSL cert), CSRF tokens, secure cookie flags
-6. Add database migrations (Alembic) to manage schema changes
-7. Implement comprehensive error logging and monitoring
 
----
-
-## 10. Summary
-
-| Aspect | Status | Notes |
-|--------|--------|-------|
-| **Core Concept** |  Clear | Course planner + degree audit for students |
-| **System Architecture** |  Sound | Dual-database design, clean MVC separation |
-| **Data Model** |  Comprehensive | 13 tables capturing courses, programs, prerequisites, user state |
-| **Implementation** |  Functional | Auth/pages working, catalog synced and accessible |
-| **Frontend** |  Functional | Server-rendered Jinja + CSS, forms working, responsive design |
-| **Backend** | ⚠️ Partial | Routes defined, service layer sound, but table name query bugs + missing eligibility logic |
-| **Database** |  Operational | Schema correct, data populated and synced to app location |
-| **Documentation** | ⚠️ Outdated | README describes API that isn't wired up; config assumptions stale |
-| **Security** | ⚠️ Basic | Passwords hashed, session cookies work, but no CSRF/rate limiting |
-| **Readiness** | ❌ Cannot Run | Requires database path fix and table name corrections |
-
-**Estimated Time to Fix & Operationalize:**
-- Database sync:  Done
-- Fix table name queries: 5 minutes (edit 2 lines in data_repository.py)
-- Test happy path (register → save program → view planner): 10 minutes
-- Implement prerequisite checking: 2–4 hours (non-trivial logic)
-- Security hardening & production deployment: 8+ hours
-- Total to fully working MVP: ~15 minutes; to fully featured: ~12 hours
-
----
-
-**Report Generated:** April 13, 2026  
-**Repository:** CSCB20-Proj (University of Toronto)  
-**Analysis Depth:** Full codebase review + schema inspection + data verification
