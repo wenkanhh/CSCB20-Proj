@@ -5,14 +5,10 @@ from config import EXISTING_PROJECT_DB_PATH, DATA_DIR
 
 class DataRepository:
     def __init__(self):
-        # Save the path to the main project database
         self.db_path = EXISTING_PROJECT_DB_PATH
 
     def get_main_db_conn(self):
-        # Open the main database
         conn = sqlite3.connect(self.db_path)
-
-        # Let us use column names like row["course_code"]
         conn.row_factory = sqlite3.Row
 
         return conn
@@ -29,7 +25,6 @@ class DataRepository:
         return cleaned
 
     def get_courses_made_complete_by_exclusion(self, taken_course_code):
-        # Find courses that should count as completed because the user took an exclusion
         conn = self.get_main_db_conn()
 
         try:
@@ -58,7 +53,6 @@ class DataRepository:
         return filtered.to_dict(orient="records")
 
     def get_all_programs(self):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -75,7 +69,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to programs.csv
         csv_path = DATA_DIR / "programs.csv"
 
         if not csv_path.exists():
@@ -88,7 +81,6 @@ class DataRepository:
         return df.to_dict(orient="records")
 
     def get_program_by_code(self, program_code):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -105,7 +97,6 @@ class DataRepository:
         if row:
             return row
 
-        # Otherwise fall back to programs.csv
         csv_path = DATA_DIR / "programs.csv"
 
         if not csv_path.exists():
@@ -121,7 +112,6 @@ class DataRepository:
         return self._clean_record(matches.iloc[0].to_dict())
 
     def get_all_courses(self):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -138,7 +128,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to courses.csv
         csv_path = DATA_DIR / "courses.csv"
 
         if not csv_path.exists():
@@ -151,7 +140,6 @@ class DataRepository:
         return df.to_dict(orient="records")
 
     def get_course_by_code(self, course_code):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -168,7 +156,6 @@ class DataRepository:
         if row:
             return row
 
-        # Otherwise fall back to courses.csv
         csv_path = DATA_DIR / "courses.csv"
 
         if not csv_path.exists():
@@ -184,7 +171,6 @@ class DataRepository:
         return self._clean_record(matches.iloc[0].to_dict())
 
     def search_courses(self, keyword):
-        # First try the main database
         conn = self.get_main_db_conn()
         like_value = "%" + keyword + "%"
 
@@ -204,7 +190,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to courses.csv
         csv_path = DATA_DIR / "courses.csv"
 
         if not csv_path.exists():
@@ -228,7 +213,6 @@ class DataRepository:
         return filtered.to_dict(orient="records")
 
     def get_past_offerings(self, course_code):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -246,7 +230,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to past_offerings.csv
         csv_path = DATA_DIR / "past_offerings.csv"
 
         if not csv_path.exists():
@@ -263,7 +246,6 @@ class DataRepository:
         return filtered.to_dict(orient="records")
 
     def get_program_requirement_groups(self, program_code):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -281,7 +263,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to program_requirement.csv
         csv_path = DATA_DIR / "program_requirement.csv"
 
         if not csv_path.exists():
@@ -294,7 +275,6 @@ class DataRepository:
         return filtered.to_dict(orient="records")
 
     def get_program_requirement_courses(self, group_id):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -312,7 +292,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to program_requirement_courses.csv
         csv_path = DATA_DIR / "program_requirement_courses.csv"
 
         if not csv_path.exists():
@@ -325,7 +304,6 @@ class DataRepository:
         return filtered.to_dict(orient="records")
 
     def get_requirement_groups_for_course(self, course_code):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -343,7 +321,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to requirements_groups.csv
         csv_path = DATA_DIR / "requirements_groups.csv"
 
         if not csv_path.exists():
@@ -356,7 +333,6 @@ class DataRepository:
         return filtered.to_dict(orient="records")
 
     def get_requirement_items(self, group_id):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -374,7 +350,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to requirement_items.csv
         csv_path = DATA_DIR / "requirement_items.csv"
 
         if not csv_path.exists():
@@ -387,7 +362,6 @@ class DataRepository:
         return filtered.to_dict(orient="records")
 
     def get_course_exclusions(self, course_code):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -404,7 +378,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to course_exclusions.csv
         csv_path = DATA_DIR / "course_exclusions.csv"
 
         if not csv_path.exists():
@@ -417,7 +390,6 @@ class DataRepository:
         return filtered.to_dict(orient="records")
 
     def get_enrolment_requirements(self, program_code):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -435,7 +407,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to enrolment_requirements.csv
         csv_path = DATA_DIR / "enrolment_requirements.csv"
 
         if not csv_path.exists():
@@ -448,7 +419,6 @@ class DataRepository:
         return filtered.to_dict(orient="records")
 
     def get_all_departments(self):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -465,7 +435,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to departments.csv
         csv_path = DATA_DIR / "departments.csv"
 
         if not csv_path.exists():
@@ -478,7 +447,6 @@ class DataRepository:
         return df.to_dict(orient="records")
 
     def get_department_prefixes(self, department_id):
-        # First try the main database
         conn = self.get_main_db_conn()
 
         try:
@@ -496,7 +464,6 @@ class DataRepository:
         if rows:
             return rows
 
-        # Otherwise fall back to department_prefixes.csv
         csv_path = DATA_DIR / "department_prefixes.csv"
 
         if not csv_path.exists():

@@ -1,8 +1,3 @@
-// ==============================
-// api.js
-// Small API helper file
-// ==============================
-
 // Empty string means: use the same website address that opened the page
 // Example: if Flask is running on localhost:5000, it will call that same server
 const DEFAULT_API_BASE = '';
@@ -48,20 +43,12 @@ async function apiFetch(path, options = {}) {
   return data;
 }
 
-// ==============================
-// Course API
-// Matches: /api/course/<course_code>
-// ==============================
 const CourseAPI = {
   getCourse(courseCode) {
     return apiFetch(`/api/course/${encodeURIComponent(courseCode)}`);
   },
 };
 
-// ==============================
-// Planner API
-// Matches: /api/planner?program_code=...
-// ==============================
 const PlannerAPI = {
   getPlan(programCode) {
     const params = new URLSearchParams({

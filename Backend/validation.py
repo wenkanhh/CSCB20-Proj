@@ -1,4 +1,3 @@
-# Allowed values from the CSV files
 VALID_USER_PROGRAM_STATUSES = ["ACTIVE", "COMPLETED", "WITHDRAWN"]
 VALID_COMPLETED_COURSE_STATUSES = ["COMPLETED", "IN_PROGRESS", "FAILED", "TRANSFER"]
 VALID_SEMESTERS = ["FALL", "WINTER", "SUMMER"]
@@ -24,7 +23,6 @@ VALID_ENROLMENT_ITEM_TYPES = [
 ]
 
 
-# Check if email looks valid
 def is_valid_email(email):
     if not email:
         return False
@@ -50,7 +48,6 @@ def is_valid_email(email):
     return True
 
 
-# Check if username is valid
 def is_valid_username(username):
     if not username:
         return False
@@ -63,7 +60,6 @@ def is_valid_username(username):
     return True
 
 
-# Check if password is valid
 def is_valid_password(password):
     if not password:
         return False
@@ -76,7 +72,6 @@ def is_valid_password(password):
     return True
 
 
-# Check if CGPA is valid
 def is_valid_cgpa(cgpa):
     if cgpa is None or cgpa == "":
         return False
@@ -92,7 +87,6 @@ def is_valid_cgpa(cgpa):
     return True
 
 
-# Check if year standing is valid
 def is_valid_year_standing(year_standing):
     if year_standing is None or year_standing == "":
         return False
@@ -108,7 +102,6 @@ def is_valid_year_standing(year_standing):
     return True
 
 
-# Clean course code
 def normalize_course_code(course_code):
     if not course_code:
         return ""
@@ -150,7 +143,6 @@ def is_valid_course_code(course_code):
     return False
 
 
-# Clean program code
 def normalize_program_code(program_code):
     if not program_code:
         return ""
@@ -162,7 +154,6 @@ def normalize_program_code(program_code):
     return program_code
 
 
-# Check if program code looks valid
 def is_valid_program_code(program_code):
     program_code = normalize_program_code(program_code)
 
@@ -178,7 +169,6 @@ def is_valid_program_code(program_code):
     return True
 
 
-# Check if semester is valid
 def is_valid_semester(semester):
     if not semester:
         return False
@@ -191,7 +181,6 @@ def is_valid_semester(semester):
     return False
 
 
-# Check if delivery type is valid
 def is_valid_delivery_type(delivery):
     if not delivery:
         return False
@@ -204,7 +193,6 @@ def is_valid_delivery_type(delivery):
     return False
 
 
-# Check if user_programs status is valid
 def is_valid_user_program_status(status):
     if not status:
         return False
@@ -217,7 +205,6 @@ def is_valid_user_program_status(status):
     return False
 
 
-# Check if completed_courses status is valid
 def is_valid_completed_course_status(status):
     if not status:
         return False
@@ -230,7 +217,6 @@ def is_valid_completed_course_status(status):
     return False
 
 
-# Check if credits earned is valid
 def is_valid_credits_earned(credits_earned):
     if credits_earned is None or credits_earned == "":
         return False
@@ -246,7 +232,6 @@ def is_valid_credits_earned(credits_earned):
     return True
 
 
-# Check if year is valid
 def is_valid_year(year):
     if year is None or year == "":
         return False
@@ -262,7 +247,6 @@ def is_valid_year(year):
     return True
 
 
-# Check if program requirement group type is valid
 def is_valid_program_group_type(group_type):
     if not group_type:
         return False
@@ -275,7 +259,6 @@ def is_valid_program_group_type(group_type):
     return False
 
 
-# Check if program category is valid
 def is_valid_program_category(category):
     if not category:
         return False
@@ -288,7 +271,6 @@ def is_valid_program_category(category):
     return False
 
 
-# Check if prereq/coreq type is valid
 def is_valid_req_type(req_type):
     if not req_type:
         return False
@@ -301,7 +283,6 @@ def is_valid_req_type(req_type):
     return False
 
 
-# Check if group logic is valid
 def is_valid_group_logic(group_logic):
     if not group_logic:
         return False
@@ -314,7 +295,6 @@ def is_valid_group_logic(group_logic):
     return False
 
 
-# Check if requirement item type is valid
 def is_valid_requirement_item_type(item_type):
     if not item_type:
         return False
@@ -327,7 +307,6 @@ def is_valid_requirement_item_type(item_type):
     return False
 
 
-# Check if enrolment requirement item type is valid
 def is_valid_enrolment_item_type(item_type):
     if not item_type:
         return False
@@ -340,7 +319,6 @@ def is_valid_enrolment_item_type(item_type):
     return False
 
 
-# Check if minimum credits value is valid
 def is_valid_min_credits(min_credits):
     if min_credits is None or min_credits == "":
         return False
@@ -356,7 +334,6 @@ def is_valid_min_credits(min_credits):
     return True
 
 
-# Check if department code/prefix looks valid
 def is_valid_department_code(department_code):
     if not department_code:
         return False
@@ -372,7 +349,6 @@ def is_valid_department_code(department_code):
     return True
 
 
-# Remove invalid and duplicate course codes from a list
 def clean_course_list(course_list):
     cleaned_list = []
 

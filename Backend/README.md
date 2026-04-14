@@ -1,19 +1,4 @@
-# Backend (Flask) — labeled to match your checklist
-
-These are **new backend files only**. They do **not** modify any file you originally uploaded.
-
-## Folder placement
-
-Put this whole folder beside your real project folders:
-
-```text
-project_root/
-├─ data_cleaned/
-├─ sql/
-└─ backend_requirements_labeled/
-```
-
-## What each file covers from your checklist
+# Backend (Flask) 
 
 ### 1) Core Setup
 **Files:**
@@ -81,12 +66,10 @@ Covers:
 
 This backend reads from:
 - `data_cleaned/*.csv`
-- `sql/database.db` if your project already has offering rows there
+- `sql/database.db` 
 
 This backend writes only to:
 - `sql/backend_runtime.db`
-
-So your original CSV files and your original `sql/database.db` stay untouched.
 
 ---
 
@@ -126,7 +109,7 @@ So your original CSV files and your original `sql/database.db` stay untouched.
 
 ---
 
-## Run it
+## Run 
 
 Open terminal inside this folder and run:
 

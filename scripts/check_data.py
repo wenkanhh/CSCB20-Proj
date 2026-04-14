@@ -1,28 +1,9 @@
-"""
-check_data.py
--------------
-Usage:
-    python scripts/check_data.py          # check only, print report
-    python scripts/check_data.py --fix    # check then auto-fix all broken refs
-
-What --fix does:
-  requirement_items    — broken COURSE items (course not in courses.csv) are
-                         converted to item_type=PERMISSION; the stale code is
-                         preserved in the notes column as "Was COURSE: <code>".
-  course_exclusions    — rows where excluded_course is missing or not in
-                         courses.csv are deleted.
-  program_requirement_courses — rows referencing unknown courses are deleted.
-  A .bak backup of each modified file is written before any change.
-"""
-
 import argparse
 import csv
 import shutil
 from pathlib import Path
 
 DATA_DIR = Path('data/data_cleaned')
-
-# ── helpers ───────────────────────────────────────────────────────────────────
 
 def load_csv(path):
     with open(path, encoding='utf-8', newline='') as f:
@@ -44,8 +25,6 @@ def section(title):
     print(title)
     print('=' * 60)
 
-# ── load all tables ───────────────────────────────────────────────────────────
-
 def load_all():
     courses      = load_csv(DATA_DIR / 'courses.csv')
     req_groups   = load_csv(DATA_DIR / 'requirements_groups.csv')
@@ -54,10 +33,6 @@ def load_all():
     prog_reqs    = load_csv(DATA_DIR / 'program_requirement.csv')
     prog_req_crs = load_csv(DATA_DIR / 'program_requirement_courses.csv')
     return courses, req_groups, req_items, exclusions, prog_reqs, prog_req_crs
-
-# ══════════════════════════════════════════════════════════════════════════════
-# CHECK
-# ══════════════════════════════════════════════════════════════════════════════
 
 def run_checks(courses, req_groups, req_items, exclusions, prog_reqs, prog_req_crs):
     course_codes  = {r['course_code'] for r in courses}
@@ -187,10 +162,6 @@ def run_checks(courses, req_groups, req_items, exclusions, prog_reqs, prog_req_c
 
     return issues
 
-# ══════════════════════════════════════════════════════════════════════════════
-# FIX
-# ══════════════════════════════════════════════════════════════════════════════
-
 def run_fixes(course_codes):
     section('FIX 1/3 — requirement_items: broken COURSE refs → PERMISSION')
     path = DATA_DIR / 'requirement_items.csv'
@@ -229,10 +200,6 @@ def run_fixes(course_codes):
     backup(path)
     save_csv(path, kept, fieldnames)
     print(f'  Saved {path.name}')
-
-# ══════════════════════════════════════════════════════════════════════════════
-# MAIN
-# ══════════════════════════════════════════════════════════════════════════════
 
 def main():
     parser = argparse.ArgumentParser(description='Check and optionally fix broken FK references in cleaned CSVs.')

@@ -1,8 +1,3 @@
-// ==============================
-// common.js
-// Small helper functions for the frontend
-// ==============================
-
 // Find the first element that matches a CSS selector
 function $(selector) {
   return document.querySelector(selector);

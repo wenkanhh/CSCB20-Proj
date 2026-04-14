@@ -330,7 +330,6 @@ def init_user_routes(app, repo):
 
         conn = get_conn()
 
-        # Only planner pages should actively remove unchecked visible courses.
         if current_page == "planner":
             unchecked_visible_codes = [
                 code for code in visible_course_codes

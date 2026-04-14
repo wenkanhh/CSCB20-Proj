@@ -3,18 +3,10 @@ import csv
 import os
 from pathlib import Path
 
-# ─────────────────────────────────────────
-# CONFIGURATION
-# ─────────────────────────────────────────
-
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = PROJECT_ROOT / 'database.db'
 SCHEMA_PATH = PROJECT_ROOT / 'sql' / 'schema.sql'
 CSV_DIR = PROJECT_ROOT / 'data' / 'data_cleaned'
-
-# ─────────────────────────────────────────
-# HELPERS
-# ─────────────────────────────────────────
 
 def connect():
     conn = sqlite3.connect(DB_PATH)
@@ -107,11 +99,6 @@ def safe_course_code(conn, course_code):
     if fk_exists(conn, 'courses', 'course_code', course_code):
         return course_code
     return None
-
-
-# ─────────────────────────────────────────
-# LOADERS — one function per table
-# ─────────────────────────────────────────
 
 def load_departments(conn):
     rows = load_csv(os.path.join(CSV_DIR, 'departments.csv'))
@@ -494,9 +481,6 @@ def load_completed_courses(conn):
     report('completed_courses', count)
 
 
-# ─────────────────────────────────────────
-# MAIN — runs everything in correct order
-# ─────────────────────────────────────────
 
 def main():
     print(f'\nConnecting to {DB_PATH}...')

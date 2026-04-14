@@ -6,7 +6,6 @@ from pathlib import Path
 BACKEND_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BACKEND_DIR.parent
 
-# Prefer the user's real project structure. Fallback to the local sandbox layout for testing.
 DATA_DIR_CANDIDATES = [
     PROJECT_ROOT / 'data' / 'data_cleaned',
     PROJECT_ROOT / 'data_cleaned',
