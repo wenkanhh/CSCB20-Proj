@@ -1,17 +1,17 @@
 # UTSC Course Planner Application
 ## CSCB20 Web Application Project Report
 University of Toronto Scarborough - April 14th, 2026  
-Anh Van Quynh Nguyen (1010280580)  
-Tien Khai Nguyen (1010041884)  
-Firdavs Ortikov (1010706568)
+- Anh Van Quynh Nguyen (1010280580)  
+- Tien Khai Nguyen (1010041884)  
+- Firdavs Ortikov (1010706568)
 
-1. Project Overview  
-1.1 Problem Statement  
+## 1. Project Overview  
+### 1.1 Problem Statement  
 University of Toronto Scarborough students face a recurring challenge when planning their academic journey: determining which courses they are eligible to take, understanding program requirements, tracking completed courses, and visualizing progress toward degree completion. Complicated courses with prerequisites, corequisites, exclusions, and varying program structures across hundreds of academic programs make navigating through the school year complex.
 
 The current official tools provided by the University only provide course details, and students need to go back and forth to manually check for prerequisites, corequisites, and cross-check the program’s requirements. Information about past course offerings is sometimes missing, thus requiring students to manually read the archived courses' PDFs.
 
-1.2 Core Idea  
+### 1.2 Core Idea  
 This application is a course recommendation and degree audit system built for students at the University of Toronto Scarborough for reference purposes. The core functionality includes:
 - A comprehensive catalog of 2,000+ courses and 240+ academic programs  
 - Student registration, login, and academic progress tracking  
@@ -19,7 +19,7 @@ This application is a course recommendation and degree audit system built for st
 - Complex prerequisite, corequisite, and exclusion data model  
 - Clean separation between institutional reference data and live user data using two independent SQLite databases
 
-2. System Description  
+## 2. System Description  
 Our application is designed to be used as a complementary reference resource along with the University’s Degree Planner. It has the following features:
 
 ### 2.1 Application Features
@@ -65,7 +65,7 @@ Step 8 User logged out through /logout and got redirected to /login
 - JavaScript API helpers defined but not wired to frontend  
 - No rate limiting, two-factor authentication, or account lockout  
 
-3. Technical Overview  
+## 3. Technical Overview  
 ### 3.1 Frontend
 The frontend is built with server-side Jinja2 templates rendered by Flask. A shared base.html provides the header, navigation, and footer layout. All pages extend this base.
 
@@ -122,7 +122,7 @@ Tables:
 
 Schema uses group_logic (AND/OR), path_id, group_type (ALL, PICK, CREDIT_LEVEL, OPTIONAL), combined_group_id.
 
-4. How to Run the Project  
+## 4. How to Run the Project  
 Prerequisites:
 - Python 3.10+  
 - pip  
@@ -134,7 +134,7 @@ Setup:
 - Run Flask  
 - Open browser at http://127.0.0.1  
 
-5. What Works and What Does Not  
+## 5. What Works and What Does Not  
 ### 5.1 Working Features
 - Registration  
 - Login/logout  
@@ -158,7 +158,7 @@ Setup:
 - No 404 pages  
 - No connection pooling  
 
-6. Division of Work  
+## 6. Division of Work  
 Phases:
 1. Planning & Setup  
 2. Data Pipeline  
@@ -199,7 +199,7 @@ Phases:
 ### 6.6 Testing & Finalization
 All: testing, debugging, cleanup  
 
-7. External Libraries, Frameworks, and Tools  
+## 7. External Libraries, Frameworks, and Tools  
 ### 7.1 Direct Dependencies
 - Flask 3.0.3  
 - Werkzeug  
@@ -214,16 +214,36 @@ All: testing, debugging, cleanup
 - JavaScript  
 - HTML5  
 
-8. References and Attribution  
+## 8. References and Attribution
+
 ### 8.1 Original Work
-All custom code written from scratch.
+All custom code (routes, templates, CSS, database schema, and service layer) was written from scratch for this assignment.
 
 ### 8.2 AI Usage
-Used for:
-- Idea generation  
-- Planning  
-- Database brainstorming  
-- Data crawling/parsing  
+The use of generative AI (ChatGPT, Claude) is applied in the following tasks:
+- Idea generating
+- Project planning
+- Database brainstorming
+- Data crawling and parsing
 
 ### 8.3 References
-(List of URLs exactly as in the PDF)
+- (n.d.). *Welcome to Flask — Flask Documentation (3.1.x).* Retrieved April 14, 2026, from https://flask.palletsprojects.com
+- *Built-in Functions — Python 3.14.4 documentation.* (n.d.). Python documentation. Retrieved April 14, 2026, from https://docs.python.org/3/library/functions.html
+- *Built-in Types — Python 3.14.4 documentation.* (n.d.). Python documentation. Retrieved April 14, 2026, from https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
+- *csv — CSV File Reading and Writing — Python 3.14.4 documentation.* (n.d.). Python documentation. Retrieved April 14, 2026, from https://docs.python.org/3/library/csv.html
+- Lemburg, M. (n.d.). *sqlite3 — DB-API 2.0 interface for SQLite databases.* Python documentation. Retrieved April 14, 2026, from https://docs.python.org/3/library/sqlite3.html
+- Lemburg, M. (n.d.). *sqlite3 — DB-API 2.0 interface for SQLite databases.* Python documentation. Retrieved April 14, 2026, from https://docs.python.org/3/library/sqlite3.html
+- *os.path — Common pathname manipulations — Python 3.14.4 documentation.* (n.d.). Python documentation. Retrieved April 14, 2026, from https://docs.python.org/3/library/os.path.html
+- *pandas.read_csv — pandas 3.0.2 documentation.* (n.d.). Pandas. Retrieved April 14, 2026, from https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
+- *pathlib — Object-oriented filesystem paths — Python 3.14.4 documentation.* (n.d.). Python documentation. Retrieved April 14, 2026, from https://docs.python.org/3/library/pathlib.html
+- *Quickstart — Flask Documentation (3.1.x).* (n.d.). Flask. Retrieved April 14, 2026, from https://flask.palletsprojects.com/en/stable/quickstart/
+- *re — Regular expression operations — Python 3.14.4 documentation.* (n.d.). Python documentation. Retrieved April 14, 2026, from https://docs.python.org/3/library/re.html
+- *shutil — High-level file operations — Python 3.14.4 documentation.* (n.d.). Python documentation. Retrieved April 14, 2026, from https://docs.python.org/3/library/shutil.html
+- *String.prototype.replaceAll() - JavaScript | MDN.* (n.d.). MDN Web Docs. Retrieved April 14, 2026, from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
+- University of Toronto Scarborough. (n.d.). *Course Timetable Archive.* https://www.utsc.utoronto.ca/registrar/course-timetable-archive
+- University of Toronto Scarborough. (n.d.). *PDF Calendar and Archives.* UTSC Calendar. https://utsc.calendar.utoronto.ca/calendar-pdfs
+- *URLSearchParams - Web APIs | MDN.* (2025, February 26). MDN Web Docs. Retrieved April 14, 2026, from https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+- *Using SQLite 3 with Flask — Flask Documentation (3.1.x).* (n.d.). Flask. Retrieved April 14, 2026, from https://flask.palletsprojects.com/en/stable/patterns/sqlite3/
+- *Using the Fetch API - Web APIs | MDN.* (2025, August 20). MDN Web Docs. Retrieved April 14, 2026, from https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+- *Window: localStorage property - Web APIs | MDN.* (2025, November 30). MDN Web Docs. Retrieved April 14, 2026, from https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
