@@ -42,14 +42,14 @@ Our application is designed to be used as a complementary reference resource alo
 - Visual progress tracking showing completed vs. remaining courses per block  
 
 ### 2.2 User Workflow
-Step 1 User navigates to / which redirects to /login  
-Step 2 User creates an account via the /register form if not yet registered  
-Step 3 User logs in and reaches the /dashboard  
-Step 4 User saves academic programs via the dashboard form  
-Step 5 User browses courses at /courses?keyword=... and views /course/<code>  
-Step 6 User opens the planner at /planner?program_code=... to track degree progress  
-Step 7 User reviews full history and details at /profile  
-Step 8 User logged out through /logout and got redirected to /login  
+- Step 1 User navigates to / which redirects to /login  
+- Step 2 User creates an account via the /register form if not yet registered  
+- Step 3 User logs in and reaches the /dashboard  
+- Step 4 User saves academic programs via the dashboard form  
+- Step 5 User browses courses at /courses?keyword=... and views /course/<code>  
+- Step 6 User opens the planner at /planner?program_code=... to track degree progress  
+- Step 7 User reviews full history and details at /profile  
+- Step 8 User logged out through /logout and got redirected to /login  
 
 ### 2.3 Notable Features and Limitations
 
