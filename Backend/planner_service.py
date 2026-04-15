@@ -22,9 +22,6 @@ class PlannerService:
         except:
             return 0.0
 
-    def _is_coop_value(self, value):
-        return str(value).strip().lower() in {"1", "true", "yes"}
-
     def _normalize_program_name_for_match(self, name):
         if not name:
             return ""
@@ -229,21 +226,31 @@ class PlannerService:
             if group_is_optional:
                 group_is_satisfied = True
                 group_progress_text = "Optional group."
-            elif group_type == "PICK":
+
+            elif group_type in ["PICK", "CREDIT_LEVEL"]:
                 min_credits = group.get("min_credits")
                 min_courses = group.get("min_courses")
 
                 if min_credits not in [None, "", "nan", "NaN"]:
                     required_credits = self._credit_value(min_credits)
                     group_is_satisfied = completed_credits >= required_credits
-                    group_progress_text = f"Need {required_credits:g} credits. Completed {min(completed_credits, required_credits):g}."
+                    group_progress_text = (
+                        f"Need {required_credits:g} credits. "
+                        f"Completed {min(completed_credits, required_credits):g}."
+                    )
+
                 elif min_courses not in [None, "", "nan", "NaN"]:
                     required_courses = int(float(min_courses))
                     group_is_satisfied = completed_count >= required_courses
-                    group_progress_text = f"Need {required_courses} courses. Completed {min(completed_count, required_courses)}."
+                    group_progress_text = (
+                        f"Need {required_courses} courses. "
+                        f"Completed {min(completed_count, required_courses)}."
+                    )
+
                 else:
                     group_is_satisfied = completed_count > 0
                     group_progress_text = f"Completed {completed_count} courses."
+
             else:
                 required_courses = len(course_list)
                 group_is_satisfied = completed_count >= required_courses and required_courses > 0
@@ -251,7 +258,7 @@ class PlannerService:
 
             for course in course_list:
                 course["is_optional_now"] = (
-                    group_type == "PICK"
+                    group_type in ["PICK", "CREDIT_LEVEL"]
                     and group_is_satisfied
                     and not course["is_completed"]
                 )
