@@ -1,9 +1,9 @@
 # UTSC Course Planner Application
 ## CSCB20 Web Application Project Report
 University of Toronto Scarborough - April 14th, 2026  
-- Anh Van Quynh Nguyen (1010280580)  
-- Tien Khai Nguyen (1010041884)  
-- Firdavs Ortikov (1010706568)
+- Anh Van Quynh Nguyen  
+- Tien Khai Nguyen
+- Firdavs Ortikov
 
 ## 1. Project Overview  
 ### 1.1 Problem Statement  
